@@ -1343,11 +1343,11 @@ section {
   background: #5c768d;
   border-top: 1px solid #768fa6;
   border-bottom: 1px solid #67839c;
-  padding: 60px 0 30px 0;
+  padding: 20px 0 5px 0;
 }
 
 #footer .footer-top .footer-info {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 #footer .footer-top .footer-info h3 {
@@ -1372,7 +1372,7 @@ section {
   background: #768fa6;
   color: #fff;
   line-height: 1;
-  padding: 8px 0;
+  padding: 4px 0;
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
