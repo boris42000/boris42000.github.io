@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #header .logo h1 {
   font-size: 28px;
   margin: 0;
-  padding: 10px 0;
+  padding:  0;
   line-height: 1;
   font-weight: 400;
   letter-spacing: 3px;
@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 #header .logo img {
   padding: 0;
-  margin: 0;
+  margin-top: : 5px;
   max-height: 40px;
 }
 
@@ -1488,3 +1488,12 @@ section {
   flex: 0;
 
 }
+.logo  li{
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+  padding-right: 1rem;
+  vertical-align: bottom;
+
+}
+
