@@ -1,3 +1,4 @@
+=============PIZZA
 1. FOCCACCIA
 pizza chlieb, olej, rozmarín (1)
 190g 4,30€
@@ -32,7 +33,6 @@ paradajkový základ, mozzarella, šunka, šampiňóny (1,7)
 11. HAWAI
 paradajkový základ, mozzarella, šunka, ananás (1,7)
 500g 8,20€
-
 12. VERDURA
 paradajkový základ, mozzarella, kukurica, brokolica, šampiňóny, artičoky (1,7)
 540g 8,20€
@@ -90,8 +90,6 @@ paradajkový základ, mozzarella, šunka, kukurica, saláma, olivy, vajce (1,3,7
 30. FUNGHI PORCINI
 mozzarella, dubáky (1,7)
 470g 8,90€
-
-
 31. DIAVOLA 
 paradajkový základ, mozzarella, saláma, cibuľa, feferónky (1,7)
 480g 9,10€
@@ -134,3 +132,24 @@ paradajkový základ, mozzarella, talianska šunka, parmezán, rukola, čerstvé
 183. PIZZA PODĽA VLASTNÉHO VÝBERU
 paradajkový základ, mozzarella, + prílohy podľa výberu
 350g 7,00€ + ceny príloh
+========PIZZA SLIMAKY
+
+
+175. MINI LUMACHE PROSCIUTTO
+mozzarella, šunka (1,7)
+360g 8,20€
+176. MINI LUMACHE FUNGI E PROSCIUTTO 
+mozzarella, šunka, šampiňóny (1,7)
+400g 8,20€
+177. MINI LUMACHE FORMAGGIO
+mozzarella, syr niva (1,7)
+320g 8,20€
+178. MINI LUMACHE PANCETTA
+mozzarella, slanina (1,7)
+350g 8,20€
+179. MINI LUMACHE SALAMI
+mozzarella, saláma (1,7)
+340g 8,20€
+181. MINI LUMACHE ACCIUGA 
+mozzarella, sardely (1,7)
+320g 8,20€
