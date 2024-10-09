@@ -1,0 +1,136 @@
+1. FOCCACCIA
+pizza chlieb, olej, rozmarín (1)
+190g 4,30€
+2. MARGHERITA
+paradajkový základ, mozzarella, bazalka, čerstvé paradajky (1,7)
+350g 7,10€
+3. FITNES PIZZA
+celozrnná múka, paradajkový základ, mozzarella, brokolica,
+paprika, kukurica (1,7)
+510g 8,20€
+4.BROCCOLI
+paradajkový základ, mozzarella, brokolica, olivy (1,7)
+500g 8,30€
+5. AL FUNGHI
+paradajkový základ, mozzarella, šampiňóny (1,7)
+410g 7,80€
+6. TONNO E CIPPOLLA
+paradajkový základ, mozzarella, tuniak, cibuľa (1, 4, 7)
+500g 8,40€
+7. QUATTRO FORMAGGI
+paradajkový základ, mozzarella, encián, niva, údený syr (1,7)
+450g 8,40€
+8. SALAMI
+paradajkový základ, mozzarella, saláma (1,7)
+410g 7,80€
+9. AL PROSCIUTTO
+paradajkový základ, mozzarella, šunka (1,7)
+440g 7,80€
+10. AL PROSCIUTTO E FUNGHI
+paradajkový základ, mozzarella, šunka, šampiňóny (1,7)
+480g 8,20€
+11. HAWAI
+paradajkový základ, mozzarella, šunka, ananás (1,7)
+500g 8,20€
+
+12. VERDURA
+paradajkový základ, mozzarella, kukurica, brokolica, šampiňóny, artičoky (1,7)
+540g 8,20€
+13. MESSICANA
+paradajkový základ, mozzarella, saláma, cibuľa, feferóny, čer. fazulka, kukurica (1,7)
+570g 9,10€
+14. MISTA
+paradajkový základ, mozzarella, klobása, slanina, šampiňóny, baraní roh (1,7)
+580g 9,10€
+15. AL FRUTTI DI MARE
+paradajkový základ, mozzarella, dary mora, cesnak (1, 2, 7, 14)
+460g 9,10€
+16. QUATTRO STAGIONE
+paradajkový základ, mozzarella, šunka, šampiňóny, artičoky, olivy (1,7)
+580g 9,10€
+17. PROVINCIALE
+paradajkový základ, mozzarella, saláma, slanina, cibuľa, baraní roh, vajce (1, 3, 7)
+550g 9,10€
+18. AL POLLO
+paradajkový základ, kuracie mäso, niva, mozzarella, kukurica(1,7)
+100/500g 9,00€
+19. ALFRÉDO
+paradajkový základ, mozzarella, šunka, šampiňóny, kukurica (1, 7)
+520g 8,90€
+20. GIUSEPPE
+paradajkový základ, mozzarella, šampiňóny, talianska šunka, cibuľa, baraní roh (1,7)
+530g 10,00€
+21. COLOSEUM
+paradajkový základ, mozzarella, talianska šunka, šampiňóny, vajce, kukurica, parmezán (1,3,7)
+550g 10,00€
+22. DOLOMITI
+paradajkový základ, mozzarella, lesné hríby, talianska šunka (1, 7)
+430g 10,00€
+23. SALERMO
+paradajkový základ, mozzarella, šunka, cibuľa, encián syr (1,7)
+500g 8,90€
+24. PROSCIUTTO E SALAMI
+paradajkový základ, mozzarella, šunka, saláma, kukurica (1,7)
+540g 9,10€
+25. SPECIALITA DEL PIZZAIOLO
+paradajkový základ, mozzarella, šunka, saláma, šampiňóny (1,7)
+510g 9,10€
+26. SALSICCIA
+paradajkový základ, mozzarella, šunka, klobása, vajce, cibuľa (1,3,7)
+530g 9,10€
+27. PER DONNA
+paradajkový základ, mozzarella, šampiňóny, kuracie mäso, udený syr (1, 7)
+100/550g 9,00€
+28. CAPRICCIOSA
+paradajkový základ, mozzarella, šunka, olivy (1,7)
+520g 8,90€
+29. SPECIÁLE
+paradajkový základ, mozzarella, šunka, kukurica, saláma, olivy, vajce (1,3,7)
+520g 9,10€
+30. FUNGHI PORCINI
+mozzarella, dubáky (1,7)
+470g 8,90€
+
+
+31. DIAVOLA 
+paradajkový základ, mozzarella, saláma, cibuľa, feferónky (1,7)
+480g 9,10€
+32. CARMELO
+paradajkový základ, mozzarella, šampiňóny, olivy, cibuľa, chilli papričky, niva syr (1,7)
+520g 8,90€
+57. PIZZA VENEZIA
+paradajkový základ, šunka, mozzarella, sušené paradajky, rukola (1,7)
+480g 9,10€
+33. CALZONE I. PREKLADANÁ PIZZA
+mozzarella, šunka, šampiňóny, artičoky, paradajková omáčka (1, 7)
+560g 9,40€
+34. CALZONE II. PREKLADANÁ PIZZA
+mozzarella, tuniak, cibuľa, paradajková omáčka (1,4, 7)
+520g 9,20€
+37. CALZONE III. PREKLADANÁ PIZZA
+mozzarella, kur. mäso, les. hríby,paradajková omáčka (1, 6, 7)
+100/640g 9,40€
+151. FOCCACCIA FORMAGGIO
+pizza chlieb, mozzarella (1,7)
+290g 5,90€
+170. FRANCÚZSKA PIZZA
+kyslá smotana, mozzarella, slanina, cesnak, cibuľa (1,7)
+600g 9,20€
+171. PIZZA FANTASTICA
+paradajkový základ, mozzarella, kuracie mäso, sušené paradajky, cesnak (1, 7)
+100/530g 8,50€
+172. PIZZA CON PANNA
+smotana, mozzarella, niva syr, údený syr, šunka (1,7)
+510g 9,10€
+173. AL PROSCIUTTO E GRANTURCO
+paradajkový základ, mozzarella, šunka, kukurica (1,7)
+460g 8,10€
+180. PIZZA NAPOLI
+mozzarella, sardely, feta syr, olivy (1,7)
+470g 9,40€
+182. PIZZA PEPE
+paradajkový základ, mozzarella, talianska šunka, parmezán, rukola, čerstvé paradajky (1,7)
+530g 10,10€
+183. PIZZA PODĽA VLASTNÉHO VÝBERU
+paradajkový základ, mozzarella, + prílohy podľa výberu
+350g 7,00€ + ceny príloh
