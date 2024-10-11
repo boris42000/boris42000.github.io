@@ -132,9 +132,8 @@ paradajkový základ, mozzarella, talianska šunka, parmezán, rukola, čerstvé
 183. PIZZA PODĽA VLASTNÉHO VÝBERU
 paradajkový základ, mozzarella, + prílohy podľa výberu
 350g 7,00€ + ceny príloh
+
 ========PIZZA SLIMAKY
-
-
 175. MINI LUMACHE PROSCIUTTO
 mozzarella, šunka (1,7)
 360g 8,20€
@@ -153,3 +152,59 @@ mozzarella, saláma (1,7)
 181. MINI LUMACHE ACCIUGA 
 mozzarella, sardely (1,7)
 320g 8,20€
+
+========STEAKY
+
+88. PETTI DI POLLO CLASSICO
+kurací steak (6,1)
+150g 8,20€
+89. PETTI DI POLLO CON BROCCOLI
+kurací steak zapečený s brokolicou a mozzarellou (6,7,1)
+150g 9,50€
+90. PETTI DI POLLO AL QUATRO FORMAGGIO 
+kurací steak s omáčkou 4 druhy syra (6,7,1)
+150g 9,50€
+92. PETTI DI POLLO DELIKATES
+kurací steak, šunka, šampiňóny, cesnak, smotanová omáčka (6,7)
+150g 9,50€
+93. PETTI DI POLLO CON PANCETTA E UOVO 
+kurací steak so slaninou a volským okom (1,3,6,7)
+150g 9,50€
+94. PETTI DI POLLO CON MANDORLA 
+kurací steak s ananásom, mandľami, kari a smotanou (6, 7, 8)
+150g 9,50€
+95. FILETTO DI MAIALE CON VERDURE
+grilovaná br. panenka s gril zeleninou (1)
+200g 12,40€
+97. FILETTO DI MAIALE CON CAPRESE 
+medailónky z br. panenky s grilovanou cuketou, zapekané s mozzarellou (7,1)
+150g 11,00€
+98. PASTICCIO DI MAIALE E POLLO
+zmes br. panenky a kuracieho mäsa s cuketou, cibuľou a šampiňónmi (1)
+150g 11,00€
+99. FILETTO DI MAIALE CON PORCINI 
+grilovaná br. panenka na smotane s lesnými hríbami (6,7)
+200g 11,50€
+147. FILETTO DI MAIALE CON POMODORI SECCHI 
+grilovaná br. panenka na smotane so sušenými paradajkami a dijonskou horčicou (6,7,10)
+200g 11,50€
+193. PICCATA ALLA PARMA
+vyprážaná bravčová panenka v parmezánovom obale (1,3,7)
+150g 11,00€
+
+=========Ryby
+
+149. SALMONE CON BURRO ALLE ERBE
+grilovaný filet z lososa s bylinkovým maslom, toasty (4,7)
+150g 12,40€
+156. SALMONE CON SPINACI
+grilovaný filet z lososa s listovým špenátom a cesnakom (4,7)
+150/220g 12,40€
+157. SPAGHETTI AL NERO DI SEPPIA CON SALMONE 
+sépiové špagety, losos, smotanovo-paradajková omáčka, cherry paradajky (1,4,7,14)
+380g 11,60€
+158. SPAGHETTI AL NERO DI SEPPIA CON FRUTTI DI MARE 
+sépiové špagety, dary mora, cesnak, cuketa, cherry paradajky (1,2,14)
+360g 11,60€
+
+=========Pasta
