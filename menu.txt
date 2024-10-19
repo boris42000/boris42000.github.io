@@ -208,3 +208,137 @@ sépiové špagety, dary mora, cesnak, cuketa, cherry paradajky (1,2,14)
 360g 11,60€
 
 =========Pasta
+
+38. SPAGHETTI BOLOGNESE
+bolognese omáčka, paradajky, parmezán (1, 6, 7, 9)
+390 g 8,10€
+39. TAGLIATELLE DI SPINACI E PROSCIUTTO 
+špenát, šunka, slanina, cesnak, smotana, syr (1,6,7)
+420 g 8,10€
+40. FETUCCINE GENOVESE CON ZUCCHINE 
+cuketa, kuracie mäso, parmezán, bazalková pasta v olivovom oleji (1,6,7)
+100/400 g 8,80€
+41. SPAGHETTI AL CAPONE
+slanina, vajce, smotana, parmezán (1, 3, 6, 7)
+400 g 8,10€
+43. PENNE ANIMATA
+kuracie mäso, pór, kukurica, šampiňóny, smotana, syr (1,6,7)
+100/500 g 8,30€
+44. PENNE BROCCOLI
+brokolica, pór, baby karotka, smotana, syr (1,6,7)
+450 g 8,20€
+45. FARFALLE MARCO POLLO
+kuracie mäso, ananás, kari, smotana (1,7)
+100/420 g 8,20€
+46. PENNE PROSCIUTTO
+šunka, šampiňóny, smotana, syr (1, 6, 7)
+430 g 8,00€
+47. FARFALLE CON ZUCCHINE
+cuketa, brokolica, šampiňóny, pór, smotana, (1,6,7)
+530 g 8,10€
+49. PENNE ARRABIATA
+šunka, slanina, cibuľa, cesnak, chilli papričky, paradajky, parmezán (1,6,7)
+410 g 8,10€
+50. PENNE MESSICANA
+tuniak, chilli papričky, paradajky, parmezán, červená fazuľa (1,4,6,7)
+410 g 8,30€
+51. SPAGHETTI POLLO CON POMODORI SECCHI
+kuracie mäso, sušené paradajky, cesnak, olivový olej, parmezán (1,7)
+100/320 g 8,40€
+52. SPAGHETTI MILANESE
+kuracie mäso, gorgonzola, smotana, orechy (1,6,7,8)
+100/400 g 8,40€
+53. FARFALLE CON FUNGHI MISTI
+lesná hríbová zmes, smotana, syr (1,6,7)
+400 g 8,30€
+54. PENNE QUATRO FORMAGGI
+omáčka-4 druhy syra (1,6,7)
+420 g 8,00€
+55. FETUCCINE CON SALMONE
+losos, smotanovo-paradajková omáčka, syr (1, 4, 6, 7)
+380 g 10,10€
+56. PENNE TONNO
+tuniak, smotanovo-paradajková omáčka, parmezán (1,4,6,7)
+400 g 8,30€
+58. FETUCCINE VENEZIA
+šunka, suš. paradajky, oliv. olej, parmezán, rukola (1, 7)
+440 g 8,70€
+59. GNOCCHI CON FUNGHI
+zemiakové noky, šampiňóny, cuketa, smotana (1, 6, 7)
+430 g 8,20€
+60. GNOCCHI DELLA CASA
+zemiakové noky, šunka, kukurica, pór, smotana (1,6,7)
+440 g 8,40€
+61. GNOCCHI VERDI FORMAGGI 
+zemiakové noky, smotana, 4 druhy syra, špenát, cesnak (1, 6, 7)
+350 g 8,60€
+62. GNOCCHI CON POLLO
+zemiakové noky, kuracie mäso, dubáky, syrová omáčka (1, 6, 7)
+100/410 g 8,70€
+152. SPAGHETTI AGLIO
+cesnak, olivový olej, chilli papričky, parmezán (1,7)
+280 g 5,90€
+153. SPAGHETTI POMODORO
+cherry paradajky, cesnak, parmezán, bazalka (1,7)
+350 g 5,90€
+154. SPAGHETTIPOLLO CON POMODORI SECCHI E CON PANNA
+kuracie mäso, sušené paradajky, cesnak, olivový olej, parmezánová omáčka (1,7)
+100/320 g 8,70€
+=========Zapekané Cestoviny
+63. FARFALLE DELLA CHEF-zapekané 
+kuracie mäso, šampiňóny, cibuľa, smotana,mozzarella (1, 6, 7)
+100/500 g 9,30€
+64. FARFALLE VITA-zapekané
+šunka, cuketa, kukurica, smotana, mozzarella (1, 6, 7)
+530 g 9,30€
+65. PENNE AL FORNO-zapekané
+bolognese omáčka, smotana, paradajky, mozzarella (1,6,7,9)
+450 g 9,10€
+66. PENNE VICENZA-zapekané
+šunka, šampiňóny, paradajky, smotana, mozzarella, pór (1,7)
+500 g 9,10€
+67. PENNE AL BROCCOLI-zapekané 
+brokolica, kuracie mäso, smotana, mozzarella (1, 6, 7)
+100/470 g 9,30€
+68. FARFALE CON MAIS-zapekané
+dubáky, kukurica, pór, smotana, mozzarella (1, 6, 7)
+500 g 9,10€
+69. GNOCCHI FLORENTINA-zapekané 
+zemiakové noky, kuracie mäso, parmezánová omáčka, cesnak (1,7)
+100/410 g 9,30€
+==========RIZOTO
+84. RISOTTO SPINACI CON POLLO 
+kuracie mäso, špenát, cesnak, šampiňóny, smotana, mozzarella (6,7)
+100/460 g 8,90€  
+85. RISOTTO CON POLLO E FUNGHI MISTI 
+kuracie mäso, kukurica, pór, dubáky, sójová omáčka, mozzarella (6,7)
+100/400 g 8,90€
+86. RISOTTO VEGETARIANO
+kukurica, baby karotka, brokolica, cesnak, hrášok, cibuľa, paradajky, mozzarella (6, 7)
+420 g 8,70€
+87. RISOTTO CALABRIA
+kuracie mäso, šampiňóny, kukurica, cibuľa, paradajky, mozzarella (6,7)
+100/360 g 8,90€
+===========SALATY
+
+71. INSALATA CON POLLO
+miešaný šalát z čerstvej zeleniny, rukola, kuracie medailónky, dressing (7)
+100/400 g 8,70€
+72. INSALATA DI TONNO E VERDURE 
+miešaný šalát z čerstvej zeleniny, rukola, tuniak vajce, kukurica, pór (3, 4)
+420 g 8,70€
+73. INSALATA MISTA E FORMAGGIO MARINATO
+miešaný šalát z čerstvej zeleniny, rukola, olivy, údený syr, syr feta (7)
+400 g 8,70€
+74. INSALATA CLASSICO
+miešaný šalát z čerstvej zeleniny, rukola, kukurica, syr, šunka, vajce, dressing (1,4,7)
+420 g 8,70€
+77. INSALATA MISTA CON POLLO 
+miešaný šalát z čerstvej zeleniny, rukola, kuracie medailónky na mandliach (8)
+100/360 g 8,70€
+79. INSALATA NATUR
+miešaný šalát z čerstvej zeleniny, rukola,
+300 g 5,00€
+81. INSALATA CAESAR
+rímsky šalát, caesar dressing, krutóny, hobliny parmezánu, slanina, kuracie medailónky (1,3,4,7,10)
+100/350 g 9,90€
