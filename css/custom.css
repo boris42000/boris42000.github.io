@@ -6,5 +6,4 @@
     html:not(.ie-11):not(.ios) .parallax-disabled {
         background-attachment: unset;
     }
-
 }
