@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .mainlogo {
+        width: 80%;
+    }
+
+    html:not(.ie-11):not(.ios) .parallax-disabled {
+        background-attachment: unset;
+    }
+
+}
