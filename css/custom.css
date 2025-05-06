@@ -1,3 +1,12 @@
+.box-pricing-dots {
+    text-transform: lowercase;
+}
+
+.box-pricing-title .box-pricing-name {
+    padding-top: 5px;
+    color: #333;
+}
+
 @media (max-width: 768px) {
     .mainlogo {
         width: 80%;
@@ -5,5 +14,10 @@
 
     html:not(.ie-11):not(.ios) .parallax-disabled {
         background-attachment: unset;
+    }
+
+    .box-pricing-item:nth-of-type(2n) .box-pricing-title .box-pricing-name,
+    .box-pricing-item:nth-of-type(2n) .box-pricing-title .box-pricing-price {
+        color: #777;
     }
 }
