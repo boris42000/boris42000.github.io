@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>ABMaudit</title>
+  <rect width="512" height="512" rx="112" fill="#0B1B2B"/>
+  <!-- The A arch and its low crossbar, lifted from the ABM monogram. The full
+       three-letter mark turns to mush below 32px; this element carries the
+       identity on its own and stays legible in a browser tab. -->
+  <g fill="none" stroke="#D4A03C" stroke-width="36" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M180 396 V202 A76 76 0 0 1 332 202 V396"/>
+    <path d="M104 312 H332"/>
+  </g>
+</svg>

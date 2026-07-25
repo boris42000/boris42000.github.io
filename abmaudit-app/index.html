@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1b2b" />
+
+    <!--
+      Gates the scroll-reveal styles, and must run before first paint: the build
+      ships pre-rendered markup, so if this were set from the bundle the content
+      would paint, then be hidden by `.js .reveal`, then fade back in.
+      Being a script, it simply never runs when JS is off — which is exactly when
+      we want the page to render fully visible.
+    -->
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
+
+    <title>ABMaudit — audit, účtovníctvo, mzdy a daňové poradenstvo | Topoľčany</title>
+    <meta
+      name="description"
+      content="ABM AUDIT s.r.o. — audítorská a účtovná spoločnosť v Topoľčanoch. Od roku 1996 poskytujeme audit účtovnej závierky, vedenie účtovníctva, spracovanie miezd a daňové poradenstvo."
+    />
+    <link rel="canonical" href="https://www.abmaudit.sk/" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="alternate icon" href="./favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sk_SK" />
+    <meta property="og:site_name" content="ABMaudit" />
+    <meta property="og:title" content="ABMaudit — audit, účtovníctvo, mzdy a daňové poradenstvo" />
+    <meta
+      property="og:description"
+      content="Audítorská a účtovná spoločnosť v Topoľčanoch. Od roku 1996 pod dohľadom licencovaného daňového poradcu a audítora."
+    />
+    <meta property="og:url" content="https://www.abmaudit.sk/" />
+    <meta property="og:image" content="https://www.abmaudit.sk/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AccountingService",
+        "name": "ABM AUDIT s.r.o.",
+        "alternateName": "ABMaudit",
+        "url": "https://www.abmaudit.sk/",
+        "email": "abmaudit@abmaudit.sk",
+        "telephone": "+421915743058",
+        "foundingDate": "1996",
+        "description": "Audítorská a účtovná spoločnosť v Topoľčanoch. Audit účtovnej závierky, vedenie jednoduchého a podvojného účtovníctva, spracovanie miezd a daňové poradenstvo.",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Pribinova 1",
+          "addressLocality": "Topoľčany",
+          "postalCode": "955 01",
+          "addressCountry": "SK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.5595187,
+          "longitude": 18.1764293
+        },
+        "areaServed": { "@type": "Country", "name": "Slovensko" },
+        "founder": {
+          "@type": "Person",
+          "name": "Ing. Miroslav Bobocký",
+          "jobTitle": "Daňový poradca a audítor"
+        },
+        "knowsLanguage": ["sk"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Služby",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit účtovnej závierky" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vedenie účtovníctva" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spracovanie miezd" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Daňové poradenstvo" } }
+          ]
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Čo zahŕňa vedenie účtovníctva?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Priebežné vedenie jednoduchého a podvojného účtovníctva, spracovanie a podanie priznania k DPH, nastavenie účtovných výstupov podľa požiadaviek klienta, priebežné účtovné a daňové poradenstvo, vypracovanie a podanie daňového priznania, zostavenie účtovnej závierky, jej zverejnenie v zbierke listín a zastupovanie klienta pred správcom dane."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Potrebujem účtovnú závierku overenú audítorom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Účtovnú závierku musí mať overenú audítorom obchodná spoločnosť, ktorá povinne vytvára základné imanie, a družstvo, ak sú ku dňu zostavenia závierky a za bezprostredne predchádzajúce účtovné obdobie splnené aspoň dve z týchto podmienok: celková suma majetku presiahla 1 000 000 €, čistý obrat presiahol 2 000 000 €, priemerný prepočítaný počet zamestnancov presiahol 30."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Čo zahŕňa spracovanie miezd?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vyhotovenie pracovných zmlúv a dohôd, výpočet miezd podľa evidencie dochádzky, výplatné listiny, vedenie mzdových listov, mesačné výkazy do poisťovní, príkazy na úhradu miezd a odvodov, potvrdenia o zdaniteľnej mzde, ročné zúčtovanie preddavkov na daň, zápočtové listy a podanie prehľadov aj ročných hlásení na daňový úrad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Čo ponúka daňové poradenstvo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Daňové poradenstvo podľa jednotlivých druhov daní pre právnické aj fyzické osoby, odborné stanoviská, daňové plánovanie, daňový audit, vypracovanie daňových priznaní, zastupovanie pred správcom dane pri daňovom konaní a kontrole, aplikáciu zmlúv o zamedzení dvojitého zdanenia a vybavovanie vrátenia DPH zahraničným osobám."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

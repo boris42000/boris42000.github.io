@@ -1,0 +1,262 @@
+/* `source(none)` is load-bearing: without it Tailwind v4 auto-detects sources from
+   the git root and harvests Bootstrap class names out of ../Coloseum and ../OldWeb,
+   which quietly triples the emitted CSS. Scan only this app. */
+@import 'tailwindcss' source(none);
+@source './';
+@source '../index.html';
+
+/* Variable fonts, self-hosted. Both ship latin-ext, so Slovak diacritics
+   (ľ š č ť ž ň ô ä) resolve without falling back to a system face. */
+/* `wght` axis only: 36.6 kB vs 67.3 kB for the opsz build. Fraunces is the LCP
+   element's face, so halving it is worth more than optical sizing. */
+@import '@fontsource-variable/fraunces/wght.css';
+@import '@fontsource-variable/plus-jakarta-sans/wght.css';
+
+@theme {
+  /* ---- Palette: deep blue base, gold used sparingly ---- */
+  --color-ink: #0b1b2b;
+  --color-ink-800: #12293f;
+  --color-deep: #0f2e4a;
+  --color-primary: #1c5c93;
+  --color-brand: #2e7dbe;
+  --color-brand-lo: #9eccf4;
+  --color-brand-50: #eff7fd;
+  --color-accent: #d4a03c;
+  --color-accent-hi: #e8bc63;
+  --color-accent-lo: #f0d9a8;
+  --color-surface: #f5f9fc;
+  --color-paper: #ffffff;
+  --color-muted: #5c768d;
+  --color-slate: #374a5b;
+  --color-line: #dbe7f0;
+
+  /* ---- Type ---- */
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Radii ---- */
+  --radius-card: 1.25rem;
+  --radius-xl2: 1.75rem;
+
+  /* ---- Layered, blue-tinted shadows. Black shadows are the tell of a default theme. ---- */
+  --shadow-soft: 0 1px 2px rgb(11 27 43 / 0.04), 0 12px 32px -8px rgb(11 27 43 / 0.1);
+  --shadow-lift: 0 2px 4px rgb(11 27 43 / 0.05), 0 24px 56px -12px rgb(11 27 43 / 0.2);
+  --shadow-gold: 0 8px 28px -8px rgb(212 160 60 / 0.45);
+
+  /* ---- Motion ---- */
+  --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-slate font-sans antialiased;
+    font-optical-sizing: auto;
+    /* Nothing may push the page sideways on a phone. */
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-ink font-display;
+    font-optical-sizing: auto;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* iOS zooms the viewport when a focused input is under 16px. Never allow that. */
+  input, textarea, select {
+    font-size: 16px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  /* Fluid display sizes — one ladder, no separate mobile scale. */
+  .t-display {
+    font-size: clamp(2.5rem, 8.4vw, 5.25rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+
+  .t-h2 {
+    font-size: clamp(1.95rem, 5.2vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+  }
+
+  .t-h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+  }
+
+  .t-eyebrow {
+    @apply font-sans text-[0.72rem] font-bold uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  .t-lead {
+    font-size: clamp(1.0625rem, 1.8vw, 1.22rem);
+    line-height: 1.65;
+  }
+
+  /* Page gutter. Generous on desktop, tight enough to breathe at 375px. */
+  .shell {
+    @apply mx-auto w-full max-w-[78rem] px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Vertical rhythm — used everywhere so section spacing is never ad-hoc. */
+  .section-y {
+    padding-block: clamp(4.5rem, 10vw, 8rem);
+  }
+
+  /* Gold underline flourish — exactly one word per major heading. */
+  .gold-underline {
+    background-image: linear-gradient(to top, var(--color-accent-lo) 0.14em, transparent 0.14em);
+    padding-inline: 0.06em;
+  }
+
+  .glass {
+    background: rgb(255 255 255 / 0.08);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid rgb(255 255 255 / 0.16);
+  }
+
+  /* Fine paper grain over the dark sections. Inline SVG, static — never animated. */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
+  }
+
+  .rule-gold {
+    background: linear-gradient(to right, transparent, rgb(212 160 60 / 0.55), transparent);
+    height: 1px;
+  }
+
+  /* Gradient text used on the big numerals and one hero word. */
+  .text-gradient-gold {
+    background-image: linear-gradient(96deg, var(--color-accent-hi) 0%, var(--color-accent-lo) 55%, var(--color-accent-hi) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---- Scroll reveal ----
+   Scoped to `html.js`, which main.tsx sets on boot. Content is therefore only ever
+   hidden when the script that will reveal it is actually running: no JS, a script
+   error, or an old browser without IntersectionObserver all fall back to a fully
+   visible page rather than a blank one. */
+.js .reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.62s var(--ease-out-soft) var(--reveal-delay, 0ms),
+    transform 0.62s var(--ease-out-soft) var(--reveal-delay, 0ms);
+}
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+@media (max-width: 640px) {
+  .js .reveal {
+    transform: translate3d(0, 12px, 0);
+  }
+}
+
+/* Printing must never lose content to an un-fired reveal. */
+@media print {
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- Hero mesh: transform-only keyframes, stays on the compositor ---- */
+@keyframes drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(6%, -8%, 0) scale(1.15); }
+}
+@keyframes drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.1); }
+  50%      { transform: translate3d(-8%, 6%, 0) scale(0.92); }
+}
+@keyframes drift-c {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(0.95); }
+  50%      { transform: translate3d(5%, 7%, 0) scale(1.2); }
+}
+@keyframes float-chip {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -8px, 0); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+.blob { will-change: transform; }
+.blob-a { animation: drift-a 26s ease-in-out infinite; }
+.blob-b { animation: drift-b 32s ease-in-out infinite; }
+.blob-c { animation: drift-c 38s ease-in-out infinite; }
+.float-chip { animation: float-chip 7s ease-in-out infinite; }
+
+/* A 40-second drift is imperceptible on a phone but costs continuous
+   compositing and battery — drop the animation, keep the gradient. */
+@media (max-width: 640px) {
+  .blob-a, .blob-b, .blob-c, .float-chip {
+    animation: none;
+  }
+  .blob { will-change: auto; }
+}
+
+/* ---- Global reduced-motion kill switch ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
