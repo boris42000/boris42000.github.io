@@ -78,7 +78,7 @@ export const about = {
   eyebrow: 'O nás',
   titleBefore: 'Dvadsať rokov skúseností je',
   highlight: 'štandard',
-  titleAfter: '. My máme viac.',
+  titleAfter: '. My sme tu dlhšie.',
   paragraphs: [
     `Všetky naše služby poskytujeme od roku ${FOUNDED_YEAR} prostredníctvom tímu kvalifikovaných účtovníčok, ktoré pracujú pod dohľadom licencovaného daňového poradcu a audítora Ing. Miroslava Bobockého.`,
     'Naša spoločnosť ABM AUDIT s.r.o. je audítorskou spoločnosťou. Evidenčné číslo licencie spoločnosti, vydanej Slovenskou komorou audítorov a oprávňujúcej na výkon činnosti, je 000242.',
