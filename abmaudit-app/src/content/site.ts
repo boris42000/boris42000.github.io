@@ -46,7 +46,7 @@ export const nav = [
   { label: 'Domov', href: '#domov' },
   { label: 'O nás', href: '#o-nas' },
   { label: 'Služby', href: '#sluzby' },
-  { label: 'Referencie', href: '#referencie' },
+  { label: 'Naši klienti', href: '#klienti' },
   { label: 'Časté otázky', href: '#faq' },
   { label: 'Kontakt', href: '#kontakt' },
 ] as const
@@ -182,45 +182,25 @@ export const services: Service[] = [
 ]
 
 /**
- * ⚠️ ZÁSTUPNÝ TEXT — NIE SÚ TO SKUTOČNÉ REFERENCIE.
+ * Sekcia „Naši klienti".
  *
- * Mená klientov aj názvy spoločností sú zámerne v hranatých zátvorkách,
- * aby ich nikto nepovažoval za reálne. Pred spustením webu ich nahraďte
- * skutočnými referenciami, ku ktorým máte súhlas klienta — alebo celú
- * sekciu odstráňte (v `App.tsx` zmažte riadok `<Testimonials />`).
+ * LOGÁ: nahrajte súbory (SVG/PNG/JPG/WebP) do priečinka `src/assets/clients/`
+ * — na stránke sa objavia automaticky pri ďalšom builde. Názov súboru sa
+ * použije ako názov klienta. Podrobný návod: `src/assets/clients/README.md`.
+ *
+ * KLIENTI BEZ LOGA: doplňte ich názvy do poľa `names` nižšie — zobrazia sa
+ * ako textové karty vedľa lôg.
  */
-export const testimonialsArePlaceholders = true
-
-export const testimonials = [
-  {
-    quote:
-      'Účtovníctvo sme mali roky rozhádzané medzi dvoma ľuďmi. Prevzatie prebehlo bez výpadku a odvtedy máme mesačné výstupy vždy načas.',
-    name: '[Meno klienta]',
-    role: 'konateľ',
-    org: '[Názov spoločnosti]',
-  },
-  {
-    quote:
-      'Pri prvom povinnom audite sme netušili, čo nás čaká. Dostali sme presný zoznam podkladov a celé to prebehlo pokojnejšie, než sme čakali.',
-    name: '[Meno klienta]',
-    role: 'finančná riaditeľka',
-    org: '[Názov spoločnosti]',
-  },
-  {
-    quote:
-      'Oceňujem, že mám jednu účtovníčku, ktorá pozná našu firmu. Nemusím pri každej otázke vysvetľovať kontext odznova.',
-    name: '[Meno klienta]',
-    role: 'majiteľ',
-    org: '[Názov spoločnosti]',
-  },
-  {
-    quote:
-      'Pri daňovej kontrole nás zastupovali a komunikovali priamo s úradom. Ušetrilo nám to týždne práce a dosť nervov.',
-    name: '[Meno klienta]',
-    role: 'konateľ',
-    org: '[Názov spoločnosti]',
-  },
-]
+export const clients = {
+  eyebrow: 'Naši klienti',
+  titleBefore: 'Firmy, ktoré nám',
+  highlight: 'dôverujú',
+  titleAfter: '.',
+  lead:
+    'Účtovníctvo, mzdy, audit a daňové poradenstvo spracúvame pre spoločnosti rôznych veľkostí a odvetví.',
+  /** Klienti bez loga — každý názov sa zobrazí ako textová karta. */
+  names: [] as string[],
+}
 
 export type FaqItem = { q: string; a?: string; list?: string[] }
 

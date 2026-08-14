@@ -70,7 +70,11 @@ export function SectionHeading({
       <Reveal delay={60}>
         <h2 className={cn('t-h2', tone === 'light' && 'text-white')}>
           {titleBefore}{' '}
-          {highlight && <span className="gold-underline">{highlight}</span>}
+          {highlight && (
+            <span className={tone === 'light' ? 'text-gradient-gold' : 'text-primary'}>
+              {highlight}
+            </span>
+          )}
           {titleAfter}
         </h2>
       </Reveal>

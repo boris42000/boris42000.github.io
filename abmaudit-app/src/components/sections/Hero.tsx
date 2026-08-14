@@ -21,23 +21,7 @@ export function Hero() {
 
             <h1 className="t-display mt-6 text-white">
               {hero.titleBefore}{' '}
-              <span className="relative whitespace-nowrap">
-                <span className="text-gradient-gold">{hero.highlight}</span>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 200 12"
-                  preserveAspectRatio="none"
-                  className="absolute -bottom-1 left-0 h-2.5 w-full text-accent/70"
-                >
-                  <path
-                    d="M2 8 C 50 2, 150 2, 198 7"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
+              <span className="text-gradient-gold">{hero.highlight}</span>
               {hero.titleAfter}
             </h1>
 

@@ -7,9 +7,7 @@
 
 /* Variable fonts, self-hosted. Both ship latin-ext, so Slovak diacritics
    (ľ š č ť ž ň ô ä) resolve without falling back to a system face. */
-/* `wght` axis only: 36.6 kB vs 67.3 kB for the opsz build. Fraunces is the LCP
-   element's face, so halving it is worth more than optical sizing. */
-@import '@fontsource-variable/fraunces/wght.css';
+@import '@fontsource-variable/space-grotesk/wght.css';
 @import '@fontsource-variable/plus-jakarta-sans/wght.css';
 
 @theme {
@@ -31,7 +29,7 @@
   --color-line: #dbe7f0;
 
   /* ---- Type ---- */
-  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
 
   /* ---- Radii ---- */
@@ -129,12 +127,6 @@
   /* Vertical rhythm — used everywhere so section spacing is never ad-hoc. */
   .section-y {
     padding-block: clamp(4.5rem, 10vw, 8rem);
-  }
-
-  /* Gold underline flourish — exactly one word per major heading. */
-  .gold-underline {
-    background-image: linear-gradient(to top, var(--color-accent-lo) 0.14em, transparent 0.14em);
-    padding-inline: 0.06em;
   }
 
   .glass {

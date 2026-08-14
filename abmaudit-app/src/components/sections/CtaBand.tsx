@@ -23,7 +23,7 @@ export function CtaBand() {
           <Reveal className="max-w-xl">
             <h2 className="t-h2 text-white">
               Potrebujete poradiť? Prvá konzultácia je{' '}
-              <span className="gold-underline text-white">nezáväzná</span>.
+              <span className="text-gradient-gold">nezáväzná</span>.
             </h2>
             <p className="t-lead mt-4 text-brand-lo">
               Povedzte nám, ako máte účtovníctvo nastavené dnes. Navrhneme, čo prevziať a

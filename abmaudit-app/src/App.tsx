@@ -6,7 +6,7 @@ import { About } from './components/sections/About'
 import { Stats } from './components/sections/Stats'
 import { Services } from './components/sections/Services'
 import { Faq } from './components/sections/Faq'
-import { Testimonials } from './components/sections/Testimonials'
+import { Clients } from './components/sections/Clients'
 import { CtaBand } from './components/sections/CtaBand'
 import { Contact } from './components/sections/Contact'
 
@@ -28,7 +28,7 @@ export default function App() {
         <Stats />
         <Services />
         <Faq />
-        <Testimonials />
+        <Clients />
         <CtaBand />
         <Contact />
       </main>
