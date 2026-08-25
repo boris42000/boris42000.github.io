@@ -30,3 +30,10 @@ dist/
 # Misc
 .cache/
 .prettierignore
+
+# sarahkophg — only the optimized derivatives in img/ are committed.
+# The masters in photos/ live on disk only; back them up separately.
+sarahkophg/photos/
+sarahkophg/desig_inspo/
+sarahkophg/tools/node_modules/
+sarahkophg/_preview.html

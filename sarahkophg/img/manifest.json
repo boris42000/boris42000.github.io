@@ -1,0 +1,223 @@
+{
+  "portret-01": {
+    "cat": "portret",
+    "alt": "Profil ženy so steblami trávy cez tvár, tmavý čiernobiely portrét",
+    "width": 2856,
+    "height": 4290,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600,
+      2000
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAwYE/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIAAwQRBSESEzFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMoBLfS6qGI0DL+OxRk5ARjoRjzFK0VoifBATahJ2YQNEOKbDvDp2ol2bQMqhm8CCBH3irL2JzXAAEAdQMM9ZVyD+QjnKwlN7EH7CB//2Q=="
+  },
+  "portret-02": {
+    "cat": "portret",
+    "alt": "Žena držiaca steblá tráv pri tvári, mäkké svetlo",
+    "width": 2856,
+    "height": 4290,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQFBv/EACEQAAICAQQCAwAAAAAAAAAAAAECAAMEBREhMRMiFEFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOeWu3Hf2Ugwyb2tAU9CXcq52RWsHET49dtBsXuBQXgQjioB2hA0LCtlIUyKhXpB25B+olbbqJPhMXyvGejAcmkWZC+RGABhNhNOsC+l2w/IQP/Z"
+  },
+  "portret-03": {
+    "cat": "portret",
+    "alt": "Detail profilu tváre za rozostrenými steblami trávy",
+    "width": 2856,
+    "height": 4290,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBBAUD/8QAIRAAAgIBBAIDAAAAAAAAAAAAAQIAAwQFERIhMUEyYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AUQs6Csnx3BATsNpraLSDmDkoYfcCjXp2TYoZam2/IR5fKrrPEKoA9QgJa1AAErtNDTbEptLE9xht0nHaorxmDm6cMdjwaBOTkM9xIPUJQr5lfl7hA//Z"
+  },
+  "tehotenske-01": {
+    "cat": "tehotenske",
+    "alt": "Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAIDBAYBBf/EACEQAAICAgEEAwAAAAAAAAAAAAECAAMEERIFITFRIkFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APPzupPlZDa7L9RMVyXBY+JSrBc/sbLY0qoTsfcDV1WUmsctbhMomVdwG2MIHKrlTvqRZdwuddeIg8ai2L8dwJmfjoD1CVuRhA//2Q=="
+  },
+  "tehotenske-02": {
+    "cat": "tehotenske",
+    "alt": "Objatie páru v lese, tehotenské fotenie",
+    "width": 3812,
+    "height": 5718,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQb/xAAgEAACAgMAAQUAAAAAAAAAAAABAgADERIhEwQiMUFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOb9QulgT7jq28aYPTEOjPeMmbaNGAz2BaroVBPzCQmxoQHX2L5shcYkzttZkmUvYHrJK9kbe45gPGmOnsInT9hA/9k="
+  },
+  "tehotenske-03": {
+    "cat": "tehotenske",
+    "alt": "Pár na prechádzke medzi stromami, protisvetlo",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAfEAACAgICAwEAAAAAAAAAAAABAgADBBEFIRIUQVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6lchFcL5CZnJZ2M/lUx7+GRcjd69503z9nM25DPmDbdbgX3UlrCVJIhKveSsBUUEahAzcl7GO2ctM11YWbMryr9NoDUTY21BMBq9gEtCIDnUIH//2Q=="
+  },
+  "tehotenske-04": {
+    "cat": "tehotenske",
+    "alt": "Ruky na tehotenskom brušku, tieň tráv na koži",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAfEAACAgEFAQEAAAAAAAAAAAABAgADEQQFEiExE1H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AU2S2tawDmd1LFReTDH5mS226lEavroeymt1NFtAHRgJXbji09ZhMnWvkeK5EIEwrFFyI7ptVZwwSYiWyMTShiDA6X3sHjYhFGtIMIH//2Q=="
+  },
+  "rodina-01": {
+    "cat": "rodina",
+    "alt": "Detské nôžky v dlaniach rodičov",
+    "width": 2400,
+    "height": 1600,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQL/xAAiEAACAgECBwEAAAAAAAAAAAABAgADEQQSBRMUISIxUUL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Ah101rjb5N8jp0i2IFsAXPqc6PaPyM/Y41gfsyA4gRrOHIjkc0Qm6xB1De4QP/9k="
+  },
+  "rodina-02": {
+    "cat": "rodina",
+    "alt": "Spiace novorodeniatko, detail tváre",
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EAB4QAAIDAAMAAwAAAAAAAAAAAAECAAMRBBMhEjIz/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AD8WpUrBY4ZqLEss61heSxRl36kTFdquBDbsDW+pVtIMo0hLcYj0iUAvOIf4JV7kyqpZ3BbzInhqq+kaZ299dbfnAh2KMVNEolOWGUEJkoH/2Q=="
+  },
+  "rodina-03": {
+    "cat": "rodina",
+    "alt": "Malá pästička držiaca prst dospelého",
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQCBQEDBv/EACAQAAICAgICAwAAAAAAAAAAAAECAAMREgQFIVEiMkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5hq2IBxLXqqsoSRIVPUwwRHuLYo+IXECLphiISHJNi3EBSRCAy/W11uLx9fU1W2Vq+48D9le/Y3MdSTr6mXvDALrAZs5ru2UXxCJG1wcA4EIH//Z"
+  }
+}
