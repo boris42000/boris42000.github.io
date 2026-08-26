@@ -66,9 +66,31 @@
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBBAUD/8QAIRAAAgIBBAIDAAAAAAAAAAAAAQIAAwQFERIhMUEyYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AUQs6Csnx3BATsNpraLSDmDkoYfcCjXp2TYoZam2/IR5fKrrPEKoA9QgJa1AAErtNDTbEptLE9xht0nHaorxmDm6cMdjwaBOTkM9xIPUJQr5lfl7hA//Z"
   },
+  "portret-04": {
+    "cat": "portret",
+    "alt": "Žena zaklonená v tráve so zavretými očami, mäkké svetlo",
+    "width": 2856,
+    "height": 4290,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAYB/8QAHhAAAgMAAgMBAAAAAAAAAAAAAAECAxESMQQTISL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AykYt9E/VJvOLLXhKHJOWYaCdvgqjOK5Z2BlnS18YFi6yLtlnQALrSjv6GWXpwSRRU2dc3gEnP6ApyAD/2Q=="
+  },
   "tehotenske-01": {
     "cat": "tehotenske",
-    "alt": "Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle",
+    "alt": "Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia",
     "width": 4000,
     "height": 6000,
     "widths": [
@@ -86,7 +108,7 @@
       400,
       800
     ],
-    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAIDBAYBBf/EACEQAAICAgEEAwAAAAAAAAAAAAECAAMEERIFITFRIkFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APPzupPlZDa7L9RMVyXBY+JSrBc/sbLY0qoTsfcDV1WUmsctbhMomVdwG2MIHKrlTvqRZdwuddeIg8ai2L8dwJmfjoD1CVuRhA//2Q=="
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQGBf/EACEQAAICAgIBBQAAAAAAAAAAAAECAAMEERIhMQUiQVFx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EABkRAAMBAQEAAAAAAAAAAAAAAAABERICUf/aAAwDAQACEQMRAD8A52d6k+VkNrpfiMxWJcFj4lOsF/2Oy3NSqE6MnlsNSNTVbSaxy1uEyqZVvEbJhJZ79DUFVyr3qRZdwtdddCRjxEsX27mlCEzPx0B9QlbkYRYNT//Z"
   },
   "tehotenske-02": {
     "cat": "tehotenske",
@@ -154,6 +176,72 @@
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAfEAACAgEFAQEAAAAAAAAAAAABAgADEQQFEiExE1H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AU2S2tawDmd1LFReTDH5mS226lEavroeymt1NFtAHRgJXbji09ZhMnWvkeK5EIEwrFFyI7ptVZwwSYiWyMTShiDA6X3sHjYhFGtIMIH//2Q=="
   },
+  "tehotenske-05": {
+    "cat": "tehotenske",
+    "alt": "Tehotenské bruško s poľnými kvetmi, farebná fotografia",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUEBgECA//EAB8QAAEEAgIDAAAAAAAAAAAAAAEAAgMRBBIhMQUTIv/EABYBAQEBAAAAAAAAAAAAAAAAAAMCAf/EABsRAQACAgMAAAAAAAAAAAAAAAEAAhEhAyIx/9oADAMBAAIRAxEAPwCRjZDYyBVqXNKzXYhV/AytphsU3yJ2epRe25vHXrOYffI6QtYXAxgoTDATDKxHLobBoqU3PJP1yEvuljblQ1H2KWTRHUPkKYhKA412hVmHhn//2Q=="
+  },
+  "tehotenske-06": {
+    "cat": "tehotenske",
+    "alt": "Pár si spolu prezerá ultrazvukovú fotografiu",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUBAgMEBv/EACAQAAEFAAMAAwEAAAAAAAAAAAEAAgMEERIhMQUTIlH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ArBK5uchurZdK2MkSenwJXVt5AA9v63pNLNf7Io587HoQJLc7mzuDXEBCrbkIncAzUICzejDm8GjQmtb5DlWIe4edBctJ1ImEXefzEETWJHSuIIzULGeOnpCD/9k="
+  },
+  "tehotenske-07": {
+    "cat": "tehotenske",
+    "alt": "Ruky v tvare srdca na tehotenskom brušku",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAgT/xAAiEAACAgIABgMAAAAAAAAAAAABAgAEAxEFEhMhMkEUIjH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6ag+SBynt7MYtuuV14xLwmxyKfsBHGS3j6QLkGBprSg9xCL2soW8GhAmq9kq5G464ey5WDZH7D1JjEDGFZmUfsCxRcLLvawk8mdwo0xhA//Z"
+  },
   "rodina-01": {
     "cat": "rodina",
     "alt": "Detské nôžky v dlaniach rodičov",
@@ -219,5 +307,49 @@
       800
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQCBQEDBv/EACAQAAICAgICAwAAAAAAAAAAAAECAAMREgQFIVEiMkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5hq2IBxLXqqsoSRIVPUwwRHuLYo+IXECLphiISHJNi3EBSRCAy/W11uLx9fU1W2Vq+48D9le/Y3MdSTr6mXvDALrAZs5ru2UXxCJG1wcA4EIH//Z"
+  },
+  "rodina-04": {
+    "cat": "rodina",
+    "alt": "Rodič pobozká novorodeniatko na čelo",
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAgP/xAAeEAABBAIDAQAAAAAAAAAAAAABAAIDBBExBRIhQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCXShjPpTclWN4yotS0RI1pOAVSnmFcgl+QfiDTqrQdISj75kd2BwEIONKGJ5Hfae5GgHQCRp0FLpuIeFWs2Sa7WY2gkNjdjSE07APiEH//2Q=="
+  },
+  "rodina-05": {
+    "cat": "rodina",
+    "alt": "Bozk na drobnú detskú dlaň",
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQL/xAAgEAADAQACAQUBAAAAAAAAAAABAgMABBExEhMhIkFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AH8OIWfYGKslPUh/NxLlKkej560DCt6s0z0MHNJqHIGNHWrpQqW7Ixg1JRVvuz9gfmRTk9FkmQMrisTx6MT52NWjip+T5wXUUFyScbP91/7jB//Z"
   }
 }

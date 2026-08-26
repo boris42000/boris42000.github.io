@@ -6,9 +6,9 @@
  * Run with `npm run images`. Output is committed, so the site itself does no image
  * work at deploy time and you can see exactly what gets published.
  *
- * Every frame is desaturated on the way through: two of the masters (IMG_0758,
- * IMG_0975) were shot in colour, and the whole premise of this portfolio is
- * "Svet vnímam najradšej v čiernobielej."
+ * Most frames are desaturated on the way through — the core of the portfolio is
+ * "Svet vnímam najradšej v čiernobielej." Two masters (IMG_0758, IMG_0975) were shot
+ * in colour and stay that way (`mono: false`): deliberate accents, not the default.
  */
 import sharp from 'sharp'
 import { mkdir, writeFile, readdir } from 'node:fs/promises'
@@ -33,10 +33,11 @@ const JPEG_MAX_WIDTH = 1120
  * Source file → slug + category. Explicit rather than globbed: the order here IS the
  * curation, and the slugs are what the markup reads.
  *
- * 10 of the 22 masters ship. The rest are held back on purpose — near-duplicates
- * (several belly-and-hands frames of the same idea, several newborn foot details), one
- * blown-flare frame, and the dog portrait, which is off-message for a couples/family/
- * maternity photographer. Add a line here and re-run to publish one.
+ * 16 of the 22 masters ship. The rest are held back on purpose — near-duplicates
+ * (several belly-and-hands frames of the same idea, several near-identical forest
+ * walking frames), one blown-flare frame, and the dog portrait, which is off-message
+ * for a couples/family/maternity photographer. Add a line here and re-run to publish
+ * one. `mono: false` keeps a frame in colour instead of the default desaturation.
  */
 const PHOTOS = [
   // Portrait / artistic — the most abstract work in the set.
@@ -46,16 +47,24 @@ const PHOTOS = [
     alt: 'Žena držiaca steblá tráv pri tvári, mäkké svetlo' },
   { file: 'IMG_7583_Original.jpg', slug: 'portret-03', cat: 'portret',
     alt: 'Detail profilu tváre za rozostrenými steblami trávy' },
+  { file: 'IMG_7227_Original.jpg', slug: 'portret-04', cat: 'portret',
+    alt: 'Žena zaklonená v tráve so zavretými očami, mäkké svetlo' },
 
   // Maternity + couples.
-  { file: 'IMG_0758.jpg', slug: 'tehotenske-01', cat: 'tehotenske',
-    alt: 'Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle' },
+  { file: 'IMG_0758.jpg', slug: 'tehotenske-01', cat: 'tehotenske', mono: false,
+    alt: 'Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia' },
   { file: 'IMG_0627.jpg', slug: 'tehotenske-02', cat: 'tehotenske',
     alt: 'Objatie páru v lese, tehotenské fotenie' },
   { file: 'IMG_0532.jpg', slug: 'tehotenske-03', cat: 'tehotenske',
     alt: 'Pár na prechádzke medzi stromami, protisvetlo' },
   { file: 'IMG_0932.jpg', slug: 'tehotenske-04', cat: 'tehotenske',
     alt: 'Ruky na tehotenskom brušku, tieň tráv na koži' },
+  { file: 'IMG_0975.jpg', slug: 'tehotenske-05', cat: 'tehotenske', mono: false,
+    alt: 'Tehotenské bruško s poľnými kvetmi, farebná fotografia' },
+  { file: 'IMG_1521.jpg', slug: 'tehotenske-06', cat: 'tehotenske',
+    alt: 'Pár si spolu prezerá ultrazvukovú fotografiu' },
+  { file: 'IMG_0937.jpg', slug: 'tehotenske-07', cat: 'tehotenske',
+    alt: 'Ruky v tvare srdca na tehotenskom brušku' },
 
   // Newborn / family.
   { file: 'IMG_0173.jpeg', slug: 'rodina-01', cat: 'rodina',
@@ -64,6 +73,10 @@ const PHOTOS = [
     alt: 'Spiace novorodeniatko, detail tváre' },
   { file: 'IMG_0073.jpeg', slug: 'rodina-03', cat: 'rodina',
     alt: 'Malá pästička držiaca prst dospelého' },
+  { file: 'IMG_0192.jpeg', slug: 'rodina-04', cat: 'rodina',
+    alt: 'Rodič pobozká novorodeniatko na čelo' },
+  { file: 'IMG_0230.jpeg', slug: 'rodina-05', cat: 'rodina',
+    alt: 'Bozk na drobnú detskú dlaň' },
 ]
 
 const encoders = (pipe, { jpeg = true } = {}) =>
@@ -90,7 +103,8 @@ const manifest = {}
 for (const photo of PHOTOS) {
   const input = path.join(SRC, photo.file)
   // .grayscale() before anything else so every downstream rendition agrees.
-  const mono = sharp(input).grayscale()
+  // `mono: false` opts a frame out — a deliberate colour accent, not the default.
+  const mono = photo.mono === false ? sharp(input) : sharp(input).grayscale()
   const meta = await mono.metadata()
 
   const widths = photo.hero ? [...WIDTHS, HERO_WIDTH] : WIDTHS

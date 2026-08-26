@@ -75,6 +75,13 @@
     })
   })
 
+  /* ── "Čo fotím" cards: jump into the gallery pre-filtered ─────────────────── */
+  $$('.catcard').forEach((card) => {
+    card.addEventListener('click', () => {
+      $(`.filter[data-filter="${card.dataset.filter}"]`)?.click()
+    })
+  })
+
   /* ── Lightbox ──────────────────────────────────────────────────────────── */
   const data = window.__GALLERY__ || []
   const lb = $('#lb')
@@ -164,7 +171,7 @@
 
   /* ── Reveal on scroll ──────────────────────────────────────────────────── */
   const targets = [
-    ...$$('.about__media, .about__body, .svc__row, .cell, .step, .ig__cell, .contact__body'),
+    ...$$('.about__media, .about__body, .catcard, .moment, .cell, .ig__cell, .contact__body'),
   ]
   targets.forEach((el) => el.classList.add('reveal'))
 

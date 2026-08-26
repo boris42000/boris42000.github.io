@@ -30,7 +30,7 @@ downsized, desaturated copy; the originals cannot be recovered from it.
 **Copy tweaks** — edit `index.html` directly. It is plain static HTML.
 
 **Anything about the photo set** — edit the `PHOTOS` list in
-`tools/optimize-images.mjs` (that list *is* the curation: 10 of the 22 masters are
+`tools/optimize-images.mjs` (that list *is* the curation: 16 of the 22 masters are
 published, the rest are held back as near-duplicates or off-message), then:
 
 ```sh
@@ -48,9 +48,24 @@ Individual steps: `npm run images`, `npm run assets`, `npm run page`.
 
 ## Notes
 
-- Every photo is desaturated by the pipeline. Two masters (`IMG_0758`, `IMG_0975`)
-  were shot in colour; converting rather than dropping them keeps the black-and-white
-  premise intact without losing the frames.
+- Every photo is desaturated by the pipeline by default. Two masters (`IMG_0758`,
+  `IMG_0975`) were shot in colour and ship as deliberate accents (`mono: false` in
+  `PHOTOS`): `IMG_0758` is the full-bleed "moment" band between About and the
+  gallery, `IMG_0975` sits in the gallery itself.
+- The About section ("Príbeh") is the one place with real copy — compact offer and
+  process lists live there too — because Sara wants the rest of the scroll to stay
+  quiet and photo-led. Keep new sections text-light by default.
+- The Instagram section is hidden (`.ig { display: none; }` in `styles.css`), not
+  deleted — its grid duplicated the gallery. `tools/build-page.mjs` still generates
+  it, so flip that one line off to bring it back. The follow prompt lives under the
+  gallery instead (`.gallery__ig`).
+- "Čo fotím" is its own section (`.focus`, between About and the colour Moment
+  band) with one illustrated card per category — `CATEGORIES` in `build-page.mjs`.
+  Clicking a card jumps into the gallery pre-filtered by clicking the matching
+  filter pill for you (see the `.catcard` listener in `main.js`). The gallery's own
+  filter row stayed plain text pills (`FILTERS`, derived from `CATEGORIES` plus
+  "Všetky") — an earlier pass turned those into photo cards too, but that read as
+  a duplicate of "Čo fotím" and got reverted.
 - `TODO` in `tools/build-page.mjs`: `EMAIL` is still the placeholder
   `ahoj@sarahkophg.sk`. Replace it there and re-run `npm run page`, or find-and-replace
   it in `index.html`.

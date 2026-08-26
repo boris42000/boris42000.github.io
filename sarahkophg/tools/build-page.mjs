@@ -63,42 +63,39 @@ function picture(slug, { sizes, alt, loading = 'lazy', priority = false, square 
 }
 
 // ── Copy ────────────────────────────────────────────────────────────────────────
-const SERVICES = [
-  { n: '01', slug: 'tehotenske-02', title: 'Párové fotenie',
-    text: 'Žiadny nátlak na klišé. Len vy dvaja, váš smiech a prirodzená blízkosť.' },
-  { n: '02', slug: 'tehotenske-04', title: 'Tehotenské fotenie',
-    text: 'Oslava nového začiatku. Jemné čiernobiele portréty čistých línií a očakávania.' },
-  { n: '03', slug: 'rodina-01', title: 'Deti a rodina',
-    text: 'Živé, nestrojené zábery. Deti nechávam objavovať svet po svojom – bez nútených úsmevov.' },
+// About stays short — Sara wants the rest of the scroll to stay quiet and let the
+// photographs carry it. "What I shoot" is its own photo-card section instead of a
+// text list, and the gallery's filter pills stay plain text.
+const STEPS = [
+  { n: '01', title: 'Naladenie', text: 'spoznáme sa, vyberieme miesto' },
+  { n: '02', title: 'Fotenie', text: 'voľná prechádzka, bez pózovania' },
+  { n: '03', title: 'Odovzdanie', text: 'starostlivo vybrané zábery' },
 ]
 
-const PROCESS = [
-  { n: '01', title: 'Naladenie',
-    text: 'Porozprávame sa o vašej predstave, vyberieme miesto a jednoduché oblečenie bez rušivých nápisov.' },
-  { n: '02', title: 'Samotné fotenie',
-    text: 'Nenútená prechádzka či stretnutie. Žiadne hodiny v jednej polohe, len uvoľnená atmosféra.' },
-  { n: '03', title: 'Odovzdanie',
-    text: 'Dostanete starostlivo vybrané fotografie s citlivým čiernobielym tónovaním.' },
+// One illustrative photo per category. Doubles as both the "Čo fotím" cards and the
+// gallery filter keys — click a card to jump into the grid pre-filtered.
+const CATEGORIES = [
+  { key: 'tehotenske', label: 'Páry a tehotenské', slug: 'tehotenske-06' },
+  { key: 'rodina', label: 'Deti a rodina', slug: 'rodina-02' },
+  { key: 'portret', label: 'Portrét', slug: 'portret-01' },
 ]
 
-const FILTERS = [
-  { key: 'all', label: 'Všetky' },
-  { key: 'tehotenske', label: 'Páry a tehotenské' },
-  { key: 'rodina', label: 'Deti a rodina' },
-  { key: 'portret', label: 'Portrét' },
-]
+const FILTERS = [{ key: 'all', label: 'Všetky' }, ...CATEGORIES]
 
+// Instagram gets its own section in the markup (below) but stays hidden for now —
+// its grid duplicates the gallery. The follow link under the gallery is the one
+// call-to-action that survives; flip `.ig` back on in styles.css to restore it.
 const NAV = [
-  ['#pribeh', 'Príbeh'], ['#fotenia', 'Fotenia'], ['#galeria', 'Galéria'],
-  ['#priebeh', 'Priebeh'], ['#instagram', 'Instagram'], ['#kontakt', 'Kontakt'],
+  ['#pribeh', 'Príbeh'], ['#fotim', 'Čo fotím'], ['#galeria', 'Galéria'], ['#kontakt', 'Kontakt'],
 ]
 
 const HERO = 'portret-01'
 const ABOUT = 'portret-02'
+const MOMENT = 'tehotenske-01'
 const gallery = Object.keys(manifest)
 
 // ── Assemble ────────────────────────────────────────────────────────────────────
-const GALLERY_SIZES = '(min-width: 1200px) 320px, (min-width: 900px) 30vw, 46vw'
+const GALLERY_SIZES = '(min-width: 1200px) 420px, (min-width: 900px) 30vw, 46vw'
 
 const html = `<!doctype html>
 <html lang="sk">
@@ -146,9 +143,9 @@ ${JSON.stringify({
   areaServed: 'SK',
   sameAs: [IG],
   knowsLanguage: 'sk',
-  makesOffer: SERVICES.map((s) => ({
+  makesOffer: CATEGORIES.map((c) => ({
     '@type': 'Offer',
-    itemOffered: { '@type': 'Service', name: s.title, description: s.text },
+    itemOffered: { '@type': 'Service', name: c.label },
   })),
 }, null, 2)}
 </script>
@@ -201,27 +198,33 @@ ${JSON.stringify({
         ${picture(ABOUT, { sizes: '(min-width: 900px) 40vw, 88vw' })}
       </div>
       <div class="about__body">
-        <p>Najkrajšie fotografie nevznikajú v strnulých pózach, ale v medziriadkoch – v tichom pohľade, spontánnom smiechu, neposednom pohybe.</p>
+        <p>Najkrajšie fotografie nevznikajú v pózach, ale v tichom pohľade a spontánnom smiechu.</p>
         <blockquote class="pullquote">Svet vnímam najradšej v čiernobielej.</blockquote>
-        <p>Odstránenie farieb necháva vyniknúť podstatné: svetlo, kontrast, čisté emócie. Nemusíte vedieť, ako sa postaviť – mojou úlohou je, aby ste sa cítili uvoľnene a sami sebou.</p>
+        <p>Nemusíte vedieť, ako sa postaviť – mojou úlohou je, aby ste sa cítili uvoľnene a sami sebou.</p>
+        <ol class="msteps">
+          ${STEPS.map((s) => `<li>
+            <span class="msteps__n">${s.n}</span>
+            <span class="msteps__title">${s.title}</span>
+            <span class="msteps__text">${s.text}</span>
+          </li>`).join('\n          ')}
+        </ol>
       </div>
     </div>
   </section>
 
-  <section class="services" id="fotenia">
-    <p class="eyebrow eyebrow--rule">Čo spolu môžeme vytvoriť</p>
-    <ol class="svc">
-      ${SERVICES.map((s) => `<li class="svc__row">
-        <a class="svc__link" href="#kontakt">
-          <span class="svc__n">${s.n}</span>
-          <span class="svc__main">
-            <span class="svc__title">${s.title}</span>
-            <span class="svc__text">${s.text}</span>
-          </span>
-          <span class="svc__arrow" aria-hidden="true">↗</span>
-        </a>
-      </li>`).join('\n      ')}
-    </ol>
+  <section class="focus" id="fotim">
+    <p class="eyebrow eyebrow--rule">Čo fotím</p>
+    <div class="catcards">
+      ${CATEGORIES.map((c) => `<a class="catcard" href="#galeria" data-filter="${c.key}">
+        ${picture(c.slug, { sizes: '(min-width: 640px) 30vw, 88vw', className: 'catcard__img' })}
+        <span class="catcard__label">${c.label}</span>
+      </a>`).join('\n      ')}
+    </div>
+  </section>
+
+  <section class="moment">
+    ${picture(MOMENT, { sizes: '100vw', className: 'moment__img' })}
+    <p class="moment__caption">Niekedy nechám hovoriť aj farby.</p>
   </section>
 
   <section class="gallery" id="galeria">
@@ -239,17 +242,7 @@ ${JSON.stringify({
       </figure>`).join('\n      ')}
     </div>
     <p class="grid__empty" id="gridEmpty" hidden>V tejto kategórii zatiaľ nie sú fotografie.</p>
-  </section>
-
-  <section class="process" id="priebeh">
-    <p class="eyebrow eyebrow--rule eyebrow--on-clay">Ako prebieha fotenie</p>
-    <ol class="steps">
-      ${PROCESS.map((s) => `<li class="step">
-        <span class="step__n">${s.n}</span>
-        <h3 class="step__title">${s.title}</h3>
-        <p class="step__text">${s.text}</p>
-      </li>`).join('\n      ')}
-    </ol>
+    <p class="gallery__ig"><a class="link" href="${IG}" target="_blank" rel="noopener">Viac fotografií na Instagrame @${HANDLE} ↗</a></p>
   </section>
 
   <section class="ig" id="instagram">
@@ -275,8 +268,7 @@ ${JSON.stringify({
   <section class="contact" id="kontakt">
     <div class="contact__body">
       <h2 class="contact__title">Máte chuť vytvoriť spomienky, ktoré nestratia na hodnote ani po rokoch?</h2>
-      <p>Momentálne rozširujem portfólio, preto vám rada ponúknem fotenie za zvýhodnených podmienok.</p>
-      <p>Napíšte mi správu a dohodneme si termín, ktorý vám vyhovuje.</p>
+      <p>Momentálne rozširujem portfólio — napíšte mi a dohodneme si termín za zvýhodnených podmienok.</p>
       <div class="contact__links">
         <a class="link link--lg" href="mailto:${EMAIL}">Napíšte mi</a>
         <a class="link link--lg" href="${IG}" target="_blank" rel="noopener">Instagram ↗</a>
