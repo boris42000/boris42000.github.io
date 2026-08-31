@@ -33,11 +33,12 @@ const JPEG_MAX_WIDTH = 1120
  * Source file → slug + category. Explicit rather than globbed: the order here IS the
  * curation, and the slugs are what the markup reads.
  *
- * 16 of the 22 masters ship. The rest are held back on purpose — near-duplicates
- * (several belly-and-hands frames of the same idea, several near-identical forest
- * walking frames), one blown-flare frame, and the dog portrait, which is off-message
- * for a couples/family/maternity photographer. Add a line here and re-run to publish
- * one. `mono: false` keeps a frame in colour instead of the default desaturation.
+ * 21 of the 22 masters ship — the mosaic homepage wants volume, so the frames that
+ * an earlier, sparser layout held back as near-duplicates are published too (the
+ * flare frame reads as deliberate at mosaic scale). Only the dog portrait stays out:
+ * off-message for a couples/family/maternity photographer. Add a line here and re-run
+ * to publish one. `mono: false` keeps a frame in colour instead of the default
+ * desaturation.
  */
 const PHOTOS = [
   // Portrait / artistic — the most abstract work in the set.
@@ -65,6 +66,12 @@ const PHOTOS = [
     alt: 'Pár si spolu prezerá ultrazvukovú fotografiu' },
   { file: 'IMG_0937.jpg', slug: 'tehotenske-07', cat: 'tehotenske',
     alt: 'Ruky v tvare srdca na tehotenskom brušku' },
+  { file: 'IMG_0422.jpg', slug: 'tehotenske-08', cat: 'tehotenske',
+    alt: 'Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie' },
+  { file: 'IMG_0477.jpg', slug: 'tehotenske-09', cat: 'tehotenske',
+    alt: 'Ruky partnera na tehotenskom brušku, detail v tlmenom svetle' },
+  { file: 'IMG_0554.jpg', slug: 'tehotenske-10', cat: 'tehotenske',
+    alt: 'Pár v protisvetle medzi stromami, slnečná žiara cez listy' },
 
   // Newborn / family.
   { file: 'IMG_0173.jpeg', slug: 'rodina-01', cat: 'rodina',
@@ -77,6 +84,10 @@ const PHOTOS = [
     alt: 'Rodič pobozká novorodeniatko na čelo' },
   { file: 'IMG_0230.jpeg', slug: 'rodina-05', cat: 'rodina',
     alt: 'Bozk na drobnú detskú dlaň' },
+  { file: 'IMG_0176.jpeg', slug: 'rodina-06', cat: 'rodina',
+    alt: 'Spiace novorodeniatko s pästičkou pri tvári' },
+  { file: 'IMG_0114.jpeg', slug: 'rodina-07', cat: 'rodina',
+    alt: 'Detské prstíky vykúkajúce spod károvanej deky' },
 ]
 
 const encoders = (pipe, { jpeg = true } = {}) =>

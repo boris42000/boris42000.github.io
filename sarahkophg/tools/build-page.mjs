@@ -2,8 +2,12 @@
  * img/manifest.json  →  index.html
  *
  * Writes every <picture> block with the right srcset, intrinsic width/height and
- * blur-up placeholder, and draws the two line-art SVGs. Run `npm run page` after
- * changing the photo set.
+ * blur-up placeholder. Run `npm run page` after changing the photo set.
+ *
+ * The page is deliberately photo-led: a hero that is nothing but the menu, two
+ * full-screen frames and one call to action, then a mosaic of every remaining
+ * photograph, its only copy the category tags set on the pictures. The booking
+ * section — three lines about how a shoot goes, and two links — closes the scroll.
  *
  * The generated index.html is plain static HTML and is the committed artifact — you
  * can edit copy in it directly. Only re-run this if the photo set changes, which
@@ -18,9 +22,9 @@ const ROOT = path.join(HERE, '..')
 const manifest = JSON.parse(await readFile(path.join(ROOT, 'img', 'manifest.json'), 'utf8'))
 
 // ── Identity ────────────────────────────────────────────────────────────────────
-// TODO: swap EMAIL for the real address. It is used in the hero CTA, the contact
-// section and the JSON-LD, so changing it here (and re-running `npm run page`) or
-// find-and-replacing it in index.html both work.
+// TODO: swap EMAIL for the real address. It is used in the booking section and the
+// JSON-LD, so changing it here (and re-running `npm run page`) or find-and-replacing
+// it in index.html both work.
 const NAME = 'Sarah Ko.'
 const HANDLE = 'sarahko.phg'
 const EMAIL = 'ahoj@sarahkophg.sk'
@@ -35,7 +39,7 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
  * `slot` scales the intrinsic dimensions to the largest rendition actually emitted,
  * so the browser reserves the right box and nothing shifts on load.
  */
-function picture(slug, { sizes, alt, loading = 'lazy', priority = false, square = false, className = '' }) {
+function picture(slug, { sizes, alt, loading = 'lazy', priority = false, square = false, className = '', pos = '' }) {
   const m = manifest[slug]
   if (!m) throw new Error(`Unknown slug: ${slug}`)
 
@@ -47,7 +51,7 @@ function picture(slug, { sizes, alt, loading = 'lazy', priority = false, square 
   const suffix = square ? '-sq' : ''
 
   const maxW = Math.max(...widths)
-  const w = square ? maxW : maxW
+  const w = maxW
   const h = square ? maxW : Math.round((m.height / m.width) * maxW)
   const fallback = `img/${slug}${suffix}-${Math.max(...jpegWidths)}.jpg`
 
@@ -58,44 +62,104 @@ function picture(slug, { sizes, alt, loading = 'lazy', priority = false, square 
                  srcset="${set('jpg', jpegWidths, suffix)}" sizes="${sizes}"
                  width="${w}" height="${h}" alt="${esc(alt ?? m.alt)}"
                  loading="${loading}" decoding="async"${priority ? ' fetchpriority="high"' : ''}
-                 style="background-image:url(${m.lqip})">
+                 style="background-image:url(${m.lqip})${pos ? `;object-position:${pos}` : ''}">
           </picture>`
 }
 
 // ── Copy ────────────────────────────────────────────────────────────────────────
-// About stays short — Sara wants the rest of the scroll to stay quiet and let the
-// photographs carry it. "What I shoot" is its own photo-card section instead of a
-// text list, and the gallery's filter pills stay plain text.
+// There is almost none, on purpose. What survives is either set on a photograph in
+// the mosaic or lives in the two closing sections at the foot of the page.
+const NAV = [
+  ['#portfolio', 'Portfólio'], ['#rezervacia', 'Rezervácia'],
+]
+
+// The whole of the written page: three lines in the booking section at the foot.
 const STEPS = [
   { n: '01', title: 'Naladenie', text: 'spoznáme sa, vyberieme miesto' },
   { n: '02', title: 'Fotenie', text: 'voľná prechádzka, bez pózovania' },
   { n: '03', title: 'Odovzdanie', text: 'starostlivo vybrané zábery' },
 ]
 
-// One illustrative photo per category. Doubles as both the "Čo fotím" cards and the
-// gallery filter keys — click a card to jump into the grid pre-filtered.
-const CATEGORIES = [
-  { key: 'tehotenske', label: 'Páry a tehotenské', slug: 'tehotenske-06' },
-  { key: 'rodina', label: 'Deti a rodina', slug: 'rodina-02' },
-  { key: 'portret', label: 'Portrét', slug: 'portret-01' },
+// The only two frames that are not in the mosaic — they carry the hero. Everything
+// else is published exactly once, so the scroll never shows the same photograph twice.
+const HERO_A = 'portret-01'
+const HERO_B = 'tehotenske-02'
+
+/**
+ * The mosaic. One entry per band; `cols` is the desktop grid track list, `h` the band
+ * height step (sm / md / lg), `pos` the crop point, and `label` the one bit of copy a
+ * tile may carry — the category tag, set over the photograph itself.
+ *
+ * Below 900px every band collapses to two columns (a trailing odd tile goes full
+ * width), so the track lists only need to read well on desktop.
+ */
+const MOSAIC = [
+  { h: 'md', cols: '1fr 1fr', tiles: [
+    { slug: 'tehotenske-08', pos: '50% 45%', label: 'Páry a tehotenské' },
+    { slug: 'tehotenske-10', pos: '50% 30%' },
+  ] },
+  { h: 'lg', cols: '1fr', tiles: [
+    { slug: 'tehotenske-03', pos: '50% 30%' },
+  ] },
+  { h: 'md', cols: '2fr 1fr', tiles: [
+    { slug: 'tehotenske-06', pos: '50% 40%' },
+    { slug: 'tehotenske-04' },
+  ] },
+  { h: 'md', cols: '1fr 1fr', tiles: [
+    { slug: 'tehotenske-07' },
+    { slug: 'tehotenske-09', pos: '50% 40%' },
+  ] },
+  // The two frames that were shot in colour, kept together so the break reads as a
+  // decision rather than an accident.
+  { h: 'md', cols: '1fr 1fr', tiles: [
+    { slug: 'tehotenske-01', pos: '50% 28%' },
+    { slug: 'tehotenske-05', pos: '50% 45%' },
+  ] },
+  { h: 'md', cols: '1fr 1fr', tiles: [
+    { slug: 'rodina-02', pos: '50% 40%', label: 'Deti a rodina' },
+    { slug: 'rodina-04', pos: '50% 35%' },
+  ] },
+  { h: 'sm', cols: '1fr 1fr 1fr', tiles: [
+    { slug: 'rodina-03' },
+    { slug: 'rodina-07' },
+    { slug: 'rodina-06', pos: '50% 40%' },
+  ] },
+  { h: 'md', cols: '3fr 2fr', tiles: [
+    { slug: 'rodina-01' },
+    { slug: 'rodina-05' },
+  ] },
+  { h: 'md', cols: '1fr 1fr 1fr', tiles: [
+    { slug: 'portret-03', pos: '50% 35%', label: 'Portrét' },
+    { slug: 'portret-02', pos: '50% 35%' },
+    { slug: 'portret-04', pos: '50% 40%' },
+  ] },
 ]
 
-const FILTERS = [{ key: 'all', label: 'Všetky' }, ...CATEGORIES]
+// Flattened once: the lightbox indexes into this, in scroll order.
+const mosaic = MOSAIC.flatMap((row) => row.tiles.map((t) => t.slug))
 
-// Instagram gets its own section in the markup (below) but stays hidden for now —
-// its grid duplicates the gallery. The follow link under the gallery is the one
-// call-to-action that survives; flip `.ig` back on in styles.css to restore it.
-const NAV = [
-  ['#pribeh', 'Príbeh'], ['#fotim', 'Čo fotím'], ['#galeria', 'Galéria'], ['#kontakt', 'Kontakt'],
-]
-
-const HERO = 'portret-01'
-const ABOUT = 'portret-02'
-const MOMENT = 'tehotenske-01'
-const gallery = Object.keys(manifest)
+const unused = Object.keys(manifest).filter((s) => ![...mosaic, HERO_A, HERO_B].includes(s))
+if (unused.length) console.warn(`! not on the page: ${unused.join(', ')}`)
 
 // ── Assemble ────────────────────────────────────────────────────────────────────
-const GALLERY_SIZES = '(min-width: 1200px) 420px, (min-width: 900px) 30vw, 46vw'
+// Bands are at most full width and usually a fraction of it; one `sizes` covers all
+// of them closely enough that no tile ever fetches a rendition two steps too big.
+const TILE_SIZES = '(min-width: 900px) 50vw, 50vw'
+
+const tileHTML = (tile, i) => {
+  const m = manifest[tile.slug]
+  const cap = tile.label
+    ? `<figcaption class="tile__cap tile__cap--label">${tile.label}</figcaption>`
+    : ''
+  return `<figure class="tile${cap ? ' tile--capped' : ''}">
+          <button class="tile__btn" data-i="${i}" aria-label="Zväčšiť fotografiu: ${esc(m.alt)}">
+            ${picture(tile.slug, { sizes: TILE_SIZES, className: 'tile__img', pos: tile.pos })}
+          </button>
+          ${cap}
+        </figure>`
+}
+
+let tileIndex = 0
 
 const html = `<!doctype html>
 <html lang="sk">
@@ -143,9 +207,9 @@ ${JSON.stringify({
   areaServed: 'SK',
   sameAs: [IG],
   knowsLanguage: 'sk',
-  makesOffer: CATEGORIES.map((c) => ({
+  makesOffer: ['Páry a tehotenské', 'Deti a rodina', 'Portrét'].map((label) => ({
     '@type': 'Offer',
-    itemOffered: { '@type': 'Service', name: c.label },
+    itemOffered: { '@type': 'Service', name: label },
   })),
 }, null, 2)}
 </script>
@@ -176,101 +240,43 @@ ${JSON.stringify({
 
 <main id="obsah">
 
+  <!-- Menu, two frames filling the screen between them, one call to action. The
+       heading is there for search engines and screen readers only. -->
   <section class="hero" id="top">
-    <div class="hero__media">
-      ${picture(HERO, { sizes: '(min-width: 900px) 54vw, 100vw', loading: 'eager', priority: true, className: 'hero__img' })}
+    <h1 class="vh">${NAME} — čiernobiela fotografia pre rodiny, páry a budúce mamičky</h1>
+    <div class="hero__frame hero__frame--a">
+      ${picture(HERO_A, { sizes: '(min-width: 900px) 50vw, 100vw', loading: 'eager', priority: true, className: 'hero__img', pos: '50% 35%' })}
     </div>
-    <div class="hero__body">
-      <p class="eyebrow">Čiernobiela fotografia — rodiny, páry, budúce mamičky</p>
-      <h1 class="hero__title">Skutočné momenty <em>namiesto dokonalých</em> póz.</h1>
-      <p class="hero__lede">Zachytávam blízkosť, emócie a detaily také, aké naozaj sú.</p>
-      <div class="hero__cta">
-        <a class="btn" href="#kontakt">Dohodnúť si fotenie</a>
-        <a class="link" href="#galeria">Pozrieť galériu</a>
-      </div>
+    <div class="hero__frame hero__frame--b">
+      ${picture(HERO_B, { sizes: '(min-width: 900px) 50vw, 100vw', loading: 'eager', className: 'hero__img', pos: '50% 40%' })}
+    </div>
+    <div class="hero__cta">
+      <a class="btn" href="#rezervacia">Rezervovať fotenie</a>
     </div>
   </section>
 
-  <section class="about" id="pribeh">
-    <p class="eyebrow eyebrow--rule">O mne a mojom prístupe</p>
-    <div class="about__grid">
-      <div class="about__media">
-        ${picture(ABOUT, { sizes: '(min-width: 900px) 40vw, 88vw' })}
-      </div>
-      <div class="about__body">
-        <p>Najkrajšie fotografie nevznikajú v pózach, ale v tichom pohľade a spontánnom smiechu.</p>
-        <blockquote class="pullquote">Svet vnímam najradšej v čiernobielej.</blockquote>
-        <p>Nemusíte vedieť, ako sa postaviť – mojou úlohou je, aby ste sa cítili uvoľnene a sami sebou.</p>
-        <ol class="msteps">
-          ${STEPS.map((s) => `<li>
-            <span class="msteps__n">${s.n}</span>
-            <span class="msteps__title">${s.title}</span>
-            <span class="msteps__text">${s.text}</span>
-          </li>`).join('\n          ')}
-        </ol>
-      </div>
-    </div>
+  <!-- The portfolio itself: every remaining photograph, the copy set on top of it. -->
+  <section class="mosaic" id="portfolio" aria-label="Portfólio">
+    ${MOSAIC.map((row) => `<div class="mrow mrow--${row.h}" style="--cols:${row.cols}">
+        ${row.tiles.map((t) => tileHTML(t, tileIndex++)).join('\n        ')}
+      </div>`).join('\n    ')}
+    <p class="mosaic__ig"><a class="link" href="${IG}" target="_blank" rel="noopener">Viac fotografií na Instagrame @${HANDLE} ↗</a></p>
   </section>
 
-  <section class="focus" id="fotim">
-    <p class="eyebrow eyebrow--rule">Čo fotím</p>
-    <div class="catcards">
-      ${CATEGORIES.map((c) => `<a class="catcard" href="#galeria" data-filter="${c.key}">
-        ${picture(c.slug, { sizes: '(min-width: 640px) 30vw, 88vw', className: 'catcard__img' })}
-        <span class="catcard__label">${c.label}</span>
-      </a>`).join('\n      ')}
-    </div>
-  </section>
-
-  <section class="moment">
-    ${picture(MOMENT, { sizes: '100vw', className: 'moment__img' })}
-    <p class="moment__caption">Niekedy nechám hovoriť aj farby.</p>
-  </section>
-
-  <section class="gallery" id="galeria">
-    <div class="gallery__head">
-      <p class="eyebrow eyebrow--rule">Galéria</p>
-      <div class="filters" role="group" aria-label="Filtrovať galériu">
-        ${FILTERS.map((f, i) => `<button class="filter${i === 0 ? ' is-on' : ''}" data-filter="${f.key}" aria-pressed="${i === 0}">${f.label}</button>`).join('\n        ')}
-      </div>
-    </div>
-    <div class="grid" id="grid">
-      ${gallery.map((slug, i) => `<figure class="cell" data-cat="${manifest[slug].cat}">
-        <button class="cell__btn" data-i="${i}" aria-label="Zväčšiť fotografiu: ${esc(manifest[slug].alt)}">
-          ${picture(slug, { sizes: GALLERY_SIZES })}
-        </button>
-      </figure>`).join('\n      ')}
-    </div>
-    <p class="grid__empty" id="gridEmpty" hidden>V tejto kategórii zatiaľ nie sú fotografie.</p>
-    <p class="gallery__ig"><a class="link" href="${IG}" target="_blank" rel="noopener">Viac fotografií na Instagrame @${HANDLE} ↗</a></p>
-  </section>
-
-  <section class="ig" id="instagram">
-    <div class="ig__head">
-      <p class="eyebrow">Instagram</p>
-      <a class="link" href="${IG}" target="_blank" rel="noopener">@${HANDLE} ↗</a>
-    </div>
-    <ul class="ig__grid">
-      ${gallery.map((slug) => `<li class="ig__cell">
-        <a href="${IG}" target="_blank" rel="noopener">
-          ${picture(slug, { sizes: '(min-width: 900px) 18vw, 32vw', square: true, alt: `${manifest[slug].alt} — otvoriť profil na Instagrame` })}
-          <span class="ig__veil" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6">
-              <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
-            </svg>
-          </span>
-        </a>
-      </li>`).join('\n      ')}
-    </ul>
-    <a class="btn btn--wide" href="${IG}" target="_blank" rel="noopener">Sledovať na Instagrame</a>
-  </section>
-
-  <section class="contact" id="kontakt">
+  <section class="contact" id="rezervacia">
     <div class="contact__body">
-      <h2 class="contact__title">Máte chuť vytvoriť spomienky, ktoré nestratia na hodnote ani po rokoch?</h2>
+      <p class="eyebrow">Rezervácia</p>
+      <h2 class="contact__title">Poďme fotiť.</h2>
       <p>Momentálne rozširujem portfólio — napíšte mi a dohodneme si termín za zvýhodnených podmienok.</p>
+      <ol class="msteps">
+        ${STEPS.map((s) => `<li>
+          <span class="msteps__n">${s.n}</span>
+          <span class="msteps__title">${s.title}</span>
+          <span class="msteps__text">${s.text}</span>
+        </li>`).join('\n        ')}
+      </ol>
       <div class="contact__links">
-        <a class="link link--lg" href="mailto:${EMAIL}">Napíšte mi</a>
+        <a class="link link--lg" href="mailto:${EMAIL}?subject=${encodeURIComponent('Rezervácia fotenia')}">Napíšte mi</a>
         <a class="link link--lg" href="${IG}" target="_blank" rel="noopener">Instagram ↗</a>
       </div>
     </div>
@@ -288,13 +294,12 @@ ${JSON.stringify({
   <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Predchádzajúca fotografia">‹</button>
   <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Nasledujúca fotografia">›</button>
   <figure class="lb__stage"><img id="lbImg" src="" alt=""></figure>
-  <p class="lb__count"><span id="lbNow">1</span> / <span id="lbTotal">${gallery.length}</span></p>
+  <p class="lb__count"><span id="lbNow">1</span> / <span id="lbTotal">${mosaic.length}</span></p>
 </div>
 
 <script>
   window.__GALLERY__ = ${JSON.stringify(
-    gallery.map((slug) => ({
-      cat: manifest[slug].cat,
+    mosaic.map((slug) => ({
       alt: manifest[slug].alt,
       // Largest rendition actually emitted, not a hardcoded width — a smaller master
       // would otherwise point at a file the pipeline never wrote.
@@ -309,4 +314,4 @@ ${JSON.stringify({
 `
 
 await writeFile(path.join(ROOT, 'index.html'), html)
-console.log(`✓ index.html — ${gallery.length} gallery images, ${html.length.toLocaleString()} bytes`)
+console.log(`✓ index.html — ${mosaic.length} mosaic photos + 2 in the hero, ${html.length.toLocaleString()} bytes`)

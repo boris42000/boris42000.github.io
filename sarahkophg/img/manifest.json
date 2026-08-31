@@ -242,6 +242,72 @@
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAgT/xAAiEAACAgIABgMAAAAAAAAAAAABAgAEAxEFEhMhMkEUIjH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6ag+SBynt7MYtuuV14xLwmxyKfsBHGS3j6QLkGBprSg9xCL2soW8GhAmq9kq5G464ey5WDZH7D1JjEDGFZmUfsCxRcLLvawk8mdwo0xhA//Z"
   },
+  "tehotenske-08": {
+    "cat": "tehotenske",
+    "alt": "Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAfEAACAgIDAAMAAAAAAAAAAAABAgADBBESEyEFIjH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Anviolm0c7jgjcCrElTEHOqttRQp5Eylbj2V09gH11uBNONUT6TCYbM0xGoQEACq4MP0GW7/kqrsLrZtECRL5zcifIGnILE7hFMo3CB//2Q=="
+  },
+  "tehotenske-09": {
+    "cat": "tehotenske",
+    "alt": "Ruky partnera na tehotenskom brušku, detail v tlmenom svetle",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAL/xAAhEAABAwMEAwAAAAAAAAAAAAABAAIDERIhBAUTMSIyUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCLtMFPJwyVVn04LBb2kbYy6MOIwFcZHE6C4oITtLU1Jyhdzufyut6Qgnwap8XocfE4bjOatBoCpUUlDlO5qHAQbeZw7KFgMxQg/9k="
+  },
+  "tehotenske-10": {
+    "cat": "tehotenske",
+    "alt": "Pár v protisvetle medzi stromami, slnečná žiara cez listy",
+    "width": 3999,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAgEAACAgIBBQEAAAAAAAAAAAABAgAEAxEFBhIhMUFC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOtQgLr0ZicxzL0sihGBH2TXOSzVszKW+anKXs75sxLMTswNx+obDMSp8GEnp1wa6kqCTCBDYs5bLl8jbIkDEs2z7jFc9uov9GA5LOVVAVyBCTgwgf/Z"
+  },
   "rodina-01": {
     "cat": "rodina",
     "alt": "Detské nôžky v dlaniach rodičov",
@@ -351,5 +417,49 @@
       800
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQL/xAAgEAADAQACAQUBAAAAAAAAAAABAgMABBExEhMhIkFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AH8OIWfYGKslPUh/NxLlKkej560DCt6s0z0MHNJqHIGNHWrpQqW7Ixg1JRVvuz9gfmRTk9FkmQMrisTx6MT52NWjip+T5wXUUFyScbP91/7jB//Z"
+  },
+  "rodina-06": {
+    "cat": "rodina",
+    "alt": "Spiace novorodeniatko s pästičkou pri tvári",
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAEFAwQG/8QAHhAAAQUAAwEBAAAAAAAAAAAAAQACAwQRBRIhQWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AhVB2dpGlelqRMsQZmOCmUYGmPuFSrTNYc3CgYpSDcQtXcixrsDh4hBF45sjo+o+p2Ks8UoLiev4suPtOjIxVJLBczSNQcBjZvuoSkk158Qg//9k="
+  },
+  "rodina-07": {
+    "cat": "rodina",
+    "alt": "Detské prstíky vykúkajúce spod károvanej deky",
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYC/8QAIxAAAQQBAwQDAAAAAAAAAAAAAQACAwQRBRITFCEiUTFBcf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDTQxABRai8RVn4+SFxbtYrngeNySvsWJI3dQfxBn5w7mdhue6Fckjdu8SAEIHWjwBsAksuyfWVPas1C0tOFkhqswi2glUpLcjj3cUDC5KXWHGM+P0hK+V3tCD/2Q=="
   }
 }

@@ -55,32 +55,8 @@
     })
   }
 
-  /* ── Gallery filters ───────────────────────────────────────────────────── */
-  const grid = $('#grid')
-  const cells = $$('.cell', grid)
-  const empty = $('#gridEmpty')
-
-  const visible = () => cells.filter((c) => !c.hidden)
-
-  $$('.filter').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const key = btn.dataset.filter
-      $$('.filter').forEach((b) => {
-        const on = b === btn
-        b.classList.toggle('is-on', on)
-        b.setAttribute('aria-pressed', String(on))
-      })
-      cells.forEach((c) => { c.hidden = key !== 'all' && c.dataset.cat !== key })
-      if (empty) empty.hidden = visible().length > 0
-    })
-  })
-
-  /* ── "Čo fotím" cards: jump into the gallery pre-filtered ─────────────────── */
-  $$('.catcard').forEach((card) => {
-    card.addEventListener('click', () => {
-      $(`.filter[data-filter="${card.dataset.filter}"]`)?.click()
-    })
-  })
+  /* ── Mosaic tiles ──────────────────────────────────────────────────────── */
+  const tiles = $$('.mosaic .tile')
 
   /* ── Lightbox ──────────────────────────────────────────────────────────── */
   const data = window.__GALLERY__ || []
@@ -103,12 +79,10 @@
     if (lbTotal) lbTotal.textContent = String(order.length)
   }
 
-  const open = (cell) => {
-    // Navigate within what's currently filtered in, not the whole set.
-    const shown = visible()
-    order = shown.map((c) => Number($('.cell__btn', c).dataset.i))
-    const at = shown.indexOf(cell)
-    opener = $('.cell__btn', cell)
+  const open = (tile) => {
+    order = tiles.map((t) => Number($('.tile__btn', t).dataset.i))
+    const at = tiles.indexOf(tile)
+    opener = $('.tile__btn', tile)
     show(at < 0 ? 0 : at)
     lb.hidden = false
     lock()
@@ -124,8 +98,8 @@
   }
 
   if (lb && lbImg) {
-    cells.forEach((cell) => {
-      $('.cell__btn', cell).addEventListener('click', () => open(cell))
+    tiles.forEach((tile) => {
+      $('.tile__btn', tile).addEventListener('click', () => open(tile))
     })
 
     $('#lbClose').addEventListener('click', close)
@@ -170,8 +144,9 @@
   }
 
   /* ── Reveal on scroll ──────────────────────────────────────────────────── */
+  // The hero is deliberately not in here: it is the LCP, so it paints straight away.
   const targets = [
-    ...$$('.about__media, .about__body, .catcard, .moment, .cell, .ig__cell, .contact__body'),
+    ...$$('.tile, .contact__body'),
   ]
   targets.forEach((el) => el.classList.add('reveal'))
 
