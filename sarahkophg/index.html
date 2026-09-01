@@ -25,7 +25,7 @@
 
 <link rel="preload" href="fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=9aa70c00">
+<link rel="stylesheet" href="styles.css?v=282d445d">
 
 <!-- Must run before first paint: the markup ships visible so the page renders fine
      with no JS, and this flips on the styles that start it hidden for the reveal. -->
@@ -138,7 +138,7 @@
        landscape frame. Category names are the only copy. -->
   <section class="portfolio" id="portfolio" aria-label="Portfólio">
     <div class="slider" role="group" aria-label="Páry a tehotenské">
-      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 4 8 12l8 8"/></svg></button>
       <div class="slider__track" tabindex="0">
         <figure class="tile tile--capped">
           <button class="tile__btn" data-i="0" aria-label="Zväčšiť fotografiu: Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie">
@@ -259,7 +259,7 @@
           </button>
         </figure>
       </div>
-      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie"><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 4 16 12l-8 8"/></svg></button>
     </div>
     <figure class="tile banner tile--capped">
           <button class="tile__btn" data-i="9" aria-label="Zväčšiť fotografiu: Detské nôžky v dlaniach rodičov">
@@ -276,7 +276,7 @@
           <figcaption class="tile__cap tile__cap--label">Deti a rodina</figcaption>
         </figure>
     <div class="slider" role="group" aria-label="Deti a rodina">
-      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 4 8 12l8 8"/></svg></button>
       <div class="slider__track" tabindex="0">
         <figure class="tile">
           <button class="tile__btn" data-i="10" aria-label="Zväčšiť fotografiu: Spiace novorodeniatko, detail tváre">
@@ -357,10 +357,10 @@
           </button>
         </figure>
       </div>
-      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie"><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 4 16 12l-8 8"/></svg></button>
     </div>
     <div class="slider" role="group" aria-label="Portrét">
-      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 4 8 12l8 8"/></svg></button>
       <div class="slider__track" tabindex="0">
         <figure class="tile tile--capped">
           <button class="tile__btn" data-i="16" aria-label="Zväčšiť fotografiu: Detail profilu tváre za rozostrenými steblami trávy">
@@ -403,7 +403,7 @@
           </button>
         </figure>
       </div>
-      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie"><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 4 16 12l-8 8"/></svg></button>
     </div>
     <p class="portfolio__ig"><a class="link" href="https://www.instagram.com/sarahko.phg/" target="_blank" rel="noopener">Viac fotografií na Instagrame @sarahko.phg ↗</a></p>
   </section>
@@ -476,8 +476,8 @@
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Zväčšená fotografia">
   <button class="lb__close" id="lbClose" aria-label="Zavrieť">✕</button>
-  <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Predchádzajúca fotografia">‹</button>
-  <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Nasledujúca fotografia">›</button>
+  <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Predchádzajúca fotografia"><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 4 8 12l8 8"/></svg></button>
+  <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Nasledujúca fotografia"><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 4 16 12l-8 8"/></svg></button>
   <figure class="lb__stage"><img id="lbImg" src="" alt=""></figure>
   <p class="lb__count"><span id="lbNow">1</span> / <span id="lbTotal">19</span></p>
 </div>
@@ -485,10 +485,12 @@
 <script>
   window.__GALLERY__ = [{"alt":"Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie","src":"img/tehotenske-08-1600.webp","fallback":"img/tehotenske-08-1120.jpg"},{"alt":"Pár v protisvetle medzi stromami, slnečná žiara cez listy","src":"img/tehotenske-10-1600.webp","fallback":"img/tehotenske-10-1120.jpg"},{"alt":"Pár na prechádzke medzi stromami, protisvetlo","src":"img/tehotenske-03-1600.webp","fallback":"img/tehotenske-03-1120.jpg"},{"alt":"Pár si spolu prezerá ultrazvukovú fotografiu","src":"img/tehotenske-06-1600.webp","fallback":"img/tehotenske-06-1120.jpg"},{"alt":"Ruky na tehotenskom brušku, tieň tráv na koži","src":"img/tehotenske-04-1600.webp","fallback":"img/tehotenske-04-1120.jpg"},{"alt":"Ruky v tvare srdca na tehotenskom brušku","src":"img/tehotenske-07-1600.webp","fallback":"img/tehotenske-07-1120.jpg"},{"alt":"Ruky partnera na tehotenskom brušku, detail v tlmenom svetle","src":"img/tehotenske-09-1600.webp","fallback":"img/tehotenske-09-1120.jpg"},{"alt":"Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia","src":"img/tehotenske-01-1600.webp","fallback":"img/tehotenske-01-1120.jpg"},{"alt":"Tehotenské bruško s poľnými kvetmi, farebná fotografia","src":"img/tehotenske-05-1600.webp","fallback":"img/tehotenske-05-1120.jpg"},{"alt":"Detské nôžky v dlaniach rodičov","src":"img/rodina-01-1600.webp","fallback":"img/rodina-01-1120.jpg"},{"alt":"Spiace novorodeniatko, detail tváre","src":"img/rodina-02-1600.webp","fallback":"img/rodina-02-1120.jpg"},{"alt":"Rodič pobozká novorodeniatko na čelo","src":"img/rodina-04-1600.webp","fallback":"img/rodina-04-1120.jpg"},{"alt":"Malá pästička držiaca prst dospelého","src":"img/rodina-03-1600.webp","fallback":"img/rodina-03-1120.jpg"},{"alt":"Detské prstíky vykúkajúce spod károvanej deky","src":"img/rodina-07-1600.webp","fallback":"img/rodina-07-1120.jpg"},{"alt":"Spiace novorodeniatko s pästičkou pri tvári","src":"img/rodina-06-1600.webp","fallback":"img/rodina-06-1120.jpg"},{"alt":"Bozk na drobnú detskú dlaň","src":"img/rodina-05-1600.webp","fallback":"img/rodina-05-1120.jpg"},{"alt":"Detail profilu tváre za rozostrenými steblami trávy","src":"img/portret-03-1600.webp","fallback":"img/portret-03-1120.jpg"},{"alt":"Žena držiaca steblá tráv pri tvári, mäkké svetlo","src":"img/portret-02-1600.webp","fallback":"img/portret-02-1120.jpg"},{"alt":"Žena zaklonená v tráve so zavretými očami, mäkké svetlo","src":"img/portret-04-1600.webp","fallback":"img/portret-04-1120.jpg"}];
 </script>
-<!-- Embla Carousel drives the portfolio rollers. Vendored rather than pulled from a
-     CDN so the site keeps no third-party runtime dependency. `defer` on both keeps
-     the order: Embla defines window.EmblaCarousel before main.js reads it. -->
+<!-- Embla Carousel drives the portfolio rollers, with its wheel-gestures plugin so a
+     trackpad's horizontal swipe moves them. Vendored rather than pulled from a CDN so
+     the site keeps no third-party runtime dependency. Deferring all three preserves
+     order: Embla and the plugin define their globals before main.js reads them. -->
 <script src="vendor/embla-carousel.umd.js?v=8.5.2" defer></script>
-<script src="main.js?v=embla1" defer></script>
+<script src="vendor/embla-carousel-wheel-gestures.umd.js?v=8.0.1" defer></script>
+<script src="main.js?v=bb4f8c20" defer></script>
 </body>
 </html>

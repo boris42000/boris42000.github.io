@@ -152,6 +152,11 @@
   // no scroll position to re-fold at the seam, and the track is no longer a scroll
   // container, so it cannot swallow the page's vertical wheel.
   const Embla = window.EmblaCarousel
+  // Trackpads emit a horizontal wheel, not a drag. Embla is not a scroll container,
+  // so nothing picks that up on its own; this plugin turns a sideways wheel gesture
+  // into a drag. It matches the gesture against the carousel's own axis, so a
+  // vertical wheel is left alone and still scrolls the page.
+  const WheelGestures = window.EmblaCarouselWheelGestures
 
   $$('.slider').forEach((slider) => {
     const viewport = $('.slider__track', slider)
@@ -179,7 +184,7 @@
       duration: reduced.matches ? 0 : 26,
       dragFree: false,
       inViewThreshold: 0.2,
-    })
+    }, WheelGestures ? [WheelGestures()] : [])
 
     // Hide the nav while every frame already fits — there is nothing to advance to.
     // Embla re-measures on resize, so re-run the check when it does.

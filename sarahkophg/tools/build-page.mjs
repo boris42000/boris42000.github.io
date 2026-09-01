@@ -142,12 +142,19 @@ const photoHTML = (slug, { cls = 'tile', sizes = TILE_SIZES, label = '' } = {}) 
 
 // `label` names the roller for assistive tech; `caption` also sets it white over the
 // first frame (skipped when a banner above the roller already carries the name).
+// A drawn chevron rather than `‹`/`›`: a text glyph centres on its font's side
+// bearings, not on the button. Both paths span x 8→16, y 4→20, so each is symmetric
+// about the viewBox centre and lands dead centre in the disc.
+const chev = (dir) => `<svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${
+  dir === 'prev' ? 'M16 4 8 12l8 8' : 'M8 4 16 12l-8 8'
+}"/></svg>`
+
 const sliderHTML = (slugs, label, caption) => `<div class="slider" role="group" aria-label="${label}">
-      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>${chev('prev')}</button>
       <div class="slider__track" tabindex="0">
         ${slugs.map((s, i) => photoHTML(s, i === 0 && caption ? { label } : {})).join('\n        ')}
       </div>
-      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">${chev('next')}</button>
     </div>`
 
 const isLandscape = (slug) => manifest[slug].width > manifest[slug].height
@@ -292,8 +299,8 @@ ${JSON.stringify({
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Zväčšená fotografia">
   <button class="lb__close" id="lbClose" aria-label="Zavrieť">✕</button>
-  <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Predchádzajúca fotografia">‹</button>
-  <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Nasledujúca fotografia">›</button>
+  <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Predchádzajúca fotografia">${chev('prev')}</button>
+  <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Nasledujúca fotografia">${chev('next')}</button>
   <figure class="lb__stage"><img id="lbImg" src="" alt=""></figure>
   <p class="lb__count"><span id="lbNow">1</span> / <span id="lbTotal">${mosaic.length}</span></p>
 </div>
@@ -309,6 +316,12 @@ ${JSON.stringify({
     })),
   )};
 </script>
+<!-- Embla Carousel drives the portfolio rollers, with its wheel-gestures plugin so a
+     trackpad's horizontal swipe moves them. Vendored rather than pulled from a CDN so
+     the site keeps no third-party runtime dependency. Deferring all three preserves
+     order: Embla and the plugin define their globals before main.js reads them. -->
+<script src="vendor/embla-carousel.umd.js?v=8.5.2" defer></script>
+<script src="vendor/embla-carousel-wheel-gestures.umd.js?v=8.0.1" defer></script>
 <script src="main.js" defer></script>
 </body>
 </html>
