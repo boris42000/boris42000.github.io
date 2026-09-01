@@ -301,7 +301,7 @@ ol, ul { list-style: none; padding: 0; }
 .mrow > .tile:last-child:nth-child(odd) { grid-column: span 2; aspect-ratio: 3 / 2; }
 .mrow > .tile:only-child { aspect-ratio: 4 / 5; }
 
-.tile { position: relative; overflow: hidden; background: var(--paper-warm); }
+.tile { position: relative; overflow: hidden; }
 .tile__btn { display: block; width: 100%; height: 100%; }
 .tile picture { width: 100%; height: 100%; }
 .tile__img {
