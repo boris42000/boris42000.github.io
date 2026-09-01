@@ -162,6 +162,8 @@
     // viewport on the middle (real) copy. A clone button just re-fires its original,
     // so the lightbox keeps working without any re-wiring.
     const origBtns = originals.map((t) => $('.tile__btn', t))
+    const origImgs = originals.map((t) => $('img.ph', t))
+    const cloneImgs = origImgs.map(() => [])
     const cloneSet = () => originals.map((t, i) => {
       const c = t.cloneNode(true)
       c.setAttribute('aria-hidden', 'true')
@@ -172,14 +174,43 @@
         b.addEventListener('click', () => origBtns[i].click())
       }
       const img = $('img.ph', c)
-      if (img && !img.classList.contains('is-loaded')) {
-        if (img.complete && img.naturalWidth) img.classList.add('is-loaded')
-        else img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true })
+      if (img) {
+        cloneImgs[i].push(img)
+        // A clone shares its original's URL, so once the original is in the clone
+        // can show it with no fade of its own; otherwise let its own load flip it.
+        if (origImgs[i]?.classList.contains('is-loaded') || (img.complete && img.naturalWidth)) {
+          img.classList.add('is-loaded')
+        } else {
+          img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true })
+        }
       }
       return c
     })
     cloneSet().forEach((c) => track.insertBefore(c, originals[0]))
     cloneSet().forEach((c) => track.appendChild(c))
+
+    // When an original finishes later, flip its clones in the same moment so the
+    // two copies never disagree as the roller wraps past them.
+    origImgs.forEach((orig, i) => {
+      if (!orig || (orig.complete && orig.naturalWidth)) return
+      orig.addEventListener('load', () => {
+        cloneImgs[i].forEach((c) => c.classList.add('is-loaded'))
+      }, { once: true })
+    })
+
+    // Chrome deprioritises image decodes inside a horizontal scroller: after the
+    // scroll position jumps (the initial park, a loop wrap, an arrow tween) tiles
+    // can be left on a low-resolution raster that never upgrades until the next
+    // interaction — the roller looks like it keeps "re-sharpening" the photos.
+    // Force a full decode of everything in or next to the viewport whenever the
+    // scroll settles.
+    const decodeNear = () => {
+      const w = track.clientWidth
+      $$('img.ph', track).forEach((img) => {
+        const r = img.getBoundingClientRect()
+        if (r.right > -w && r.left < w * 2 && img.decode) img.decode().catch(() => {})
+      })
+    }
 
     // One segment = one copy of the strip. The three copies are pixel-identical, so
     // shifting the scroll position by a whole segment is invisible.
@@ -191,17 +222,31 @@
       const s = seg()
       track.scrollLeft = s + (((x % s) + s) % s)
     }
-    // Manual drag / trackpad / fling: fold straight back onto the middle copy the
-    // moment the user leaves it, and again once the gesture settles.
+    // Manual drag / trackpad / fling: fold back onto the middle copy once the
+    // gesture settles. Rewriting scrollLeft on every raw `scroll` event fights the
+    // scroll-snap engine and makes the wrap itself stutter, so mid-roller we wait
+    // for `scrollend`; only a fling that gets within a viewport of a real edge is
+    // wrapped in-flight, where there is still a whole clone copy of runway left.
     const refold = () => {
       const s = seg()
       if (track.scrollLeft < s) track.scrollLeft += s
       else if (track.scrollLeft >= 2 * s) track.scrollLeft -= s
     }
+    const settle = () => { refold(); decodeNear() }
+    // `scrollend` is not everywhere yet; a short idle timer is the fallback that
+    // still fires the decode after a drag on browsers that lack it.
+    let idle = 0
+    const onScroll = () => {
+      const edge = track.clientWidth
+      if (track.scrollLeft < edge || track.scrollLeft > track.scrollWidth - edge) refold()
+      clearTimeout(idle)
+      idle = setTimeout(settle, 140)
+    }
     track.scrollLeft = seg()
-    track.addEventListener('scroll', refold, { passive: true })
-    track.addEventListener('scrollend', refold)
-    addEventListener('resize', refold)
+    decodeNear()
+    track.addEventListener('scroll', onScroll, { passive: true })
+    track.addEventListener('scrollend', settle)
+    addEventListener('resize', settle)
 
     // Animate by hand: the page's global `scroll-behavior: smooth` leaves a plain
     // `scrollBy` doing nothing here. A long duration, an ease and a modest step keep
@@ -220,6 +265,7 @@
         const e = p < 0.5 ? 2 * p * p : 1 - (-2 * p + 2) ** 2 / 2
         place(start + dist * e)
         if (p < 1) raf = requestAnimationFrame(tick)
+        else decodeNear()
       }
       raf = requestAnimationFrame(tick)
     }
