@@ -144,144 +144,98 @@
   }
 
   /* ── Portfolio rollers ─────────────────────────────────────────────────── */
+  // Driven by Embla Carousel (vendored, ~18 KB, no dependencies). It translates a
+  // flex container instead of scripting `scrollLeft` on a scroll-snap scroller, which
+  // is what the hand-rolled version did. That one change removes the three things
+  // that made the old roller feel unreliable: the loop needs no DOM clones (Embla
+  // repositions the real slides, so the lightbox indices stay untouched), there is
+  // no scroll position to re-fold at the seam, and the track is no longer a scroll
+  // container, so it cannot swallow the page's vertical wheel.
+  const Embla = window.EmblaCarousel
+
   $$('.slider').forEach((slider) => {
-    const track = $('.slider__track', slider)
+    const viewport = $('.slider__track', slider)
     const prev = $('.slider__nav--prev', slider)
     const next = $('.slider__nav--next', slider)
-    if (!track) return
+    if (!viewport) return
 
-    const originals = $$('.tile', track)
+    const slides = $$('.tile', viewport)
+    // No Embla (blocked script, ancient browser) leaves the track as the native
+    // scroller the CSS ships by default — degraded, but never broken.
+    if (!Embla || !slides.length) return
 
-    // Not enough frames to fill the viewport: nothing to loop, hide the nav.
-    if (originals.length === 0 || track.scrollWidth <= track.clientWidth + 4) {
-      slider.classList.add('slider--static')
-      return
+    // Embla's shape is viewport > container > slides. The markup ships the slides as
+    // direct children of the track so the no-JS scroller works; wrap them here.
+    const container = document.createElement('div')
+    container.className = 'slider__container'
+    slides.forEach((s) => container.appendChild(s))
+    viewport.appendChild(container)
+    slider.classList.add('slider--embla')
+
+    const embla = Embla(viewport, {
+      loop: true,
+      align: 'start',
+      containScroll: false, // the loop wants the full strip, not clamped ends
+      duration: reduced.matches ? 0 : 26,
+      dragFree: false,
+      inViewThreshold: 0.2,
+    })
+
+    // Hide the nav while every frame already fits — there is nothing to advance to.
+    // Embla re-measures on resize, so re-run the check when it does.
+    const sync = () => {
+      const strip = slides.reduce((w, s) => w + s.getBoundingClientRect().width, 0)
+      const fits = strip <= viewport.clientWidth + 4
+      slider.classList.toggle('slider--static', fits)
+      ;[prev, next].forEach((b) => { if (b) b.disabled = fits })
     }
 
-    // Infinite loop: flank the real strip with a clone set on each side and park the
-    // viewport on the middle (real) copy. A clone button just re-fires its original,
-    // so the lightbox keeps working without any re-wiring.
-    const origBtns = originals.map((t) => $('.tile__btn', t))
-    const origImgs = originals.map((t) => $('img.ph', t))
-    const cloneImgs = origImgs.map(() => [])
-    const cloneSet = () => originals.map((t, i) => {
-      const c = t.cloneNode(true)
-      c.setAttribute('aria-hidden', 'true')
-      const b = $('.tile__btn', c)
-      if (b) {
-        b.tabIndex = -1
-        b.removeAttribute('data-i')
-        b.addEventListener('click', () => origBtns[i].click())
-      }
-      const img = $('img.ph', c)
-      if (img) {
-        cloneImgs[i].push(img)
-        // A clone shares its original's URL, so once the original is in the clone
-        // can show it with no fade of its own; otherwise let its own load flip it.
-        if (origImgs[i]?.classList.contains('is-loaded') || (img.complete && img.naturalWidth)) {
-          img.classList.add('is-loaded')
-        } else {
-          img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true })
-        }
-      }
-      return c
-    })
-    cloneSet().forEach((c) => track.insertBefore(c, originals[0]))
-    cloneSet().forEach((c) => track.appendChild(c))
-
-    // When an original finishes later, flip its clones in the same moment so the
-    // two copies never disagree as the roller wraps past them.
-    origImgs.forEach((orig, i) => {
-      if (!orig || (orig.complete && orig.naturalWidth)) return
-      orig.addEventListener('load', () => {
-        cloneImgs[i].forEach((c) => c.classList.add('is-loaded'))
-      }, { once: true })
-    })
-
-    // Chrome deprioritises image decodes inside a horizontal scroller: after the
-    // scroll position jumps (the initial park, a loop wrap, an arrow tween) tiles
-    // can be left on a low-resolution raster that never upgrades until the next
-    // interaction — the roller looks like it keeps "re-sharpening" the photos.
-    // Force a full decode of everything in or next to the viewport whenever the
-    // scroll settles.
+    // Insurance against Chrome leaving a tile on a low-resolution raster after a
+    // jump: decode everything in or beside the viewport once movement stops.
     const decodeNear = () => {
-      const w = track.clientWidth
-      $$('img.ph', track).forEach((img) => {
+      const w = viewport.clientWidth
+      $$('img.ph', container).forEach((img) => {
         const r = img.getBoundingClientRect()
         if (r.right > -w && r.left < w * 2 && img.decode) img.decode().catch(() => {})
       })
     }
 
-    // One segment = one copy of the strip. The three copies are pixel-identical, so
-    // shifting the scroll position by a whole segment is invisible.
-    const seg = () => track.scrollWidth / 3
-
-    // Land any position on the middle copy, [seg, 2·seg). Everything writes scrollLeft
-    // through here, so the roller can never reach a real scroll end — it just wraps.
-    const place = (x) => {
-      const s = seg()
-      track.scrollLeft = s + (((x % s) + s) % s)
-    }
-    // Manual drag / trackpad / fling: fold back onto the middle copy once the
-    // gesture settles. Rewriting scrollLeft on every raw `scroll` event fights the
-    // scroll-snap engine and makes the wrap itself stutter, so mid-roller we wait
-    // for `scrollend`; only a fling that gets within a viewport of a real edge is
-    // wrapped in-flight, where there is still a whole clone copy of runway left.
-    const refold = () => {
-      const s = seg()
-      if (track.scrollLeft < s) track.scrollLeft += s
-      else if (track.scrollLeft >= 2 * s) track.scrollLeft -= s
-    }
-    const settle = () => { refold(); decodeNear() }
-    // `scrollend` is not everywhere yet; a short idle timer is the fallback that
-    // still fires the decode after a drag on browsers that lack it.
-    let idle = 0
-    const onScroll = () => {
-      const edge = track.clientWidth
-      if (track.scrollLeft < edge || track.scrollLeft > track.scrollWidth - edge) refold()
-      clearTimeout(idle)
-      idle = setTimeout(settle, 140)
-    }
-    track.scrollLeft = seg()
+    // `init` already fired inside the constructor above, so the first pass is a
+    // direct call; Embla re-measures on resize and emits `reInit` for the rest.
+    sync()
     decodeNear()
-    track.addEventListener('scroll', onScroll, { passive: true })
-    track.addEventListener('scrollend', settle)
-    addEventListener('resize', settle)
+    embla.on('reInit', sync).on('reInit', decodeNear).on('settle', decodeNear)
+    embla.on('pointerDown', () => slider.classList.add('slider--dragging'))
+    embla.on('pointerUp', () => slider.classList.remove('slider--dragging'))
 
-    // Animate by hand: the page's global `scroll-behavior: smooth` leaves a plain
-    // `scrollBy` doing nothing here. A long duration, an ease and a modest step keep
-    // the arrow a gentle nudge; `place` keeps the tween on the middle copy.
-    const step = () => Math.max(track.clientWidth * 0.62, 240)
-    let raf = 0
-    const glide = (dir) => {
-      cancelAnimationFrame(raf)
-      refold()
-      const start = track.scrollLeft - seg()
-      const dist = dir * step()
-      const dur = reduced.matches ? 0 : 900
-      const t0 = performance.now()
-      const tick = (t) => {
-        const p = dur ? Math.min((t - t0) / dur, 1) : 1
-        const e = p < 0.5 ? 2 * p * p : 1 - (-2 * p + 2) ** 2 / 2
-        place(start + dist * e)
-        if (p < 1) raf = requestAnimationFrame(tick)
-        else decodeNear()
-      }
-      raf = requestAnimationFrame(tick)
-    }
-    prev?.addEventListener('click', () => glide(-1))
-    next?.addEventListener('click', () => glide(1))
+    prev?.addEventListener('click', () => embla.scrollPrev())
+    next?.addEventListener('click', () => embla.scrollNext())
 
-    // A horizontal scroll container swallows the vertical mouse wheel (Chrome turns it
-    // into a sideways nudge that scroll-snap then eats), so a wheel over the roller
-    // neither moves it nor lets the page scroll past. Forward a vertical-dominant
-    // wheel to the window; leave a horizontal gesture (trackpad) to scroll natively.
-    track.addEventListener('wheel', (e) => {
-      if (Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return
+    // The track keeps its tabindex, but it is no longer a scroller, so the arrow
+    // keys that used to move it natively have to be wired up.
+    viewport.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); embla.scrollPrev() }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); embla.scrollNext() }
+    })
+
+    // A drag that ends on a tile must not also open the lightbox. Measured from the
+    // pointer itself rather than from Embla's `clickAllowed()`, which is not in every
+    // build; the capture phase gets this in before the tile's own click handler.
+    let dragFrom = null
+    let dragged = false
+    container.addEventListener('pointerdown', (e) => {
+      dragFrom = { x: e.clientX, y: e.clientY }
+      dragged = false
+    })
+    container.addEventListener('pointermove', (e) => {
+      if (!dragFrom) return
+      if (Math.hypot(e.clientX - dragFrom.x, e.clientY - dragFrom.y) > 8) dragged = true
+    })
+    container.addEventListener('click', (e) => {
+      if (!dragged) return
       e.preventDefault()
-      const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1
-      window.scrollBy({ top: e.deltaY * unit, behavior: 'instant' })
-    }, { passive: false })
+      e.stopPropagation()
+    }, true)
   })
 
   /* ── Reveal on scroll ──────────────────────────────────────────────────── */
