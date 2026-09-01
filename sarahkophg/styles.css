@@ -284,22 +284,23 @@ ol, ul { list-style: none; padding: 0; }
 }
 
 /* ── Mosaic ─────────────────────────────────────────────────────────────── */
-/* The portfolio is the page. Bands of one to three frames, edge to edge, with what
-   little copy there is set on the photographs themselves. Below 900px every band
-   collapses to two columns of fixed ratio; above it, `--cols` (written inline by the
-   generator) and a band height take over so each row composes as intended. */
+/* The portfolio is the page — one seamless grid. Every band dissolves into it
+   (`.mrow { display: contents }`), so tiles pack N-up no matter how the generator
+   grouped them, with no gutters — frame meets frame. The set is 2:3 portraits but for
+   one 3:2 landscape; each tile keeps its native ratio, so `object-fit: cover` has
+   nothing to crop. `dense` backfills the cells the full-width landscape would leave. */
 .mosaic {
-  display: flex; flex-direction: column;
-  gap: var(--mgap);
-  padding: var(--mgap);
-  --mgap: clamp(0.5rem, 1.6vw, 1rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: dense;
+  gap: 0;
 }
-
-.mrow { display: grid; gap: var(--mgap); grid-template-columns: 1fr 1fr; }
-.mrow > .tile { aspect-ratio: 3 / 4; }
-/* A trailing odd frame would strand half a row, so it takes the full width. */
-.mrow > .tile:last-child:nth-child(odd) { grid-column: span 2; aspect-ratio: 3 / 2; }
-.mrow > .tile:only-child { aspect-ratio: 4 / 5; }
+.mrow { display: contents; }
+.mrow > .tile { aspect-ratio: 2 / 3; }
+.mrow > .tile.tile--wide { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
+/* A lone trailing portrait would strand half a row; let it run full width instead
+   (still 2:3, so still uncropped — just larger). */
+.mrow:last-child > .tile:last-child:not(.tile--wide) { grid-column: 1 / -1; }
 
 .tile { position: relative; overflow: hidden; }
 .tile__btn { display: block; width: 100%; height: 100%; }
@@ -446,14 +447,8 @@ body.is-locked { overflow: hidden; }
 
   .msteps { flex-wrap: nowrap; gap: clamp(2rem, 4vw, 3.5rem); }
 
-  /* The composed layout: inline `--cols` per band, one of three height steps. */
-  .mrow { grid-template-columns: var(--cols); height: var(--h); }
-  .mrow > .tile,
-  .mrow > .tile:last-child:nth-child(odd),
-  .mrow > .tile:only-child { aspect-ratio: auto; grid-column: auto; }
-  .mrow--sm { --h: clamp(20rem, 46vh, 30rem); }
-  .mrow--md { --h: clamp(26rem, 64vh, 42rem); }
-  .mrow--lg { --h: clamp(32rem, 88vh, 56rem); }
+  /* Three portraits to a row where they fit. */
+  .mosaic { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ── Reduced motion ─────────────────────────────────────────────────────── */

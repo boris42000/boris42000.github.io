@@ -54,17 +54,19 @@ The page is photo-led and almost wordless, by request:
   phones, side by side from 900px) and one button. No headline: the `<h1>` is there
   for search engines and screen readers only (`.vh`). `HERO_A` / `HERO_B` in
   `build-page.mjs` pick the two frames.
-- **Portfolio** (`#portfolio`) — every other photograph, as a mosaic of bands. The
-  `MOSAIC` array in `build-page.mjs` *is* the layout: one entry per band with `cols`
-  (the desktop grid track list, written inline as `--cols`), `h` (the band height
-  step — `sm` / `md` / `lg`), and per-tile `pos` (the `object-position` crop point,
-  which matters because these are portrait frames in wide slots) and `label`.
+- **Portfolio** (`#portfolio`) — every other photograph, as one seamless grid: no
+  gutters, three portraits to a row on desktop and two below 900px. Each `.mrow` is
+  `display: contents`, so the `MOSAIC` array in `build-page.mjs` now only sets the
+  order and which tile carries a category `label` — `cols` / `h` are vestigial. Every
+  tile keeps its native aspect ratio (`2/3` for the portraits, `3/2` full-width for
+  the one landscape via `tile--wide`), so `object-fit: cover` crops nothing; `pos` is
+  a no-op unless a future non-2:3 frame is added.
 - **Labels are the only copy on the photographs.** An earlier pass set serif pull
   quotes over some tiles too; they were cut. So was the separate "O mne" section —
   its three process steps live in the booking section now, which is the whole of the
   written page.
-- Below 900px every band collapses to two columns of 3:4 tiles; a trailing odd tile
-  spans the full width at 3:2 (`:last-child:nth-child(odd)`), so no row ever strands.
+- `grid-auto-flow: dense` backfills the cells the full-width landscape would otherwise
+  leave empty, so no row ever strands.
 - The gallery filter pills, the "Čo fotím" cards and the hidden Instagram grid are
   gone — the mosaic is grouped and labelled by category instead, so all three read as
   duplicates of it. The follow link survives under the mosaic (`.mosaic__ig`).

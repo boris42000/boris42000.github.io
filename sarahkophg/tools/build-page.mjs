@@ -151,7 +151,9 @@ const tileHTML = (tile, i) => {
   const cap = tile.label
     ? `<figcaption class="tile__cap tile__cap--label">${tile.label}</figcaption>`
     : ''
-  return `<figure class="tile${cap ? ' tile--capped' : ''}">
+  // Landscape frames span the full grid width so they show uncropped at 3:2.
+  const wide = m.width > m.height ? ' tile--wide' : ''
+  return `<figure class="tile${wide}${cap ? ' tile--capped' : ''}">
           <button class="tile__btn" data-i="${i}" aria-label="Zväčšiť fotografiu: ${esc(m.alt)}">
             ${picture(tile.slug, { sizes: TILE_SIZES, className: 'tile__img', pos: tile.pos })}
           </button>
