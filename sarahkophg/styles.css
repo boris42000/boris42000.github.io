@@ -303,24 +303,37 @@ ol, ul { list-style: none; padding: 0; }
 .portfolio { display: flex; flex-direction: column; }
 
 .slider { position: relative; }
+
+/* Two states. Before main.js runs — and if it never does — the track is a plain
+   horizontal scroll container, so the frames stay reachable with JS off. Once Embla
+   takes over it becomes a viewport that merely clips a flex container Embla moves
+   with transforms; the track stops being a scroller at all, which is what removes
+   the whole class of scroll-position bugs the loop used to have. */
 .slider__track {
   display: flex;
   gap: 0;
-  /* x scrolls; y stays out of it. Without an explicit y the browser computes it to
-     `auto` too, which turns the track into a scroll container that swallows the
-     vertical wheel instead of passing it to the page. */
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-snap-type: x proximity;
   scrollbar-width: none;
 }
 .slider__track::-webkit-scrollbar { display: none; }
+
+.slider--embla .slider__track { display: block; overflow: hidden; }
+.slider__container {
+  display: flex;
+  gap: 0;
+  /* A vertical drag scrolls the page; a horizontal one drags the roller. Without
+     this the browser claims the gesture and Embla never sees it. */
+  touch-action: pan-y pinch-zoom;
+  backface-visibility: hidden;
+  cursor: grab;
+}
+.slider--dragging .slider__container { cursor: grabbing; }
 
 .slider .tile {
   flex: 0 0 auto;
   height: clamp(26rem, 78vh, 52rem);
   aspect-ratio: 2 / 3;
-  scroll-snap-align: start;
 }
 
 /* Dark disc, white chevron — reads on any frame. Hidden only while the track fits
