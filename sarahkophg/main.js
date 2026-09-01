@@ -150,9 +150,73 @@
     const next = $('.slider__nav--next', slider)
     if (!track) return
 
-    const step = () => Math.max(track.clientWidth * 0.8, 240)
-    prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }))
-    next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }))
+    const originals = $$('.tile', track)
+
+    // Not enough frames to fill the viewport: nothing to loop, hide the nav.
+    if (originals.length === 0 || track.scrollWidth <= track.clientWidth + 4) {
+      slider.classList.add('slider--static')
+      return
+    }
+
+    // Infinite loop: flank the real strip with a clone set on each side and park the
+    // viewport on the middle (real) copy. A clone button just re-fires its original,
+    // so the lightbox keeps working without any re-wiring.
+    const origBtns = originals.map((t) => $('.tile__btn', t))
+    const cloneSet = () => originals.map((t, i) => {
+      const c = t.cloneNode(true)
+      c.setAttribute('aria-hidden', 'true')
+      const b = $('.tile__btn', c)
+      if (b) {
+        b.tabIndex = -1
+        b.removeAttribute('data-i')
+        b.addEventListener('click', () => origBtns[i].click())
+      }
+      const img = $('img.ph', c)
+      if (img && !img.classList.contains('is-loaded')) {
+        if (img.complete && img.naturalWidth) img.classList.add('is-loaded')
+        else img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true })
+      }
+      return c
+    })
+    cloneSet().forEach((c) => track.insertBefore(c, originals[0]))
+    cloneSet().forEach((c) => track.appendChild(c))
+
+    // One segment = one copy of the strip. Jumping the scroll position by exactly a
+    // segment is invisible because the three copies are pixel-identical.
+    let animating = false
+    const wrap = () => {
+      if (animating) return
+      const seg = track.scrollWidth / 3
+      if (track.scrollLeft < seg * 0.5) track.scrollLeft += seg
+      else if (track.scrollLeft > seg * 1.5) track.scrollLeft -= seg
+    }
+    track.scrollLeft = track.scrollWidth / 3
+    track.addEventListener('scroll', wrap, { passive: true })
+    addEventListener('resize', () => { animating = false; wrap() })
+
+    // Animate scrollLeft by hand: the page's global `scroll-behavior: smooth` makes a
+    // plain `scrollBy` do nothing here. A long duration and an ease keep the button a
+    // gentle nudge rather than a jump.
+    const step = () => Math.max(track.clientWidth * 0.62, 240)
+    let raf = 0
+    const glide = (dir) => {
+      cancelAnimationFrame(raf)
+      animating = true
+      const from = track.scrollLeft
+      const to = from + dir * step()
+      const dur = reduced.matches ? 0 : 900
+      const t0 = performance.now()
+      const tick = (t) => {
+        const p = dur ? Math.min((t - t0) / dur, 1) : 1
+        const e = p < 0.5 ? 2 * p * p : 1 - (-2 * p + 2) ** 2 / 2
+        track.scrollLeft = from + (to - from) * e
+        if (p < 1) { raf = requestAnimationFrame(tick) }
+        else { animating = false; wrap() }
+      }
+      raf = requestAnimationFrame(tick)
+    }
+    prev?.addEventListener('click', () => glide(-1))
+    next?.addEventListener('click', () => glide(1))
 
     // A horizontal scroll container swallows the vertical mouse wheel (Chrome turns it
     // into a sideways nudge that scroll-snap then eats), so a wheel over the roller
@@ -166,16 +230,6 @@
       // smooth` would otherwise turn these into competing animations that stall.
       window.scrollBy({ top: e.deltaY * unit, behavior: 'instant' })
     }, { passive: false })
-
-    const sync = () => {
-      const slack = track.scrollWidth - track.clientWidth
-      slider.classList.toggle('slider--static', slack <= 4)
-      if (prev) prev.disabled = track.scrollLeft <= 4
-      if (next) next.disabled = track.scrollLeft >= slack - 4
-    }
-    track.addEventListener('scroll', sync, { passive: true })
-    addEventListener('resize', sync)
-    sync()
   })
 
   /* ── Reveal on scroll ──────────────────────────────────────────────────── */
