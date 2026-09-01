@@ -234,8 +234,6 @@
       if (Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return
       e.preventDefault()
       const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1
-      // `behavior: 'instant'` so each notch lands now; the page's CSS `scroll-behavior:
-      // smooth` would otherwise turn these into competing animations that stall.
       window.scrollBy({ top: e.deltaY * unit, behavior: 'instant' })
     }, { passive: false })
   })

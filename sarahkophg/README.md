@@ -60,11 +60,14 @@ The page is photo-led and almost wordless, by request:
   rows with `gap: 0` and `.tile__btn` has its UA padding zeroed (that stray padding
   was the "background between photos"). Each roller frame is a `2/3` portrait sized
   from its height; a landscape frame in a category (only `rodina-01` today) is lifted
-  out and shown full-bleed at `3/2` as the `.banner` that opens that category.
-  `main.js` wires the bare-chevron prev/next arrows (hidden via `.slider--static`
-  when a track doesn't overflow) and forwards a vertical mouse-wheel over a track to
-  the page — a horizontal scroll container otherwise swallows it, so the page can't
-  scroll past the roller.
+  out and shown full-bleed as a thin `5/2` `.banner` strip that opens that category.
+  `main.js` makes each roller an infinite loop: it flanks the strip with a clone set
+  on each side, parks the viewport on the middle copy, and folds every scroll write
+  (`place`/`refold`) back onto that copy so the track can never hit an end. The
+  disc prev/next arrows glide `scrollLeft` by hand over 900ms (hidden via
+  `.slider--static` only when a track doesn't overflow at all). A vertical
+  mouse-wheel over a track is forwarded to the page — a horizontal scroll container
+  otherwise swallows it, so the page can't scroll past the roller.
 - **Category names are the only copy**, set white over the first frame of each roller
   (`.tile__cap--label`, over the `.banner` for Deti a rodina). An earlier pass set
   serif pull quotes over the photos and, briefly, `.cathead` labels above the

@@ -335,7 +335,7 @@ ol, ul { list-style: none; padding: 0; }
 .slider__nav--next { right: clamp(0.5rem, 2vw, 1.25rem); }
 .slider--static .slider__nav { display: none; }
 
-.banner { display: block; width: 100%; aspect-ratio: 3 / 2; }
+.banner { display: block; width: 100%; aspect-ratio: 5 / 2; }
 
 .tile { position: relative; overflow: hidden; }
 .tile__btn { display: block; width: 100%; height: 100%; padding: 0; }
@@ -351,11 +351,11 @@ ol, ul { list-style: none; padding: 0; }
 /* Category name, white over the first frame of its roller (over the banner for Deti a
    rodina). Pointer passes through to the button beneath so the frame still opens. */
 .tile__cap {
-  position: absolute; inset: auto 0 0 0;
-  padding: clamp(2.5rem, 8vw, 4rem) clamp(1.25rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
+  position: absolute; inset: 0 0 auto 0;
+  padding: clamp(1rem, 3vw, 1.5rem) clamp(1.25rem, 4vw, 2rem) clamp(2rem, 6vw, 3rem);
   color: #fff;
   pointer-events: none;
-  background: linear-gradient(180deg, rgb(26 22 20 / 0) 0%, rgb(26 22 20 / 0.55) 100%);
+  background: linear-gradient(180deg, rgb(26 22 20 / 0.55) 0%, rgb(26 22 20 / 0) 100%);
 }
 .tile__cap--label {
   font-family: var(--mono);
