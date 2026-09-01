@@ -519,13 +519,13 @@ body.is-locked { overflow: hidden; }
 
   .msteps { flex-wrap: nowrap; gap: clamp(2rem, 4vw, 3.5rem); }
 
-  /* Photo left, text right. */
+  /* Photo left, text right — an even 50/50 split, the photo running tall in its half. */
   .about {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: clamp(3rem, 7vw, 6rem);
   }
-  .about__photo img { aspect-ratio: 4 / 5; }
+  .about__photo img { aspect-ratio: 2 / 3; }
 }
 
 /* ── Reduced motion ─────────────────────────────────────────────────────── */
