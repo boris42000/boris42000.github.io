@@ -182,7 +182,12 @@
       align: 'start',
       containScroll: false, // the loop wants the full strip, not clamped ends
       duration: reduced.matches ? 0 : 26,
-      dragFree: false,
+      // Free scroll, no snap. With snap on, a gentle side-scroll or trackpad nudge
+      // that stops before a frame's midpoint animates back to where it started —
+      // that backward jump was the "rebound". The frames are edge to edge and all
+      // one width, so there is no alignment worth snapping to anyway. The arrows
+      // still step frame to frame; only the drag/wheel gesture is free.
+      dragFree: true,
       inViewThreshold: 0.2,
     }, WheelGestures ? [WheelGestures()] : [])
 
