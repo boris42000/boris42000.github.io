@@ -150,21 +150,81 @@
     const next = $('.slider__nav--next', slider)
     if (!track) return
 
-    // Enable/disable the arrows for where the track sits, and hide both when it fits.
-    const sync = () => {
-      const slack = track.scrollWidth - track.clientWidth
-      slider.classList.toggle('slider--static', slack <= 4)
-      if (prev) prev.disabled = track.scrollLeft <= 4
-      if (next) next.disabled = track.scrollLeft >= slack - 4
+    const originals = $$('.tile', track)
+
+    // Not enough frames to fill the viewport: nothing to loop, hide the nav.
+    if (originals.length === 0 || track.scrollWidth <= track.clientWidth + 4) {
+      slider.classList.add('slider--static')
+      return
     }
 
-    // Plain scrollBy only: passing `behavior: 'smooth'` (or the CSS equivalent) leaves
-    // the call doing nothing in this page; scroll-snap tidies the landing. Re-sync by
-    // hand afterwards — a programmatic scroll here doesn't always emit a `scroll`.
-    const step = () => Math.max(track.clientWidth * 0.85, 240)
-    const nudge = (dir) => { track.scrollBy({ left: dir * step() }); setTimeout(sync, 80) }
-    prev?.addEventListener('click', () => nudge(-1))
-    next?.addEventListener('click', () => nudge(1))
+    // Infinite loop: flank the real strip with a clone set on each side and park the
+    // viewport on the middle (real) copy. A clone button just re-fires its original,
+    // so the lightbox keeps working without any re-wiring.
+    const origBtns = originals.map((t) => $('.tile__btn', t))
+    const cloneSet = () => originals.map((t, i) => {
+      const c = t.cloneNode(true)
+      c.setAttribute('aria-hidden', 'true')
+      const b = $('.tile__btn', c)
+      if (b) {
+        b.tabIndex = -1
+        b.removeAttribute('data-i')
+        b.addEventListener('click', () => origBtns[i].click())
+      }
+      const img = $('img.ph', c)
+      if (img && !img.classList.contains('is-loaded')) {
+        if (img.complete && img.naturalWidth) img.classList.add('is-loaded')
+        else img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true })
+      }
+      return c
+    })
+    cloneSet().forEach((c) => track.insertBefore(c, originals[0]))
+    cloneSet().forEach((c) => track.appendChild(c))
+
+    // One segment = one copy of the strip. The three copies are pixel-identical, so
+    // shifting the scroll position by a whole segment is invisible.
+    const seg = () => track.scrollWidth / 3
+
+    // Land any position on the middle copy, [seg, 2·seg). Everything writes scrollLeft
+    // through here, so the roller can never reach a real scroll end — it just wraps.
+    const place = (x) => {
+      const s = seg()
+      track.scrollLeft = s + (((x % s) + s) % s)
+    }
+    // Manual drag / trackpad / fling: fold straight back onto the middle copy the
+    // moment the user leaves it, and again once the gesture settles.
+    const refold = () => {
+      const s = seg()
+      if (track.scrollLeft < s) track.scrollLeft += s
+      else if (track.scrollLeft >= 2 * s) track.scrollLeft -= s
+    }
+    track.scrollLeft = seg()
+    track.addEventListener('scroll', refold, { passive: true })
+    track.addEventListener('scrollend', refold)
+    addEventListener('resize', refold)
+
+    // Animate by hand: the page's global `scroll-behavior: smooth` leaves a plain
+    // `scrollBy` doing nothing here. A long duration, an ease and a modest step keep
+    // the arrow a gentle nudge; `place` keeps the tween on the middle copy.
+    const step = () => Math.max(track.clientWidth * 0.62, 240)
+    let raf = 0
+    const glide = (dir) => {
+      cancelAnimationFrame(raf)
+      refold()
+      const start = track.scrollLeft - seg()
+      const dist = dir * step()
+      const dur = reduced.matches ? 0 : 900
+      const t0 = performance.now()
+      const tick = (t) => {
+        const p = dur ? Math.min((t - t0) / dur, 1) : 1
+        const e = p < 0.5 ? 2 * p * p : 1 - (-2 * p + 2) ** 2 / 2
+        place(start + dist * e)
+        if (p < 1) raf = requestAnimationFrame(tick)
+      }
+      raf = requestAnimationFrame(tick)
+    }
+    prev?.addEventListener('click', () => glide(-1))
+    next?.addEventListener('click', () => glide(1))
 
     // A horizontal scroll container swallows the vertical mouse wheel (Chrome turns it
     // into a sideways nudge that scroll-snap then eats), so a wheel over the roller
@@ -176,11 +236,6 @@
       const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1
       window.scrollBy({ top: e.deltaY * unit, behavior: 'instant' })
     }, { passive: false })
-
-    track.addEventListener('scroll', sync, { passive: true })
-    addEventListener('resize', sync)
-    addEventListener('load', sync)
-    sync()
   })
 
   /* ── Reveal on scroll ──────────────────────────────────────────────────── */
