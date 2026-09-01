@@ -181,37 +181,45 @@
     cloneSet().forEach((c) => track.insertBefore(c, originals[0]))
     cloneSet().forEach((c) => track.appendChild(c))
 
-    // One segment = one copy of the strip. Jumping the scroll position by exactly a
-    // segment is invisible because the three copies are pixel-identical.
-    let animating = false
-    const wrap = () => {
-      if (animating) return
-      const seg = track.scrollWidth / 3
-      if (track.scrollLeft < seg * 0.5) track.scrollLeft += seg
-      else if (track.scrollLeft > seg * 1.5) track.scrollLeft -= seg
-    }
-    track.scrollLeft = track.scrollWidth / 3
-    track.addEventListener('scroll', wrap, { passive: true })
-    addEventListener('resize', () => { animating = false; wrap() })
+    // One segment = one copy of the strip. The three copies are pixel-identical, so
+    // shifting the scroll position by a whole segment is invisible.
+    const seg = () => track.scrollWidth / 3
 
-    // Animate scrollLeft by hand: the page's global `scroll-behavior: smooth` makes a
-    // plain `scrollBy` do nothing here. A long duration and an ease keep the button a
-    // gentle nudge rather than a jump.
+    // Land any position on the middle copy, [seg, 2·seg). Everything writes scrollLeft
+    // through here, so the roller can never reach a real scroll end — it just wraps.
+    const place = (x) => {
+      const s = seg()
+      track.scrollLeft = s + (((x % s) + s) % s)
+    }
+    // Manual drag / trackpad / fling: fold straight back onto the middle copy the
+    // moment the user leaves it, and again once the gesture settles.
+    const refold = () => {
+      const s = seg()
+      if (track.scrollLeft < s) track.scrollLeft += s
+      else if (track.scrollLeft >= 2 * s) track.scrollLeft -= s
+    }
+    track.scrollLeft = seg()
+    track.addEventListener('scroll', refold, { passive: true })
+    track.addEventListener('scrollend', refold)
+    addEventListener('resize', refold)
+
+    // Animate by hand: the page's global `scroll-behavior: smooth` leaves a plain
+    // `scrollBy` doing nothing here. A long duration, an ease and a modest step keep
+    // the arrow a gentle nudge; `place` keeps the tween on the middle copy.
     const step = () => Math.max(track.clientWidth * 0.62, 240)
     let raf = 0
     const glide = (dir) => {
       cancelAnimationFrame(raf)
-      animating = true
-      const from = track.scrollLeft
-      const to = from + dir * step()
+      refold()
+      const start = track.scrollLeft - seg()
+      const dist = dir * step()
       const dur = reduced.matches ? 0 : 900
       const t0 = performance.now()
       const tick = (t) => {
         const p = dur ? Math.min((t - t0) / dur, 1) : 1
         const e = p < 0.5 ? 2 * p * p : 1 - (-2 * p + 2) ** 2 / 2
-        track.scrollLeft = from + (to - from) * e
-        if (p < 1) { raf = requestAnimationFrame(tick) }
-        else { animating = false; wrap() }
+        place(start + dist * e)
+        if (p < 1) raf = requestAnimationFrame(tick)
       }
       raf = requestAnimationFrame(tick)
     }
