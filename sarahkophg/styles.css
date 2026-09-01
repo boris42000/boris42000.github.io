@@ -311,24 +311,25 @@ ol, ul { list-style: none; padding: 0; }
   scroll-snap-align: start;
 }
 
-/* Bare chevrons, legible on any frame; hidden while the track fits (main.js sets
-   .slider--static) or at a scroll end ([disabled]). */
+/* Dark disc, white chevron — reads on any frame. Hidden while the track fits (main.js
+   sets .slider--static) or at a scroll end ([disabled]). */
 .slider__nav {
   position: absolute; top: 50%; translate: 0 -50%; z-index: 2;
-  width: 2.75rem; height: 4rem;
+  width: 3rem; height: 3rem;
   display: grid; place-items: center;
-  font-size: 2.5rem; line-height: 1;
-  color: rgb(244 241 234 / 0.85);
-  text-shadow: 0 1px 16px rgb(26 22 20 / 0.6);
-  transition: color 0.2s var(--ease), opacity 0.25s var(--ease);
+  font-size: 1.5rem; line-height: 1;
+  color: #fff;
+  background: rgb(26 22 20 / 0.5);
+  border-radius: 50%;
+  transition: background-color 0.2s var(--ease), opacity 0.25s var(--ease);
 }
-.slider__nav:hover, .slider__nav:focus-visible { color: #fff; }
+.slider__nav:hover, .slider__nav:focus-visible { background: rgb(26 22 20 / 0.8); }
 .slider__nav[disabled] { opacity: 0; pointer-events: none; }
-.slider__nav--prev { left: clamp(0.25rem, 1.5vw, 1rem); }
-.slider__nav--next { right: clamp(0.25rem, 1.5vw, 1rem); }
+.slider__nav--prev { left: clamp(0.5rem, 2vw, 1.25rem); }
+.slider__nav--next { right: clamp(0.5rem, 2vw, 1.25rem); }
 .slider--static .slider__nav { display: none; }
 
-.banner { display: block; width: 100%; aspect-ratio: 3 / 2; }
+.banner { display: block; width: 100%; aspect-ratio: 5 / 2; }
 
 .tile { position: relative; overflow: hidden; }
 .tile__btn { display: block; width: 100%; height: 100%; padding: 0; }
@@ -344,11 +345,11 @@ ol, ul { list-style: none; padding: 0; }
 /* Category name, white over the first frame of its roller (over the banner for Deti a
    rodina). Pointer passes through to the button beneath so the frame still opens. */
 .tile__cap {
-  position: absolute; inset: auto 0 0 0;
-  padding: clamp(2.5rem, 8vw, 4rem) clamp(1.25rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
+  position: absolute; inset: 0 0 auto 0;
+  padding: clamp(1rem, 3vw, 1.5rem) clamp(1.25rem, 4vw, 2rem) clamp(2rem, 6vw, 3rem);
   color: #fff;
   pointer-events: none;
-  background: linear-gradient(180deg, rgb(26 22 20 / 0) 0%, rgb(26 22 20 / 0.55) 100%);
+  background: linear-gradient(180deg, rgb(26 22 20 / 0.55) 0%, rgb(26 22 20 / 0) 100%);
 }
 .tile__cap--label {
   font-family: var(--mono);

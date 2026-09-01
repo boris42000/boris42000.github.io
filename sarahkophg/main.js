@@ -150,9 +150,21 @@
     const next = $('.slider__nav--next', slider)
     if (!track) return
 
-    const step = () => Math.max(track.clientWidth * 0.8, 240)
-    prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }))
-    next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }))
+    // Enable/disable the arrows for where the track sits, and hide both when it fits.
+    const sync = () => {
+      const slack = track.scrollWidth - track.clientWidth
+      slider.classList.toggle('slider--static', slack <= 4)
+      if (prev) prev.disabled = track.scrollLeft <= 4
+      if (next) next.disabled = track.scrollLeft >= slack - 4
+    }
+
+    // Plain scrollBy only: passing `behavior: 'smooth'` (or the CSS equivalent) leaves
+    // the call doing nothing in this page; scroll-snap tidies the landing. Re-sync by
+    // hand afterwards — a programmatic scroll here doesn't always emit a `scroll`.
+    const step = () => Math.max(track.clientWidth * 0.85, 240)
+    const nudge = (dir) => { track.scrollBy({ left: dir * step() }); setTimeout(sync, 80) }
+    prev?.addEventListener('click', () => nudge(-1))
+    next?.addEventListener('click', () => nudge(1))
 
     // A horizontal scroll container swallows the vertical mouse wheel (Chrome turns it
     // into a sideways nudge that scroll-snap then eats), so a wheel over the roller
@@ -162,19 +174,12 @@
       if (Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return
       e.preventDefault()
       const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1
-      // `behavior: 'instant'` so each notch lands now; the page's CSS `scroll-behavior:
-      // smooth` would otherwise turn these into competing animations that stall.
       window.scrollBy({ top: e.deltaY * unit, behavior: 'instant' })
     }, { passive: false })
 
-    const sync = () => {
-      const slack = track.scrollWidth - track.clientWidth
-      slider.classList.toggle('slider--static', slack <= 4)
-      if (prev) prev.disabled = track.scrollLeft <= 4
-      if (next) next.disabled = track.scrollLeft >= slack - 4
-    }
     track.addEventListener('scroll', sync, { passive: true })
     addEventListener('resize', sync)
+    addEventListener('load', sync)
     sync()
   })
 
