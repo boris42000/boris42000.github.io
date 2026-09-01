@@ -290,20 +290,15 @@ ol, ul { list-style: none; padding: 0; }
    carries a margin. */
 .portfolio { display: flex; flex-direction: column; }
 
-.cathead {
-  font-family: var(--mono);
-  font-size: clamp(0.6875rem, 0.6rem + 0.3vw, 0.8125rem);
-  font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--ink-soft);
-  padding: clamp(2.25rem, 6vw, 3.5rem) var(--pad) clamp(1rem, 2.5vw, 1.5rem);
-}
-
 .slider { position: relative; }
 .slider__track {
   display: flex;
   gap: 0;
+  /* x scrolls; y stays out of it. Without an explicit y the browser computes it to
+     `auto` too, which turns the track into a scroll container that swallows the
+     vertical wheel instead of passing it to the page. */
   overflow-x: auto;
-  overscroll-behavior-x: contain;
+  overflow-y: hidden;
   scroll-snap-type: x proximity;
   scrollbar-width: none;
 }
@@ -316,21 +311,21 @@ ol, ul { list-style: none; padding: 0; }
   scroll-snap-align: start;
 }
 
-/* Arrows — only while the track actually overflows (main.js toggles .slider--static). */
+/* Bare chevrons, legible on any frame; hidden while the track fits (main.js sets
+   .slider--static) or at a scroll end ([disabled]). */
 .slider__nav {
   position: absolute; top: 50%; translate: 0 -50%; z-index: 2;
-  width: 44px; height: 44px;
+  width: 2.75rem; height: 4rem;
   display: grid; place-items: center;
-  font-size: 2rem; line-height: 1;
-  color: #fff;
-  background: rgb(26 22 20 / 0.32);
-  border-radius: 50%;
-  transition: background-color 0.2s var(--ease), opacity 0.2s var(--ease);
+  font-size: 2.5rem; line-height: 1;
+  color: rgb(244 241 234 / 0.85);
+  text-shadow: 0 1px 16px rgb(26 22 20 / 0.6);
+  transition: color 0.2s var(--ease), opacity 0.25s var(--ease);
 }
-.slider__nav:hover { background: rgb(26 22 20 / 0.55); }
+.slider__nav:hover, .slider__nav:focus-visible { color: #fff; }
 .slider__nav[disabled] { opacity: 0; pointer-events: none; }
-.slider__nav--prev { left: clamp(0.5rem, 2vw, 1.25rem); }
-.slider__nav--next { right: clamp(0.5rem, 2vw, 1.25rem); }
+.slider__nav--prev { left: clamp(0.25rem, 1.5vw, 1rem); }
+.slider__nav--next { right: clamp(0.25rem, 1.5vw, 1rem); }
 .slider--static .slider__nav { display: none; }
 
 .banner { display: block; width: 100%; aspect-ratio: 3 / 2; }
@@ -345,6 +340,21 @@ ol, ul { list-style: none; padding: 0; }
   transition: transform 0.8s var(--ease);
 }
 .tile__btn:hover .tile__img, .tile__btn:focus-visible .tile__img { transform: scale(1.04); }
+
+/* Category name, white over the first frame of its roller (over the banner for Deti a
+   rodina). Pointer passes through to the button beneath so the frame still opens. */
+.tile__cap {
+  position: absolute; inset: auto 0 0 0;
+  padding: clamp(2.5rem, 8vw, 4rem) clamp(1.25rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
+  color: #fff;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(26 22 20 / 0) 0%, rgb(26 22 20 / 0.55) 100%);
+}
+.tile__cap--label {
+  font-family: var(--mono);
+  font-size: clamp(0.6875rem, 0.6rem + 0.3vw, 0.8125rem);
+  font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+}
 
 .portfolio__ig { padding: clamp(2rem, 5vw, 3rem) var(--pad) 0; }
 .portfolio__ig .link { color: var(--clay); }

@@ -125,19 +125,22 @@ const BANNER_SIZES = '100vw'
 // whichever roller the click came from.
 const idx = (slug) => ORDER.indexOf(slug)
 
-const photoHTML = (slug, { cls = 'tile', sizes = TILE_SIZES } = {}) => {
+const photoHTML = (slug, { cls = 'tile', sizes = TILE_SIZES, label = '' } = {}) => {
   const m = manifest[slug]
-  return `<figure class="${cls}">
+  const cap = label ? `\n          <figcaption class="tile__cap tile__cap--label">${label}</figcaption>` : ''
+  return `<figure class="${cls}${label ? ' tile--capped' : ''}">
           <button class="tile__btn" data-i="${idx(slug)}" aria-label="Zväčšiť fotografiu: ${esc(m.alt)}">
             ${picture(slug, { sizes, className: 'tile__img' })}
-          </button>
+          </button>${cap}
         </figure>`
 }
 
-const sliderHTML = (slugs) => `<div class="slider" role="group">
+// `label` names the roller for assistive tech; `caption` also sets it white over the
+// first frame (skipped when a banner above the roller already carries the name).
+const sliderHTML = (slugs, label, caption) => `<div class="slider" role="group" aria-label="${label}">
       <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
       <div class="slider__track" tabindex="0">
-        ${slugs.map((s) => photoHTML(s)).join('\n        ')}
+        ${slugs.map((s, i) => photoHTML(s, i === 0 && caption ? { label } : {})).join('\n        ')}
       </div>
       <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
     </div>`
@@ -148,10 +151,10 @@ const portfolioHTML = CATS.map(({ cat, label }) => {
   const slugs = ORDER.filter((s) => manifest[s].cat === cat)
   const banner = slugs.find(isLandscape)
   const rail = slugs.filter((s) => s !== banner)
+  // With a banner the name rides that; otherwise it rides the roller's first frame.
   return [
-    banner && photoHTML(banner, { cls: 'tile banner', sizes: BANNER_SIZES }),
-    `<p class="cathead">${label}</p>`,
-    sliderHTML(rail),
+    banner && photoHTML(banner, { cls: 'tile banner', sizes: BANNER_SIZES, label }),
+    sliderHTML(rail, label, !banner),
   ].filter(Boolean).join('\n    ')
 }).join('\n    ')
 

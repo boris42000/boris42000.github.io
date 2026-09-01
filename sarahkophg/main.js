@@ -154,6 +154,19 @@
     prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }))
     next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }))
 
+    // A horizontal scroll container swallows the vertical mouse wheel (Chrome turns it
+    // into a sideways nudge that scroll-snap then eats), so a wheel over the roller
+    // neither moves it nor lets the page scroll past. Forward a vertical-dominant
+    // wheel to the window; leave a horizontal gesture (trackpad) to scroll natively.
+    track.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return
+      e.preventDefault()
+      const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1
+      // `behavior: 'instant'` so each notch lands now; the page's CSS `scroll-behavior:
+      // smooth` would otherwise turn these into competing animations that stall.
+      window.scrollBy({ top: e.deltaY * unit, behavior: 'instant' })
+    }, { passive: false })
+
     const sync = () => {
       const slack = track.scrollWidth - track.clientWidth
       slider.classList.toggle('slider--static', slack <= 4)

@@ -61,13 +61,15 @@ The page is photo-led and almost wordless, by request:
   was the "background between photos"). Each roller frame is a `2/3` portrait sized
   from its height; a landscape frame in a category (only `rodina-01` today) is lifted
   out and shown full-bleed at `3/2` as the `.banner` that opens that category.
-  `main.js` wires the prev/next arrows and hides them (`.slider--static`) when a
-  track doesn't overflow.
-- **Category names are the only copy.** `.cathead` labels sit above each roller
-  (under the banner, for Deti a rodina). An earlier pass set serif pull quotes and
-  per-tile caption strips over the photos; both were cut. So was the separate "O mne"
-  section — its three process steps live in the booking section now, which is the
-  whole of the written page.
+  `main.js` wires the bare-chevron prev/next arrows (hidden via `.slider--static`
+  when a track doesn't overflow) and forwards a vertical mouse-wheel over a track to
+  the page — a horizontal scroll container otherwise swallows it, so the page can't
+  scroll past the roller.
+- **Category names are the only copy**, set white over the first frame of each roller
+  (`.tile__cap--label`, over the `.banner` for Deti a rodina). An earlier pass set
+  serif pull quotes over the photos and, briefly, `.cathead` labels above the
+  rollers; both were cut. So was the separate "O mne" section — its three process
+  steps live in the booking section now, which is the whole of the written page.
 - The gallery filter pills, the "Čo fotím" cards and the hidden Instagram grid are
   gone — the rollers are grouped and labelled by category instead. The follow link
   survives under them (`.portfolio__ig`).
