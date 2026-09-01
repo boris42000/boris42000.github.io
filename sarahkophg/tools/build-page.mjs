@@ -12,6 +12,11 @@
  * The generated index.html is plain static HTML and is the committed artifact — you
  * can edit copy in it directly. Only re-run this if the photo set changes, which
  * would overwrite such edits (the copy also lives in COPY below).
+ *
+ * `npm run page` chains `bump-version.mjs` right after, which stamps the
+ * styles.css/main.js links below with a content hash so a deploy can't be served
+ * against a stale cached copy of either file. If you edit styles.css or main.js
+ * without touching the photo set, skip this script and run `npm run version` alone.
  */
 import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'

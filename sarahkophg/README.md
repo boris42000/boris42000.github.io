@@ -29,6 +29,12 @@ downsized, desaturated copy; the originals cannot be recovered from it.
 
 **Copy tweaks** — edit `index.html` directly. It is plain static HTML.
 
+**CSS/JS tweaks** — edit `styles.css`/`main.js` directly, then run
+`(cd tools && npm run version)`. It stamps the `<link>`/`<script>` tags in
+`index.html` with a content-hash query string (`tools/bump-version.mjs`), so a
+deploy can't be served against a browser's or GitHub Pages' CDN's cached copy of
+the old file. Skip this only if you didn't touch either file.
+
 **Anything about the photo set** — edit the `PHOTOS` list in
 `tools/optimize-images.mjs` (that list *is* the curation: 21 of the 22 masters are
 published; only the dog portrait is held back as off-message), then:
@@ -44,7 +50,8 @@ Note that `npm run page` regenerates `index.html` from the template inside
 edited `index.html` by hand and want to change photos too, port the copy changes into
 `build-page.mjs` first.
 
-Individual steps: `npm run images`, `npm run assets`, `npm run page`.
+Individual steps: `npm run images`, `npm run assets`, `npm run page`, `npm run
+version` (bumps the styles.css/main.js cache-busting query strings alone).
 
 ## Notes
 
