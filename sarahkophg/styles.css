@@ -251,6 +251,17 @@ ol, ul { list-style: none; padding: 0; }
   left: 50%; translate: -50% 0;
   bottom: max(clamp(2rem, 7vh, 4.5rem), env(safe-area-inset-bottom));
   z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(1.1rem, 3.5vh, 1.9rem);
+  width: min(90vw, 32rem);
+}
+.hero__slogan {
+  color: var(--paper);
+  font-size: clamp(1.5rem, 1rem + 2.6vw, 2.75rem);
+  font-weight: 300; font-style: italic; line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-align: center; text-wrap: balance;
+  text-shadow: 0 2px 28px rgb(26 22 20 / 0.6);
 }
 .hero__cta .btn {
   white-space: nowrap;
