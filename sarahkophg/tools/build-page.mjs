@@ -148,14 +148,10 @@ const TILE_SIZES = '(min-width: 900px) 50vw, 50vw'
 
 const tileHTML = (tile, i) => {
   const m = manifest[tile.slug]
-  const cap = tile.label
-    ? `<figcaption class="tile__cap tile__cap--label">${tile.label}</figcaption>`
-    : ''
-  return `<figure class="tile${cap ? ' tile--capped' : ''}">
+  return `<figure class="tile">
           <button class="tile__btn" data-i="${i}" aria-label="Zväčšiť fotografiu: ${esc(m.alt)}">
             ${picture(tile.slug, { sizes: TILE_SIZES, className: 'tile__img', pos: tile.pos })}
           </button>
-          ${cap}
         </figure>`
 }
 

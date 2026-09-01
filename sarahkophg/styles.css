@@ -311,19 +311,6 @@ ol, ul { list-style: none; padding: 0; }
 }
 .tile__btn:hover .tile__img, .tile__btn:focus-visible .tile__img { transform: scale(1.04); }
 
-/* Captions stay in the accessibility tree but let the pointer through to the button
-   underneath them, so the whole tile opens the lightbox. */
-.tile__cap {
-  position: absolute; inset: auto 0 0 0;
-  padding: clamp(2.5rem, 8vw, 4rem) clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 1.75rem);
-  color: #fff;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgb(26 22 20 / 0) 0%, rgb(26 22 20 / 0.62) 100%);
-}
-.tile__cap--label {
-  font-family: var(--mono); font-size: clamp(0.625rem, 0.55rem + 0.25vw, 0.75rem);
-  font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-}
 .mosaic__ig { padding: clamp(2rem, 5vw, 3rem) var(--pad) 0; }
 .mosaic__ig .link { color: var(--clay); }
 
