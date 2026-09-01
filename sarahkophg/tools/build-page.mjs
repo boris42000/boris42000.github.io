@@ -86,82 +86,74 @@ const HERO_A = 'portret-01'
 const HERO_B = 'tehotenske-02'
 
 /**
- * The mosaic. One entry per band; `cols` is the desktop grid track list, `h` the band
- * height step (sm / md / lg), `pos` the crop point, and `label` the one bit of copy a
- * tile may carry — the category tag, set over the photograph itself.
- *
- * Below 900px every band collapses to two columns (a trailing odd tile goes full
- * width), so the track lists only need to read well on desktop.
+ * The portfolio: three horizontal rollers, one per category, in this order. Each
+ * category's photographs are pulled from the manifest in the curated `ORDER` below;
+ * a landscape frame in a category is lifted out of its roller and shown full-bleed
+ * as the banner that opens it (only `rodina-01` qualifies today).
  */
-const MOSAIC = [
-  { h: 'md', cols: '1fr 1fr', tiles: [
-    { slug: 'tehotenske-08', pos: '50% 45%', label: 'Páry a tehotenské' },
-    { slug: 'tehotenske-10', pos: '50% 30%' },
-  ] },
-  { h: 'lg', cols: '1fr', tiles: [
-    { slug: 'tehotenske-03', pos: '50% 30%' },
-  ] },
-  { h: 'md', cols: '2fr 1fr', tiles: [
-    { slug: 'tehotenske-06', pos: '50% 40%' },
-    { slug: 'tehotenske-04' },
-  ] },
-  { h: 'md', cols: '1fr 1fr', tiles: [
-    { slug: 'tehotenske-07' },
-    { slug: 'tehotenske-09', pos: '50% 40%' },
-  ] },
-  // The two frames that were shot in colour, kept together so the break reads as a
-  // decision rather than an accident.
-  { h: 'md', cols: '1fr 1fr', tiles: [
-    { slug: 'tehotenske-01', pos: '50% 28%' },
-    { slug: 'tehotenske-05', pos: '50% 45%' },
-  ] },
-  { h: 'md', cols: '1fr 1fr', tiles: [
-    { slug: 'rodina-02', pos: '50% 40%', label: 'Deti a rodina' },
-    { slug: 'rodina-04', pos: '50% 35%' },
-  ] },
-  { h: 'sm', cols: '1fr 1fr 1fr', tiles: [
-    { slug: 'rodina-03' },
-    { slug: 'rodina-07' },
-    { slug: 'rodina-06', pos: '50% 40%' },
-  ] },
-  { h: 'md', cols: '3fr 2fr', tiles: [
-    { slug: 'rodina-01' },
-    { slug: 'rodina-05' },
-  ] },
-  { h: 'md', cols: '1fr 1fr 1fr', tiles: [
-    { slug: 'portret-03', pos: '50% 35%', label: 'Portrét' },
-    { slug: 'portret-02', pos: '50% 35%' },
-    { slug: 'portret-04', pos: '50% 40%' },
-  ] },
+const CATS = [
+  { cat: 'tehotenske', label: 'Páry a tehotenské' },
+  { cat: 'rodina', label: 'Deti a rodina' },
+  { cat: 'portret', label: 'Portrét' },
 ]
 
-// Flattened once: the lightbox indexes into this, in scroll order.
-const mosaic = MOSAIC.flatMap((row) => row.tiles.map((t) => t.slug))
+// Curated running order of every non-hero frame. The lightbox indexes into this, so
+// it is also the left-to-right order within each roller (banner first in its group).
+const ORDER = [
+  'tehotenske-08', 'tehotenske-10', 'tehotenske-03', 'tehotenske-06', 'tehotenske-04',
+  'tehotenske-07', 'tehotenske-09', 'tehotenske-01', 'tehotenske-05',
+  'rodina-01', 'rodina-02', 'rodina-04', 'rodina-03', 'rodina-07', 'rodina-06', 'rodina-05',
+  'portret-03', 'portret-02', 'portret-04',
+]
+
+// Kept name: still the flat, in-order slug list the lightbox and JSON-LD read.
+const mosaic = ORDER
 
 const unused = Object.keys(manifest).filter((s) => ![...mosaic, HERO_A, HERO_B].includes(s))
 if (unused.length) console.warn(`! not on the page: ${unused.join(', ')}`)
+const missing = mosaic.filter((s) => !manifest[s])
+if (missing.length) throw new Error(`ORDER lists slugs not in the manifest: ${missing.join(', ')}`)
 
 // ── Assemble ────────────────────────────────────────────────────────────────────
-// Bands are at most full width and usually a fraction of it; one `sizes` covers all
-// of them closely enough that no tile ever fetches a rendition two steps too big.
-const TILE_SIZES = '(min-width: 900px) 50vw, 50vw'
+// A roller frame is at most ~40vw on desktop and ~two-thirds of the screen on a
+// phone; the banner is full width. One `sizes` per kind is close enough that nothing
+// fetches a rendition two steps too big.
+const TILE_SIZES = '(min-width: 900px) 40vw, 66vw'
+const BANNER_SIZES = '100vw'
 
-const tileHTML = (tile, i) => {
-  const m = manifest[tile.slug]
-  const cap = tile.label
-    ? `<figcaption class="tile__cap tile__cap--label">${tile.label}</figcaption>`
-    : ''
-  // Landscape frames span the full grid width so they show uncropped at 3:2.
-  const wide = m.width > m.height ? ' tile--wide' : ''
-  return `<figure class="tile${wide}${cap ? ' tile--capped' : ''}">
-          <button class="tile__btn" data-i="${i}" aria-label="Zväčšiť fotografiu: ${esc(m.alt)}">
-            ${picture(tile.slug, { sizes: TILE_SIZES, className: 'tile__img', pos: tile.pos })}
+// data-i is the frame's slot in ORDER, so the lightbox opens the right photograph
+// whichever roller the click came from.
+const idx = (slug) => ORDER.indexOf(slug)
+
+const photoHTML = (slug, { cls = 'tile', sizes = TILE_SIZES } = {}) => {
+  const m = manifest[slug]
+  return `<figure class="${cls}">
+          <button class="tile__btn" data-i="${idx(slug)}" aria-label="Zväčšiť fotografiu: ${esc(m.alt)}">
+            ${picture(slug, { sizes, className: 'tile__img' })}
           </button>
-          ${cap}
         </figure>`
 }
 
-let tileIndex = 0
+const sliderHTML = (slugs) => `<div class="slider" role="group">
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <div class="slider__track" tabindex="0">
+        ${slugs.map((s) => photoHTML(s)).join('\n        ')}
+      </div>
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+    </div>`
+
+const isLandscape = (slug) => manifest[slug].width > manifest[slug].height
+
+const portfolioHTML = CATS.map(({ cat, label }) => {
+  const slugs = ORDER.filter((s) => manifest[s].cat === cat)
+  const banner = slugs.find(isLandscape)
+  const rail = slugs.filter((s) => s !== banner)
+  return [
+    banner && photoHTML(banner, { cls: 'tile banner', sizes: BANNER_SIZES }),
+    `<p class="cathead">${label}</p>`,
+    sliderHTML(rail),
+  ].filter(Boolean).join('\n    ')
+}).join('\n    ')
 
 const html = `<!doctype html>
 <html lang="sk">
@@ -257,12 +249,11 @@ ${JSON.stringify({
     </div>
   </section>
 
-  <!-- The portfolio itself: every remaining photograph, the copy set on top of it. -->
-  <section class="mosaic" id="portfolio" aria-label="Portfólio">
-    ${MOSAIC.map((row) => `<div class="mrow mrow--${row.h}" style="--cols:${row.cols}">
-        ${row.tiles.map((t) => tileHTML(t, tileIndex++)).join('\n        ')}
-      </div>`).join('\n    ')}
-    <p class="mosaic__ig"><a class="link" href="${IG}" target="_blank" rel="noopener">Viac fotografií na Instagrame @${HANDLE} ↗</a></p>
+  <!-- The portfolio: three horizontal rollers, the middle one opened by a full-bleed
+       landscape frame. Category names are the only copy. -->
+  <section class="portfolio" id="portfolio" aria-label="Portfólio">
+    ${portfolioHTML}
+    <p class="portfolio__ig"><a class="link" href="${IG}" target="_blank" rel="noopener">Viac fotografií na Instagrame @${HANDLE} ↗</a></p>
   </section>
 
   <section class="contact" id="rezervacia">

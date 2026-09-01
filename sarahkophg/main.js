@@ -56,7 +56,7 @@
   }
 
   /* ── Mosaic tiles ──────────────────────────────────────────────────────── */
-  const tiles = $$('.mosaic .tile')
+  const tiles = $$('.portfolio .tile')
 
   /* ── Lightbox ──────────────────────────────────────────────────────────── */
   const data = window.__GALLERY__ || []
@@ -143,10 +143,32 @@
     }, { passive: true })
   }
 
+  /* ── Portfolio rollers ─────────────────────────────────────────────────── */
+  $$('.slider').forEach((slider) => {
+    const track = $('.slider__track', slider)
+    const prev = $('.slider__nav--prev', slider)
+    const next = $('.slider__nav--next', slider)
+    if (!track) return
+
+    const step = () => Math.max(track.clientWidth * 0.8, 240)
+    prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }))
+    next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }))
+
+    const sync = () => {
+      const slack = track.scrollWidth - track.clientWidth
+      slider.classList.toggle('slider--static', slack <= 4)
+      if (prev) prev.disabled = track.scrollLeft <= 4
+      if (next) next.disabled = track.scrollLeft >= slack - 4
+    }
+    track.addEventListener('scroll', sync, { passive: true })
+    addEventListener('resize', sync)
+    sync()
+  })
+
   /* ── Reveal on scroll ──────────────────────────────────────────────────── */
   // The hero is deliberately not in here: it is the LCP, so it paints straight away.
   const targets = [
-    ...$$('.tile, .contact__body'),
+    ...$$('.slider, .banner, .contact__body'),
   ]
   targets.forEach((el) => el.classList.add('reveal'))
 

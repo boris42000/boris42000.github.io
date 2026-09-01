@@ -283,50 +283,71 @@ ol, ul { list-style: none; padding: 0; }
   letter-spacing: 0.02em; color: var(--ink-soft);
 }
 
-/* ── Mosaic ─────────────────────────────────────────────────────────────── */
-/* The portfolio is the page — one seamless grid. Every band dissolves into it
-   (`.mrow { display: contents }`), so tiles pack N-up no matter how the generator
-   grouped them, with no gutters — frame meets frame. The set is 2:3 portraits but for
-   one 3:2 landscape; each tile keeps its native ratio, so `object-fit: cover` has
-   nothing to crop. `dense` backfills the cells the full-width landscape would leave. */
-.mosaic {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-flow: dense;
-  gap: 0;
+/* ── Portfolio ─────────────────────────────────────────────────────────────
+   Three horizontal rollers — Páry a tehotenské, Deti a rodina, Portrét — the middle
+   one opened by a full-bleed landscape frame. Photos meet edge to edge everywhere:
+   each track is a flex row with `gap: 0`, and nothing stacked between the rollers
+   carries a margin. */
+.portfolio { display: flex; flex-direction: column; }
+
+.cathead {
+  font-family: var(--mono);
+  font-size: clamp(0.6875rem, 0.6rem + 0.3vw, 0.8125rem);
+  font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: clamp(2.25rem, 6vw, 3.5rem) var(--pad) clamp(1rem, 2.5vw, 1.5rem);
 }
-.mrow { display: contents; }
-.mrow > .tile { aspect-ratio: 2 / 3; }
-.mrow > .tile.tile--wide { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
-/* A lone trailing portrait would strand half a row; let it run full width instead
-   (still 2:3, so still uncropped — just larger). */
-.mrow:last-child > .tile:last-child:not(.tile--wide) { grid-column: 1 / -1; }
+
+.slider { position: relative; }
+.slider__track {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+.slider__track::-webkit-scrollbar { display: none; }
+
+.slider .tile {
+  flex: 0 0 auto;
+  height: clamp(26rem, 78vh, 52rem);
+  aspect-ratio: 2 / 3;
+  scroll-snap-align: start;
+}
+
+/* Arrows — only while the track actually overflows (main.js toggles .slider--static). */
+.slider__nav {
+  position: absolute; top: 50%; translate: 0 -50%; z-index: 2;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  font-size: 2rem; line-height: 1;
+  color: #fff;
+  background: rgb(26 22 20 / 0.32);
+  border-radius: 50%;
+  transition: background-color 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+.slider__nav:hover { background: rgb(26 22 20 / 0.55); }
+.slider__nav[disabled] { opacity: 0; pointer-events: none; }
+.slider__nav--prev { left: clamp(0.5rem, 2vw, 1.25rem); }
+.slider__nav--next { right: clamp(0.5rem, 2vw, 1.25rem); }
+.slider--static .slider__nav { display: none; }
+
+.banner { display: block; width: 100%; aspect-ratio: 3 / 2; }
 
 .tile { position: relative; overflow: hidden; }
-.tile__btn { display: block; width: 100%; height: 100%; }
-.tile picture { width: 100%; height: 100%; }
+.tile__btn { display: block; width: 100%; height: 100%; padding: 0; }
+.tile picture { display: block; width: 100%; height: 100%; }
 .tile__img {
+  display: block;
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.8s var(--ease);
 }
 .tile__btn:hover .tile__img, .tile__btn:focus-visible .tile__img { transform: scale(1.04); }
 
-/* Captions stay in the accessibility tree but let the pointer through to the button
-   underneath them, so the whole tile opens the lightbox. */
-.tile__cap {
-  position: absolute; inset: auto 0 0 0;
-  padding: clamp(2.5rem, 8vw, 4rem) clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 1.75rem);
-  color: #fff;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgb(26 22 20 / 0) 0%, rgb(26 22 20 / 0.62) 100%);
-}
-.tile__cap--label {
-  font-family: var(--mono); font-size: clamp(0.625rem, 0.55rem + 0.25vw, 0.75rem);
-  font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-}
-.mosaic__ig { padding: clamp(2rem, 5vw, 3rem) var(--pad) 0; }
-.mosaic__ig .link { color: var(--clay); }
+.portfolio__ig { padding: clamp(2rem, 5vw, 3rem) var(--pad) 0; }
+.portfolio__ig .link { color: var(--clay); }
 
 /* ── Contact ────────────────────────────────────────────────────────────── */
 .contact { position: relative; text-align: center; padding-block: clamp(5rem, 15vw, 11rem); }
@@ -446,9 +467,6 @@ body.is-locked { overflow: hidden; }
   .hero { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
 
   .msteps { flex-wrap: nowrap; gap: clamp(2rem, 4vw, 3.5rem); }
-
-  /* Three portraits to a row where they fit. */
-  .mosaic { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ── Reduced motion ─────────────────────────────────────────────────────── */

@@ -131,293 +131,278 @@
     </div>
   </section>
 
-  <!-- The portfolio itself: every remaining photograph, the copy set on top of it. -->
-  <section class="mosaic" id="portfolio" aria-label="Portfólio">
-    <div class="mrow mrow--md" style="--cols:1fr 1fr">
-        <figure class="tile tile--capped">
+  <!-- The portfolio: three horizontal rollers, the middle one opened by a full-bleed
+       landscape frame. Category names are the only copy. -->
+  <section class="portfolio" id="portfolio" aria-label="Portfólio">
+    <p class="cathead">Páry a tehotenské</p>
+    <div class="slider" role="group">
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <div class="slider__track" tabindex="0">
+        <figure class="tile">
           <button class="tile__btn" data-i="0" aria-label="Zväčšiť fotografiu: Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-08-480.avif 480w, img/tehotenske-08-768.avif 768w, img/tehotenske-08-1120.avif 1120w, img/tehotenske-08-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-08-480.webp 480w, img/tehotenske-08-768.webp 768w, img/tehotenske-08-1120.webp 1120w, img/tehotenske-08-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-08-480.avif 480w, img/tehotenske-08-768.avif 768w, img/tehotenske-08-1120.avif 1120w, img/tehotenske-08-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-08-480.webp 480w, img/tehotenske-08-768.webp 768w, img/tehotenske-08-1120.webp 1120w, img/tehotenske-08-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-08-1120.jpg"
-                 srcset="img/tehotenske-08-480.jpg 480w, img/tehotenske-08-768.jpg 768w, img/tehotenske-08-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-08-480.jpg 480w, img/tehotenske-08-768.jpg 768w, img/tehotenske-08-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAfEAACAgIDAAMAAAAAAAAAAAABAgADBBESEyEFIjH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Anviolm0c7jgjcCrElTEHOqttRQp5Eylbj2V09gH11uBNONUT6TCYbM0xGoQEACq4MP0GW7/kqrsLrZtECRL5zcifIGnILE7hFMo3CB//2Q==);object-position:50% 45%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAfEAACAgIDAAMAAAAAAAAAAAABAgADBBESEyEFIjH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Anviolm0c7jgjcCrElTEHOqttRQp5Eylbj2V09gH11uBNONUT6TCYbM0xGoQEACq4MP0GW7/kqrsLrZtECRL5zcifIGnILE7hFMo3CB//2Q==)">
           </picture>
           </button>
-          <figcaption class="tile__cap tile__cap--label">Páry a tehotenské</figcaption>
         </figure>
         <figure class="tile">
           <button class="tile__btn" data-i="1" aria-label="Zväčšiť fotografiu: Pár v protisvetle medzi stromami, slnečná žiara cez listy">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-10-480.avif 480w, img/tehotenske-10-768.avif 768w, img/tehotenske-10-1120.avif 1120w, img/tehotenske-10-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-10-480.webp 480w, img/tehotenske-10-768.webp 768w, img/tehotenske-10-1120.webp 1120w, img/tehotenske-10-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-10-480.avif 480w, img/tehotenske-10-768.avif 768w, img/tehotenske-10-1120.avif 1120w, img/tehotenske-10-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-10-480.webp 480w, img/tehotenske-10-768.webp 768w, img/tehotenske-10-1120.webp 1120w, img/tehotenske-10-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-10-1120.jpg"
-                 srcset="img/tehotenske-10-480.jpg 480w, img/tehotenske-10-768.jpg 768w, img/tehotenske-10-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-10-480.jpg 480w, img/tehotenske-10-768.jpg 768w, img/tehotenske-10-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2401" alt="Pár v protisvetle medzi stromami, slnečná žiara cez listy"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAgEAACAgIBBQEAAAAAAAAAAAABAgAEAxEFBhIhMUFC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOtQgLr0ZicxzL0sihGBH2TXOSzVszKW+anKXs75sxLMTswNx+obDMSp8GEnp1wa6kqCTCBDYs5bLl8jbIkDEs2z7jFc9uov9GA5LOVVAVyBCTgwgf/Z);object-position:50% 30%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAgEAACAgIBBQEAAAAAAAAAAAABAgAEAxEFBhIhMUFC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOtQgLr0ZicxzL0sihGBH2TXOSzVszKW+anKXs75sxLMTswNx+obDMSp8GEnp1wa6kqCTCBDYs5bLl8jbIkDEs2z7jFc9uov9GA5LOVVAVyBCTgwgf/Z)">
           </picture>
           </button>
-          
         </figure>
-      </div>
-    <div class="mrow mrow--lg" style="--cols:1fr">
         <figure class="tile">
           <button class="tile__btn" data-i="2" aria-label="Zväčšiť fotografiu: Pár na prechádzke medzi stromami, protisvetlo">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-03-480.avif 480w, img/tehotenske-03-768.avif 768w, img/tehotenske-03-1120.avif 1120w, img/tehotenske-03-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-03-480.webp 480w, img/tehotenske-03-768.webp 768w, img/tehotenske-03-1120.webp 1120w, img/tehotenske-03-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-03-480.avif 480w, img/tehotenske-03-768.avif 768w, img/tehotenske-03-1120.avif 1120w, img/tehotenske-03-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-03-480.webp 480w, img/tehotenske-03-768.webp 768w, img/tehotenske-03-1120.webp 1120w, img/tehotenske-03-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-03-1120.jpg"
-                 srcset="img/tehotenske-03-480.jpg 480w, img/tehotenske-03-768.jpg 768w, img/tehotenske-03-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-03-480.jpg 480w, img/tehotenske-03-768.jpg 768w, img/tehotenske-03-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Pár na prechádzke medzi stromami, protisvetlo"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAfEAACAgICAwEAAAAAAAAAAAABAgADBBEFIRIUQVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6lchFcL5CZnJZ2M/lUx7+GRcjd69503z9nM25DPmDbdbgX3UlrCVJIhKveSsBUUEahAzcl7GO2ctM11YWbMryr9NoDUTY21BMBq9gEtCIDnUIH//2Q==);object-position:50% 30%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAfEAACAgICAwEAAAAAAAAAAAABAgADBBEFIRIUQVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6lchFcL5CZnJZ2M/lUx7+GRcjd69503z9nM25DPmDbdbgX3UlrCVJIhKveSsBUUEahAzcl7GO2ctM11YWbMryr9NoDUTY21BMBq9gEtCIDnUIH//2Q==)">
           </picture>
           </button>
-          
         </figure>
-      </div>
-    <div class="mrow mrow--md" style="--cols:2fr 1fr">
         <figure class="tile">
           <button class="tile__btn" data-i="3" aria-label="Zväčšiť fotografiu: Pár si spolu prezerá ultrazvukovú fotografiu">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-06-480.avif 480w, img/tehotenske-06-768.avif 768w, img/tehotenske-06-1120.avif 1120w, img/tehotenske-06-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-06-480.webp 480w, img/tehotenske-06-768.webp 768w, img/tehotenske-06-1120.webp 1120w, img/tehotenske-06-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-06-480.avif 480w, img/tehotenske-06-768.avif 768w, img/tehotenske-06-1120.avif 1120w, img/tehotenske-06-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-06-480.webp 480w, img/tehotenske-06-768.webp 768w, img/tehotenske-06-1120.webp 1120w, img/tehotenske-06-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-06-1120.jpg"
-                 srcset="img/tehotenske-06-480.jpg 480w, img/tehotenske-06-768.jpg 768w, img/tehotenske-06-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-06-480.jpg 480w, img/tehotenske-06-768.jpg 768w, img/tehotenske-06-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Pár si spolu prezerá ultrazvukovú fotografiu"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUBAgMEBv/EACAQAAEFAAMAAwEAAAAAAAAAAAEAAgMEERIhMQUTIlH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ArBK5uchurZdK2MkSenwJXVt5AA9v63pNLNf7Io587HoQJLc7mzuDXEBCrbkIncAzUICzejDm8GjQmtb5DlWIe4edBctJ1ImEXefzEETWJHSuIIzULGeOnpCD/9k=);object-position:50% 40%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUBAgMEBv/EACAQAAEFAAMAAwEAAAAAAAAAAAEAAgMEERIhMQUTIlH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ArBK5uchurZdK2MkSenwJXVt5AA9v63pNLNf7Io587HoQJLc7mzuDXEBCrbkIncAzUICzejDm8GjQmtb5DlWIe4edBctJ1ImEXefzEETWJHSuIIzULGeOnpCD/9k=)">
           </picture>
           </button>
-          
         </figure>
         <figure class="tile">
           <button class="tile__btn" data-i="4" aria-label="Zväčšiť fotografiu: Ruky na tehotenskom brušku, tieň tráv na koži">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-04-480.avif 480w, img/tehotenske-04-768.avif 768w, img/tehotenske-04-1120.avif 1120w, img/tehotenske-04-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-04-480.webp 480w, img/tehotenske-04-768.webp 768w, img/tehotenske-04-1120.webp 1120w, img/tehotenske-04-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-04-480.avif 480w, img/tehotenske-04-768.avif 768w, img/tehotenske-04-1120.avif 1120w, img/tehotenske-04-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-04-480.webp 480w, img/tehotenske-04-768.webp 768w, img/tehotenske-04-1120.webp 1120w, img/tehotenske-04-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-04-1120.jpg"
-                 srcset="img/tehotenske-04-480.jpg 480w, img/tehotenske-04-768.jpg 768w, img/tehotenske-04-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-04-480.jpg 480w, img/tehotenske-04-768.jpg 768w, img/tehotenske-04-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Ruky na tehotenskom brušku, tieň tráv na koži"
                  loading="lazy" decoding="async"
                  style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAfEAACAgEFAQEAAAAAAAAAAAABAgADEQQFEiExE1H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AU2S2tawDmd1LFReTDH5mS226lEavroeymt1NFtAHRgJXbji09ZhMnWvkeK5EIEwrFFyI7ptVZwwSYiWyMTShiDA6X3sHjYhFGtIMIH//2Q==)">
           </picture>
           </button>
-          
         </figure>
-      </div>
-    <div class="mrow mrow--md" style="--cols:1fr 1fr">
         <figure class="tile">
           <button class="tile__btn" data-i="5" aria-label="Zväčšiť fotografiu: Ruky v tvare srdca na tehotenskom brušku">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-07-480.avif 480w, img/tehotenske-07-768.avif 768w, img/tehotenske-07-1120.avif 1120w, img/tehotenske-07-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-07-480.webp 480w, img/tehotenske-07-768.webp 768w, img/tehotenske-07-1120.webp 1120w, img/tehotenske-07-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-07-480.avif 480w, img/tehotenske-07-768.avif 768w, img/tehotenske-07-1120.avif 1120w, img/tehotenske-07-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-07-480.webp 480w, img/tehotenske-07-768.webp 768w, img/tehotenske-07-1120.webp 1120w, img/tehotenske-07-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-07-1120.jpg"
-                 srcset="img/tehotenske-07-480.jpg 480w, img/tehotenske-07-768.jpg 768w, img/tehotenske-07-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-07-480.jpg 480w, img/tehotenske-07-768.jpg 768w, img/tehotenske-07-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Ruky v tvare srdca na tehotenskom brušku"
                  loading="lazy" decoding="async"
                  style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAgT/xAAiEAACAgIABgMAAAAAAAAAAAABAgAEAxEFEhMhMkEUIjH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6ag+SBynt7MYtuuV14xLwmxyKfsBHGS3j6QLkGBprSg9xCL2soW8GhAmq9kq5G464ey5WDZH7D1JjEDGFZmUfsCxRcLLvawk8mdwo0xhA//Z)">
           </picture>
           </button>
-          
         </figure>
         <figure class="tile">
           <button class="tile__btn" data-i="6" aria-label="Zväčšiť fotografiu: Ruky partnera na tehotenskom brušku, detail v tlmenom svetle">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-09-480.avif 480w, img/tehotenske-09-768.avif 768w, img/tehotenske-09-1120.avif 1120w, img/tehotenske-09-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-09-480.webp 480w, img/tehotenske-09-768.webp 768w, img/tehotenske-09-1120.webp 1120w, img/tehotenske-09-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-09-480.avif 480w, img/tehotenske-09-768.avif 768w, img/tehotenske-09-1120.avif 1120w, img/tehotenske-09-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-09-480.webp 480w, img/tehotenske-09-768.webp 768w, img/tehotenske-09-1120.webp 1120w, img/tehotenske-09-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-09-1120.jpg"
-                 srcset="img/tehotenske-09-480.jpg 480w, img/tehotenske-09-768.jpg 768w, img/tehotenske-09-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-09-480.jpg 480w, img/tehotenske-09-768.jpg 768w, img/tehotenske-09-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Ruky partnera na tehotenskom brušku, detail v tlmenom svetle"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAL/xAAhEAABAwMEAwAAAAAAAAAAAAABAAIDERIhBAUTMSIyUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCLtMFPJwyVVn04LBb2kbYy6MOIwFcZHE6C4oITtLU1Jyhdzufyut6Qgnwap8XocfE4bjOatBoCpUUlDlO5qHAQbeZw7KFgMxQg/9k=);object-position:50% 40%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAL/xAAhEAABAwMEAwAAAAAAAAAAAAABAAIDERIhBAUTMSIyUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCLtMFPJwyVVn04LBb2kbYy6MOIwFcZHE6C4oITtLU1Jyhdzufyut6Qgnwap8XocfE4bjOatBoCpUUlDlO5qHAQbeZw7KFgMxQg/9k=)">
           </picture>
           </button>
-          
         </figure>
-      </div>
-    <div class="mrow mrow--md" style="--cols:1fr 1fr">
         <figure class="tile">
           <button class="tile__btn" data-i="7" aria-label="Zväčšiť fotografiu: Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-01-480.avif 480w, img/tehotenske-01-768.avif 768w, img/tehotenske-01-1120.avif 1120w, img/tehotenske-01-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-01-480.webp 480w, img/tehotenske-01-768.webp 768w, img/tehotenske-01-1120.webp 1120w, img/tehotenske-01-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-01-480.avif 480w, img/tehotenske-01-768.avif 768w, img/tehotenske-01-1120.avif 1120w, img/tehotenske-01-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-01-480.webp 480w, img/tehotenske-01-768.webp 768w, img/tehotenske-01-1120.webp 1120w, img/tehotenske-01-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-01-1120.jpg"
-                 srcset="img/tehotenske-01-480.jpg 480w, img/tehotenske-01-768.jpg 768w, img/tehotenske-01-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-01-480.jpg 480w, img/tehotenske-01-768.jpg 768w, img/tehotenske-01-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQGBf/EACEQAAICAgIBBQAAAAAAAAAAAAECAAMEERIhMQUiQVFx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EABkRAAMBAQEAAAAAAAAAAAAAAAABERICUf/aAAwDAQACEQMRAD8A52d6k+VkNrpfiMxWJcFj4lOsF/2Oy3NSqE6MnlsNSNTVbSaxy1uEyqZVvEbJhJZ79DUFVyr3qRZdwtdddCRjxEsX27mlCEzPx0B9QlbkYRYNT//Z);object-position:50% 28%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQGBf/EACEQAAICAgIBBQAAAAAAAAAAAAECAAMEERIhMQUiQVFx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EABkRAAMBAQEAAAAAAAAAAAAAAAABERICUf/aAAwDAQACEQMRAD8A52d6k+VkNrpfiMxWJcFj4lOsF/2Oy3NSqE6MnlsNSNTVbSaxy1uEyqZVvEbJhJZ79DUFVyr3qRZdwtdddCRjxEsX27mlCEzPx0B9QlbkYRYNT//Z)">
           </picture>
           </button>
-          
         </figure>
         <figure class="tile">
           <button class="tile__btn" data-i="8" aria-label="Zväčšiť fotografiu: Tehotenské bruško s poľnými kvetmi, farebná fotografia">
             <picture>
-            <source type="image/avif" srcset="img/tehotenske-05-480.avif 480w, img/tehotenske-05-768.avif 768w, img/tehotenske-05-1120.avif 1120w, img/tehotenske-05-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/tehotenske-05-480.webp 480w, img/tehotenske-05-768.webp 768w, img/tehotenske-05-1120.webp 1120w, img/tehotenske-05-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/tehotenske-05-480.avif 480w, img/tehotenske-05-768.avif 768w, img/tehotenske-05-1120.avif 1120w, img/tehotenske-05-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/tehotenske-05-480.webp 480w, img/tehotenske-05-768.webp 768w, img/tehotenske-05-1120.webp 1120w, img/tehotenske-05-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/tehotenske-05-1120.jpg"
-                 srcset="img/tehotenske-05-480.jpg 480w, img/tehotenske-05-768.jpg 768w, img/tehotenske-05-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/tehotenske-05-480.jpg 480w, img/tehotenske-05-768.jpg 768w, img/tehotenske-05-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Tehotenské bruško s poľnými kvetmi, farebná fotografia"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUEBgECA//EAB8QAAEEAgIDAAAAAAAAAAAAAAEAAgMRBBIhMQUTIv/EABYBAQEBAAAAAAAAAAAAAAAAAAMCAf/EABsRAQACAgMAAAAAAAAAAAAAAAEAAhEhAyIx/9oADAMBAAIRAxEAPwCRjZDYyBVqXNKzXYhV/AytphsU3yJ2epRe25vHXrOYffI6QtYXAxgoTDATDKxHLobBoqU3PJP1yEvuljblQ1H2KWTRHUPkKYhKA412hVmHhn//2Q==);object-position:50% 45%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUEBgECA//EAB8QAAEEAgIDAAAAAAAAAAAAAAEAAgMRBBIhMQUTIv/EABYBAQEBAAAAAAAAAAAAAAAAAAMCAf/EABsRAQACAgMAAAAAAAAAAAAAAAEAAhEhAyIx/9oADAMBAAIRAxEAPwCRjZDYyBVqXNKzXYhV/AytphsU3yJ2epRe25vHXrOYffI6QtYXAxgoTDATDKxHLobBoqU3PJP1yEvuljblQ1H2KWTRHUPkKYhKA412hVmHhn//2Q==)">
           </picture>
           </button>
-          
         </figure>
       </div>
-    <div class="mrow mrow--md" style="--cols:1fr 1fr">
-        <figure class="tile tile--capped">
-          <button class="tile__btn" data-i="9" aria-label="Zväčšiť fotografiu: Spiace novorodeniatko, detail tváre">
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+    </div>
+    <figure class="tile banner">
+          <button class="tile__btn" data-i="9" aria-label="Zväčšiť fotografiu: Detské nôžky v dlaniach rodičov">
             <picture>
-            <source type="image/avif" srcset="img/rodina-02-480.avif 480w, img/rodina-02-768.avif 768w, img/rodina-02-1120.avif 1120w, img/rodina-02-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/rodina-02-480.webp 480w, img/rodina-02-768.webp 768w, img/rodina-02-1120.webp 1120w, img/rodina-02-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <img class="ph tile__img" src="img/rodina-02-1120.jpg"
-                 srcset="img/rodina-02-480.jpg 480w, img/rodina-02-768.jpg 768w, img/rodina-02-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
-                 width="1600" height="2400" alt="Spiace novorodeniatko, detail tváre"
-                 loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EAB4QAAIDAAMAAwAAAAAAAAAAAAECAAMRBBMhEjIz/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AD8WpUrBY4ZqLEss61heSxRl36kTFdquBDbsDW+pVtIMo0hLcYj0iUAvOIf4JV7kyqpZ3BbzInhqq+kaZ299dbfnAh2KMVNEolOWGUEJkoH/2Q==);object-position:50% 40%">
-          </picture>
-          </button>
-          <figcaption class="tile__cap tile__cap--label">Deti a rodina</figcaption>
-        </figure>
-        <figure class="tile">
-          <button class="tile__btn" data-i="10" aria-label="Zväčšiť fotografiu: Rodič pobozká novorodeniatko na čelo">
-            <picture>
-            <source type="image/avif" srcset="img/rodina-04-480.avif 480w, img/rodina-04-768.avif 768w, img/rodina-04-1120.avif 1120w, img/rodina-04-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/rodina-04-480.webp 480w, img/rodina-04-768.webp 768w, img/rodina-04-1120.webp 1120w, img/rodina-04-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <img class="ph tile__img" src="img/rodina-04-1120.jpg"
-                 srcset="img/rodina-04-480.jpg 480w, img/rodina-04-768.jpg 768w, img/rodina-04-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
-                 width="1600" height="2400" alt="Rodič pobozká novorodeniatko na čelo"
-                 loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAgP/xAAeEAABBAIDAQAAAAAAAAAAAAABAAIDBBExBRIhQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCXShjPpTclWN4yotS0RI1pOAVSnmFcgl+QfiDTqrQdISj75kd2BwEIONKGJ5Hfae5GgHQCRp0FLpuIeFWs2Sa7WY2gkNjdjSE07APiEH//2Q==);object-position:50% 35%">
-          </picture>
-          </button>
-          
-        </figure>
-      </div>
-    <div class="mrow mrow--sm" style="--cols:1fr 1fr 1fr">
-        <figure class="tile">
-          <button class="tile__btn" data-i="11" aria-label="Zväčšiť fotografiu: Malá pästička držiaca prst dospelého">
-            <picture>
-            <source type="image/avif" srcset="img/rodina-03-480.avif 480w, img/rodina-03-768.avif 768w, img/rodina-03-1120.avif 1120w, img/rodina-03-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/rodina-03-480.webp 480w, img/rodina-03-768.webp 768w, img/rodina-03-1120.webp 1120w, img/rodina-03-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <img class="ph tile__img" src="img/rodina-03-1120.jpg"
-                 srcset="img/rodina-03-480.jpg 480w, img/rodina-03-768.jpg 768w, img/rodina-03-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
-                 width="1600" height="2400" alt="Malá pästička držiaca prst dospelého"
-                 loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQCBQEDBv/EACAQAAICAgICAwAAAAAAAAAAAAECAAMREgQFIVEiMkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5hq2IBxLXqqsoSRIVPUwwRHuLYo+IXECLphiISHJNi3EBSRCAy/W11uLx9fU1W2Vq+48D9le/Y3MdSTr6mXvDALrAZs5ru2UXxCJG1wcA4EIH//Z)">
-          </picture>
-          </button>
-          
-        </figure>
-        <figure class="tile">
-          <button class="tile__btn" data-i="12" aria-label="Zväčšiť fotografiu: Detské prstíky vykúkajúce spod károvanej deky">
-            <picture>
-            <source type="image/avif" srcset="img/rodina-07-480.avif 480w, img/rodina-07-768.avif 768w, img/rodina-07-1120.avif 1120w, img/rodina-07-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/rodina-07-480.webp 480w, img/rodina-07-768.webp 768w, img/rodina-07-1120.webp 1120w, img/rodina-07-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <img class="ph tile__img" src="img/rodina-07-1120.jpg"
-                 srcset="img/rodina-07-480.jpg 480w, img/rodina-07-768.jpg 768w, img/rodina-07-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
-                 width="1600" height="2400" alt="Detské prstíky vykúkajúce spod károvanej deky"
-                 loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYC/8QAIxAAAQQBAwQDAAAAAAAAAAAAAQACAwQRBRITFCEiUTFBcf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDTQxABRai8RVn4+SFxbtYrngeNySvsWJI3dQfxBn5w7mdhue6Fckjdu8SAEIHWjwBsAksuyfWVPas1C0tOFkhqswi2glUpLcjj3cUDC5KXWHGM+P0hK+V3tCD/2Q==)">
-          </picture>
-          </button>
-          
-        </figure>
-        <figure class="tile">
-          <button class="tile__btn" data-i="13" aria-label="Zväčšiť fotografiu: Spiace novorodeniatko s pästičkou pri tvári">
-            <picture>
-            <source type="image/avif" srcset="img/rodina-06-480.avif 480w, img/rodina-06-768.avif 768w, img/rodina-06-1120.avif 1120w, img/rodina-06-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/rodina-06-480.webp 480w, img/rodina-06-768.webp 768w, img/rodina-06-1120.webp 1120w, img/rodina-06-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <img class="ph tile__img" src="img/rodina-06-1120.jpg"
-                 srcset="img/rodina-06-480.jpg 480w, img/rodina-06-768.jpg 768w, img/rodina-06-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
-                 width="1600" height="2400" alt="Spiace novorodeniatko s pästičkou pri tvári"
-                 loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAEFAwQG/8QAHhAAAQUAAwEBAAAAAAAAAAAAAQACAwQRBRIhQWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AhVB2dpGlelqRMsQZmOCmUYGmPuFSrTNYc3CgYpSDcQtXcixrsDh4hBF45sjo+o+p2Ks8UoLiev4suPtOjIxVJLBczSNQcBjZvuoSkk158Qg//9k=);object-position:50% 40%">
-          </picture>
-          </button>
-          
-        </figure>
-      </div>
-    <div class="mrow mrow--md" style="--cols:3fr 2fr">
-        <figure class="tile tile--wide">
-          <button class="tile__btn" data-i="14" aria-label="Zväčšiť fotografiu: Detské nôžky v dlaniach rodičov">
-            <picture>
-            <source type="image/avif" srcset="img/rodina-01-480.avif 480w, img/rodina-01-768.avif 768w, img/rodina-01-1120.avif 1120w, img/rodina-01-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/rodina-01-480.webp 480w, img/rodina-01-768.webp 768w, img/rodina-01-1120.webp 1120w, img/rodina-01-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/rodina-01-480.avif 480w, img/rodina-01-768.avif 768w, img/rodina-01-1120.avif 1120w, img/rodina-01-1600.avif 1600w" sizes="100vw">
+            <source type="image/webp" srcset="img/rodina-01-480.webp 480w, img/rodina-01-768.webp 768w, img/rodina-01-1120.webp 1120w, img/rodina-01-1600.webp 1600w" sizes="100vw">
             <img class="ph tile__img" src="img/rodina-01-1120.jpg"
-                 srcset="img/rodina-01-480.jpg 480w, img/rodina-01-768.jpg 768w, img/rodina-01-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/rodina-01-480.jpg 480w, img/rodina-01-768.jpg 768w, img/rodina-01-1120.jpg 1120w" sizes="100vw"
                  width="1600" height="1067" alt="Detské nôžky v dlaniach rodičov"
                  loading="lazy" decoding="async"
                  style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQL/xAAiEAACAgECBwEAAAAAAAAAAAABAgADEQQSBRMUISIxUUL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Ah101rjb5N8jp0i2IFsAXPqc6PaPyM/Y41gfsyA4gRrOHIjkc0Qm6xB1De4QP/9k=)">
           </picture>
           </button>
-          
+        </figure>
+    <p class="cathead">Deti a rodina</p>
+    <div class="slider" role="group">
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <div class="slider__track" tabindex="0">
+        <figure class="tile">
+          <button class="tile__btn" data-i="10" aria-label="Zväčšiť fotografiu: Spiace novorodeniatko, detail tváre">
+            <picture>
+            <source type="image/avif" srcset="img/rodina-02-480.avif 480w, img/rodina-02-768.avif 768w, img/rodina-02-1120.avif 1120w, img/rodina-02-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/rodina-02-480.webp 480w, img/rodina-02-768.webp 768w, img/rodina-02-1120.webp 1120w, img/rodina-02-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <img class="ph tile__img" src="img/rodina-02-1120.jpg"
+                 srcset="img/rodina-02-480.jpg 480w, img/rodina-02-768.jpg 768w, img/rodina-02-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
+                 width="1600" height="2400" alt="Spiace novorodeniatko, detail tváre"
+                 loading="lazy" decoding="async"
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EAB4QAAIDAAMAAwAAAAAAAAAAAAECAAMRBBMhEjIz/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AD8WpUrBY4ZqLEss61heSxRl36kTFdquBDbsDW+pVtIMo0hLcYj0iUAvOIf4JV7kyqpZ3BbzInhqq+kaZ299dbfnAh2KMVNEolOWGUEJkoH/2Q==)">
+          </picture>
+          </button>
+        </figure>
+        <figure class="tile">
+          <button class="tile__btn" data-i="11" aria-label="Zväčšiť fotografiu: Rodič pobozká novorodeniatko na čelo">
+            <picture>
+            <source type="image/avif" srcset="img/rodina-04-480.avif 480w, img/rodina-04-768.avif 768w, img/rodina-04-1120.avif 1120w, img/rodina-04-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/rodina-04-480.webp 480w, img/rodina-04-768.webp 768w, img/rodina-04-1120.webp 1120w, img/rodina-04-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <img class="ph tile__img" src="img/rodina-04-1120.jpg"
+                 srcset="img/rodina-04-480.jpg 480w, img/rodina-04-768.jpg 768w, img/rodina-04-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
+                 width="1600" height="2400" alt="Rodič pobozká novorodeniatko na čelo"
+                 loading="lazy" decoding="async"
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAgP/xAAeEAABBAIDAQAAAAAAAAAAAAABAAIDBBExBRIhQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCXShjPpTclWN4yotS0RI1pOAVSnmFcgl+QfiDTqrQdISj75kd2BwEIONKGJ5Hfae5GgHQCRp0FLpuIeFWs2Sa7WY2gkNjdjSE07APiEH//2Q==)">
+          </picture>
+          </button>
+        </figure>
+        <figure class="tile">
+          <button class="tile__btn" data-i="12" aria-label="Zväčšiť fotografiu: Malá pästička držiaca prst dospelého">
+            <picture>
+            <source type="image/avif" srcset="img/rodina-03-480.avif 480w, img/rodina-03-768.avif 768w, img/rodina-03-1120.avif 1120w, img/rodina-03-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/rodina-03-480.webp 480w, img/rodina-03-768.webp 768w, img/rodina-03-1120.webp 1120w, img/rodina-03-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <img class="ph tile__img" src="img/rodina-03-1120.jpg"
+                 srcset="img/rodina-03-480.jpg 480w, img/rodina-03-768.jpg 768w, img/rodina-03-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
+                 width="1600" height="2400" alt="Malá pästička držiaca prst dospelého"
+                 loading="lazy" decoding="async"
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQCBQEDBv/EACAQAAICAgICAwAAAAAAAAAAAAECAAMREgQFIVEiMkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5hq2IBxLXqqsoSRIVPUwwRHuLYo+IXECLphiISHJNi3EBSRCAy/W11uLx9fU1W2Vq+48D9le/Y3MdSTr6mXvDALrAZs5ru2UXxCJG1wcA4EIH//Z)">
+          </picture>
+          </button>
+        </figure>
+        <figure class="tile">
+          <button class="tile__btn" data-i="13" aria-label="Zväčšiť fotografiu: Detské prstíky vykúkajúce spod károvanej deky">
+            <picture>
+            <source type="image/avif" srcset="img/rodina-07-480.avif 480w, img/rodina-07-768.avif 768w, img/rodina-07-1120.avif 1120w, img/rodina-07-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/rodina-07-480.webp 480w, img/rodina-07-768.webp 768w, img/rodina-07-1120.webp 1120w, img/rodina-07-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <img class="ph tile__img" src="img/rodina-07-1120.jpg"
+                 srcset="img/rodina-07-480.jpg 480w, img/rodina-07-768.jpg 768w, img/rodina-07-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
+                 width="1600" height="2400" alt="Detské prstíky vykúkajúce spod károvanej deky"
+                 loading="lazy" decoding="async"
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYC/8QAIxAAAQQBAwQDAAAAAAAAAAAAAQACAwQRBRITFCEiUTFBcf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDTQxABRai8RVn4+SFxbtYrngeNySvsWJI3dQfxBn5w7mdhue6Fckjdu8SAEIHWjwBsAksuyfWVPas1C0tOFkhqswi2glUpLcjj3cUDC5KXWHGM+P0hK+V3tCD/2Q==)">
+          </picture>
+          </button>
+        </figure>
+        <figure class="tile">
+          <button class="tile__btn" data-i="14" aria-label="Zväčšiť fotografiu: Spiace novorodeniatko s pästičkou pri tvári">
+            <picture>
+            <source type="image/avif" srcset="img/rodina-06-480.avif 480w, img/rodina-06-768.avif 768w, img/rodina-06-1120.avif 1120w, img/rodina-06-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/rodina-06-480.webp 480w, img/rodina-06-768.webp 768w, img/rodina-06-1120.webp 1120w, img/rodina-06-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <img class="ph tile__img" src="img/rodina-06-1120.jpg"
+                 srcset="img/rodina-06-480.jpg 480w, img/rodina-06-768.jpg 768w, img/rodina-06-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
+                 width="1600" height="2400" alt="Spiace novorodeniatko s pästičkou pri tvári"
+                 loading="lazy" decoding="async"
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAEFAwQG/8QAHhAAAQUAAwEBAAAAAAAAAAAAAQACAwQRBRIhQWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AhVB2dpGlelqRMsQZmOCmUYGmPuFSrTNYc3CgYpSDcQtXcixrsDh4hBF45sjo+o+p2Ks8UoLiev4suPtOjIxVJLBczSNQcBjZvuoSkk158Qg//9k=)">
+          </picture>
+          </button>
         </figure>
         <figure class="tile">
           <button class="tile__btn" data-i="15" aria-label="Zväčšiť fotografiu: Bozk na drobnú detskú dlaň">
             <picture>
-            <source type="image/avif" srcset="img/rodina-05-480.avif 480w, img/rodina-05-768.avif 768w, img/rodina-05-1120.avif 1120w, img/rodina-05-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/rodina-05-480.webp 480w, img/rodina-05-768.webp 768w, img/rodina-05-1120.webp 1120w, img/rodina-05-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/rodina-05-480.avif 480w, img/rodina-05-768.avif 768w, img/rodina-05-1120.avif 1120w, img/rodina-05-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/rodina-05-480.webp 480w, img/rodina-05-768.webp 768w, img/rodina-05-1120.webp 1120w, img/rodina-05-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/rodina-05-1120.jpg"
-                 srcset="img/rodina-05-480.jpg 480w, img/rodina-05-768.jpg 768w, img/rodina-05-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/rodina-05-480.jpg 480w, img/rodina-05-768.jpg 768w, img/rodina-05-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2400" alt="Bozk na drobnú detskú dlaň"
                  loading="lazy" decoding="async"
                  style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQL/xAAgEAADAQACAQUBAAAAAAAAAAABAgMABBExEhMhIkFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AH8OIWfYGKslPUh/NxLlKkej560DCt6s0z0MHNJqHIGNHWrpQqW7Ixg1JRVvuz9gfmRTk9FkmQMrisTx6MT52NWjip+T5wXUUFyScbP91/7jB//Z)">
           </picture>
           </button>
-          
         </figure>
       </div>
-    <div class="mrow mrow--md" style="--cols:1fr 1fr 1fr">
-        <figure class="tile tile--capped">
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+    </div>
+    <p class="cathead">Portrét</p>
+    <div class="slider" role="group">
+      <button class="slider__nav slider__nav--prev" aria-label="Predchádzajúce" disabled>‹</button>
+      <div class="slider__track" tabindex="0">
+        <figure class="tile">
           <button class="tile__btn" data-i="16" aria-label="Zväčšiť fotografiu: Detail profilu tváre za rozostrenými steblami trávy">
             <picture>
-            <source type="image/avif" srcset="img/portret-03-480.avif 480w, img/portret-03-768.avif 768w, img/portret-03-1120.avif 1120w, img/portret-03-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/portret-03-480.webp 480w, img/portret-03-768.webp 768w, img/portret-03-1120.webp 1120w, img/portret-03-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/portret-03-480.avif 480w, img/portret-03-768.avif 768w, img/portret-03-1120.avif 1120w, img/portret-03-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/portret-03-480.webp 480w, img/portret-03-768.webp 768w, img/portret-03-1120.webp 1120w, img/portret-03-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/portret-03-1120.jpg"
-                 srcset="img/portret-03-480.jpg 480w, img/portret-03-768.jpg 768w, img/portret-03-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/portret-03-480.jpg 480w, img/portret-03-768.jpg 768w, img/portret-03-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2403" alt="Detail profilu tváre za rozostrenými steblami trávy"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBBAUD/8QAIRAAAgIBBAIDAAAAAAAAAAAAAQIAAwQFERIhMUEyYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AUQs6Csnx3BATsNpraLSDmDkoYfcCjXp2TYoZam2/IR5fKrrPEKoA9QgJa1AAErtNDTbEptLE9xht0nHaorxmDm6cMdjwaBOTkM9xIPUJQr5lfl7hA//Z);object-position:50% 35%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBBAUD/8QAIRAAAgIBBAIDAAAAAAAAAAAAAQIAAwQFERIhMUEyYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AUQs6Csnx3BATsNpraLSDmDkoYfcCjXp2TYoZam2/IR5fKrrPEKoA9QgJa1AAErtNDTbEptLE9xht0nHaorxmDm6cMdjwaBOTkM9xIPUJQr5lfl7hA//Z)">
           </picture>
           </button>
-          <figcaption class="tile__cap tile__cap--label">Portrét</figcaption>
         </figure>
         <figure class="tile">
           <button class="tile__btn" data-i="17" aria-label="Zväčšiť fotografiu: Žena držiaca steblá tráv pri tvári, mäkké svetlo">
             <picture>
-            <source type="image/avif" srcset="img/portret-02-480.avif 480w, img/portret-02-768.avif 768w, img/portret-02-1120.avif 1120w, img/portret-02-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/portret-02-480.webp 480w, img/portret-02-768.webp 768w, img/portret-02-1120.webp 1120w, img/portret-02-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/portret-02-480.avif 480w, img/portret-02-768.avif 768w, img/portret-02-1120.avif 1120w, img/portret-02-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/portret-02-480.webp 480w, img/portret-02-768.webp 768w, img/portret-02-1120.webp 1120w, img/portret-02-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/portret-02-1120.jpg"
-                 srcset="img/portret-02-480.jpg 480w, img/portret-02-768.jpg 768w, img/portret-02-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/portret-02-480.jpg 480w, img/portret-02-768.jpg 768w, img/portret-02-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2403" alt="Žena držiaca steblá tráv pri tvári, mäkké svetlo"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQFBv/EACEQAAICAQQCAwAAAAAAAAAAAAECAAMEBREhMRMiFEFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOeWu3Hf2Ugwyb2tAU9CXcq52RWsHET49dtBsXuBQXgQjioB2hA0LCtlIUyKhXpB25B+olbbqJPhMXyvGejAcmkWZC+RGABhNhNOsC+l2w/IQP/Z);object-position:50% 35%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQFBv/EACEQAAICAQQCAwAAAAAAAAAAAAECAAMEBREhMRMiFEFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOeWu3Hf2Ugwyb2tAU9CXcq52RWsHET49dtBsXuBQXgQjioB2hA0LCtlIUyKhXpB25B+olbbqJPhMXyvGejAcmkWZC+RGABhNhNOsC+l2w/IQP/Z)">
           </picture>
           </button>
-          
         </figure>
         <figure class="tile">
           <button class="tile__btn" data-i="18" aria-label="Zväčšiť fotografiu: Žena zaklonená v tráve so zavretými očami, mäkké svetlo">
             <picture>
-            <source type="image/avif" srcset="img/portret-04-480.avif 480w, img/portret-04-768.avif 768w, img/portret-04-1120.avif 1120w, img/portret-04-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 50vw">
-            <source type="image/webp" srcset="img/portret-04-480.webp 480w, img/portret-04-768.webp 768w, img/portret-04-1120.webp 1120w, img/portret-04-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 50vw">
+            <source type="image/avif" srcset="img/portret-04-480.avif 480w, img/portret-04-768.avif 768w, img/portret-04-1120.avif 1120w, img/portret-04-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 66vw">
+            <source type="image/webp" srcset="img/portret-04-480.webp 480w, img/portret-04-768.webp 768w, img/portret-04-1120.webp 1120w, img/portret-04-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 66vw">
             <img class="ph tile__img" src="img/portret-04-1120.jpg"
-                 srcset="img/portret-04-480.jpg 480w, img/portret-04-768.jpg 768w, img/portret-04-1120.jpg 1120w" sizes="(min-width: 900px) 50vw, 50vw"
+                 srcset="img/portret-04-480.jpg 480w, img/portret-04-768.jpg 768w, img/portret-04-1120.jpg 1120w" sizes="(min-width: 900px) 40vw, 66vw"
                  width="1600" height="2403" alt="Žena zaklonená v tráve so zavretými očami, mäkké svetlo"
                  loading="lazy" decoding="async"
-                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAYB/8QAHhAAAgMAAgMBAAAAAAAAAAAAAAECAxESMQQTISL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AykYt9E/VJvOLLXhKHJOWYaCdvgqjOK5Z2BlnS18YFi6yLtlnQALrSjv6GWXpwSRRU2dc3gEnP6ApyAD/2Q==);object-position:50% 40%">
+                 style="background-image:url(data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAYB/8QAHhAAAgMAAgMBAAAAAAAAAAAAAAECAxESMQQTISL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AykYt9E/VJvOLLXhKHJOWYaCdvgqjOK5Z2BlnS18YFi6yLtlnQALrSjv6GWXpwSRRU2dc3gEnP6ApyAD/2Q==)">
           </picture>
           </button>
-          
         </figure>
       </div>
-    <p class="mosaic__ig"><a class="link" href="https://www.instagram.com/sarahko.phg/" target="_blank" rel="noopener">Viac fotografií na Instagrame @sarahko.phg ↗</a></p>
+      <button class="slider__nav slider__nav--next" aria-label="Ďalšie">›</button>
+    </div>
+    <p class="portfolio__ig"><a class="link" href="https://www.instagram.com/sarahko.phg/" target="_blank" rel="noopener">Viac fotografií na Instagrame @sarahko.phg ↗</a></p>
   </section>
 
   <section class="contact" id="rezervacia">
@@ -465,7 +450,7 @@
 </div>
 
 <script>
-  window.__GALLERY__ = [{"alt":"Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie","src":"img/tehotenske-08-1600.webp","fallback":"img/tehotenske-08-1120.jpg"},{"alt":"Pár v protisvetle medzi stromami, slnečná žiara cez listy","src":"img/tehotenske-10-1600.webp","fallback":"img/tehotenske-10-1120.jpg"},{"alt":"Pár na prechádzke medzi stromami, protisvetlo","src":"img/tehotenske-03-1600.webp","fallback":"img/tehotenske-03-1120.jpg"},{"alt":"Pár si spolu prezerá ultrazvukovú fotografiu","src":"img/tehotenske-06-1600.webp","fallback":"img/tehotenske-06-1120.jpg"},{"alt":"Ruky na tehotenskom brušku, tieň tráv na koži","src":"img/tehotenske-04-1600.webp","fallback":"img/tehotenske-04-1120.jpg"},{"alt":"Ruky v tvare srdca na tehotenskom brušku","src":"img/tehotenske-07-1600.webp","fallback":"img/tehotenske-07-1120.jpg"},{"alt":"Ruky partnera na tehotenskom brušku, detail v tlmenom svetle","src":"img/tehotenske-09-1600.webp","fallback":"img/tehotenske-09-1120.jpg"},{"alt":"Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia","src":"img/tehotenske-01-1600.webp","fallback":"img/tehotenske-01-1120.jpg"},{"alt":"Tehotenské bruško s poľnými kvetmi, farebná fotografia","src":"img/tehotenske-05-1600.webp","fallback":"img/tehotenske-05-1120.jpg"},{"alt":"Spiace novorodeniatko, detail tváre","src":"img/rodina-02-1600.webp","fallback":"img/rodina-02-1120.jpg"},{"alt":"Rodič pobozká novorodeniatko na čelo","src":"img/rodina-04-1600.webp","fallback":"img/rodina-04-1120.jpg"},{"alt":"Malá pästička držiaca prst dospelého","src":"img/rodina-03-1600.webp","fallback":"img/rodina-03-1120.jpg"},{"alt":"Detské prstíky vykúkajúce spod károvanej deky","src":"img/rodina-07-1600.webp","fallback":"img/rodina-07-1120.jpg"},{"alt":"Spiace novorodeniatko s pästičkou pri tvári","src":"img/rodina-06-1600.webp","fallback":"img/rodina-06-1120.jpg"},{"alt":"Detské nôžky v dlaniach rodičov","src":"img/rodina-01-1600.webp","fallback":"img/rodina-01-1120.jpg"},{"alt":"Bozk na drobnú detskú dlaň","src":"img/rodina-05-1600.webp","fallback":"img/rodina-05-1120.jpg"},{"alt":"Detail profilu tváre za rozostrenými steblami trávy","src":"img/portret-03-1600.webp","fallback":"img/portret-03-1120.jpg"},{"alt":"Žena držiaca steblá tráv pri tvári, mäkké svetlo","src":"img/portret-02-1600.webp","fallback":"img/portret-02-1120.jpg"},{"alt":"Žena zaklonená v tráve so zavretými očami, mäkké svetlo","src":"img/portret-04-1600.webp","fallback":"img/portret-04-1120.jpg"}];
+  window.__GALLERY__ = [{"alt":"Smejúci sa pár sediaci vo vysokej tráve, tehotenské fotenie","src":"img/tehotenske-08-1600.webp","fallback":"img/tehotenske-08-1120.jpg"},{"alt":"Pár v protisvetle medzi stromami, slnečná žiara cez listy","src":"img/tehotenske-10-1600.webp","fallback":"img/tehotenske-10-1120.jpg"},{"alt":"Pár na prechádzke medzi stromami, protisvetlo","src":"img/tehotenske-03-1600.webp","fallback":"img/tehotenske-03-1120.jpg"},{"alt":"Pár si spolu prezerá ultrazvukovú fotografiu","src":"img/tehotenske-06-1600.webp","fallback":"img/tehotenske-06-1120.jpg"},{"alt":"Ruky na tehotenskom brušku, tieň tráv na koži","src":"img/tehotenske-04-1600.webp","fallback":"img/tehotenske-04-1120.jpg"},{"alt":"Ruky v tvare srdca na tehotenskom brušku","src":"img/tehotenske-07-1600.webp","fallback":"img/tehotenske-07-1120.jpg"},{"alt":"Ruky partnera na tehotenskom brušku, detail v tlmenom svetle","src":"img/tehotenske-09-1600.webp","fallback":"img/tehotenske-09-1120.jpg"},{"alt":"Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia","src":"img/tehotenske-01-1600.webp","fallback":"img/tehotenske-01-1120.jpg"},{"alt":"Tehotenské bruško s poľnými kvetmi, farebná fotografia","src":"img/tehotenske-05-1600.webp","fallback":"img/tehotenske-05-1120.jpg"},{"alt":"Detské nôžky v dlaniach rodičov","src":"img/rodina-01-1600.webp","fallback":"img/rodina-01-1120.jpg"},{"alt":"Spiace novorodeniatko, detail tváre","src":"img/rodina-02-1600.webp","fallback":"img/rodina-02-1120.jpg"},{"alt":"Rodič pobozká novorodeniatko na čelo","src":"img/rodina-04-1600.webp","fallback":"img/rodina-04-1120.jpg"},{"alt":"Malá pästička držiaca prst dospelého","src":"img/rodina-03-1600.webp","fallback":"img/rodina-03-1120.jpg"},{"alt":"Detské prstíky vykúkajúce spod károvanej deky","src":"img/rodina-07-1600.webp","fallback":"img/rodina-07-1120.jpg"},{"alt":"Spiace novorodeniatko s pästičkou pri tvári","src":"img/rodina-06-1600.webp","fallback":"img/rodina-06-1120.jpg"},{"alt":"Bozk na drobnú detskú dlaň","src":"img/rodina-05-1600.webp","fallback":"img/rodina-05-1120.jpg"},{"alt":"Detail profilu tváre za rozostrenými steblami trávy","src":"img/portret-03-1600.webp","fallback":"img/portret-03-1120.jpg"},{"alt":"Žena držiaca steblá tráv pri tvári, mäkké svetlo","src":"img/portret-02-1600.webp","fallback":"img/portret-02-1120.jpg"},{"alt":"Žena zaklonená v tráve so zavretými očami, mäkké svetlo","src":"img/portret-04-1600.webp","fallback":"img/portret-04-1120.jpg"}];
 </script>
 <script src="main.js" defer></script>
 </body>

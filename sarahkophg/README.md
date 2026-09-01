@@ -54,27 +54,29 @@ The page is photo-led and almost wordless, by request:
   phones, side by side from 900px) and one button. No headline: the `<h1>` is there
   for search engines and screen readers only (`.vh`). `HERO_A` / `HERO_B` in
   `build-page.mjs` pick the two frames.
-- **Portfolio** (`#portfolio`) — every other photograph, as one seamless grid: no
-  gutters, three portraits to a row on desktop and two below 900px. Each `.mrow` is
-  `display: contents`, so the `MOSAIC` array in `build-page.mjs` now only sets the
-  order and which tile carries a category `label` — `cols` / `h` are vestigial. Every
-  tile keeps its native aspect ratio (`2/3` for the portraits, `3/2` full-width for
-  the one landscape via `tile--wide`), so `object-fit: cover` crops nothing; `pos` is
-  a no-op unless a future non-2:3 frame is added.
-- **Labels are the only copy on the photographs.** An earlier pass set serif pull
-  quotes over some tiles too; they were cut. So was the separate "O mne" section —
-  its three process steps live in the booking section now, which is the whole of the
-  written page.
-- `grid-auto-flow: dense` backfills the cells the full-width landscape would otherwise
-  leave empty, so no row ever strands.
+- **Portfolio** (`#portfolio`) — one horizontal roller per category (`.slider`), in
+  the order set by `CATS` in `build-page.mjs`; the frames in each come from the
+  curated `ORDER` list. Photos meet edge to edge everywhere — the tracks are flex
+  rows with `gap: 0` and `.tile__btn` has its UA padding zeroed (that stray padding
+  was the "background between photos"). Each roller frame is a `2/3` portrait sized
+  from its height; a landscape frame in a category (only `rodina-01` today) is lifted
+  out and shown full-bleed at `3/2` as the `.banner` that opens that category.
+  `main.js` wires the prev/next arrows and hides them (`.slider--static`) when a
+  track doesn't overflow.
+- **Category names are the only copy.** `.cathead` labels sit above each roller
+  (under the banner, for Deti a rodina). An earlier pass set serif pull quotes and
+  per-tile caption strips over the photos; both were cut. So was the separate "O mne"
+  section — its three process steps live in the booking section now, which is the
+  whole of the written page.
 - The gallery filter pills, the "Čo fotím" cards and the hidden Instagram grid are
-  gone — the mosaic is grouped and labelled by category instead, so all three read as
-  duplicates of it. The follow link survives under the mosaic (`.mosaic__ig`).
+  gone — the rollers are grouped and labelled by category instead. The follow link
+  survives under them (`.portfolio__ig`).
 - Every photo is desaturated by the pipeline by default. Two masters (`IMG_0758`,
   `IMG_0975`) were shot in colour and ship that way (`mono: false` in `PHOTOS`). They
-  sit side by side in one band so the break reads as a decision, not an accident.
+  sit next to each other in the Páry a tehotenské roller so the break reads as a
+  decision, not an accident.
 - Each photograph appears exactly once on the page: `build-page.mjs` warns on build
-  if anything in the manifest is on neither the hero nor the mosaic.
+  if anything in the manifest is on neither the hero nor a roller.
 - `TODO` in `tools/build-page.mjs`: `EMAIL` is still the placeholder
   `ahoj@sarahkophg.sk`. Replace it there and re-run `npm run page`, or find-and-replace
   it in `index.html`.
