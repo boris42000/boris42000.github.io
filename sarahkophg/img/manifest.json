@@ -308,6 +308,50 @@
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAgEAACAgIBBQEAAAAAAAAAAAABAgAEAxEFBhIhMUFC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOtQgLr0ZicxzL0sihGBH2TXOSzVszKW+anKXs75sxLMTswNx+obDMSp8GEnp1wa6kqCTCBDYs5bLl8jbIkDEs2z7jFc9uov9GA5LOVVAVyBCTgwgf/Z"
   },
+  "tehotenske-11": {
+    "cat": "tehotenske",
+    "alt": "Pár tvárou v tvár, profily proti svetlej oblohe",
+    "width": 3843,
+    "height": 5764,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGBP/EACEQAAICAgICAwEAAAAAAAAAAAECAAMEEQUSBiETIjEU/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFmPzmcLQQ5b3+S8469snESxxpiPcisDD+OxU69mlXblfxYy1gabUBpCRt3P5ddjKPY3CBp8duHy9LFBJ/GmvyCr6hw+jJPjs6ymz6mOXyLMykC1twFb0WFiQ8IxWxEHUJvUIH//2Q=="
+  },
+  "tehotenske-12": {
+    "cat": "tehotenske",
+    "alt": "Pár čelo na čele so zavretými očami, detail tvárí",
+    "width": 3725,
+    "height": 5587,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAIDBQcEBv/EACcQAAICAAMGBwAAAAAAAAAAAAECAAMEERMFEiIxUZEGFCEyQlJh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AHPi99T2cM9BszatO0Kd9SARzEz67AtVSGY8Rk9BvwVasjEBueUDRter7jvCZ+cZaTnqHvCA1O9jrwhYADrGxxWtdM/GVleIauwMnpO+5xiaFJGTdYFa9mbHIwk3lv2ED//Z"
+  },
   "rodina-01": {
     "cat": "rodina",
     "alt": "Detské nôžky v dlaniach rodičov",
@@ -461,5 +505,313 @@
       800
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYC/8QAIxAAAQQBAwQDAAAAAAAAAAAAAQACAwQRBRITFCEiUTFBcf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDTQxABRai8RVn4+SFxbtYrngeNySvsWJI3dQfxBn5w7mdhue6Fckjdu8SAEIHWjwBsAksuyfWVPas1C0tOFkhqswi2glUpLcjj3cUDC5KXWHGM+P0hK+V3tCD/2Q=="
+  },
+  "rodina-08": {
+    "cat": "rodina",
+    "alt": "Detský portrét zblízka, prst pri ústach, veľké oči",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAwL/xAAgEAABBAMAAgMAAAAAAAAAAAABAAIDBBESIQUTIjFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AInAcP6qXjDDvpr0pSam+J+JBnBVKm2D2MOuHAIOJo8SuBOOoWd2wTZdjgQgqVK7ZHZkO/6s56BF0GI6tStC84Bpx9p2xe9WjtclxQanw0Uvyc7pQm2S7MaQMZCEH//Z"
+  },
+  "rodina-09": {
+    "cat": "rodina",
+    "alt": "Dieťa sa drží dospelého za ruku, pohľad zozadu",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAEDBAUC/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIAAwQREiEFE0Ex/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMceMVu1Mt42KMRGLNsmMZPoQELvZjN4vs2RoD5AjJbfQ6hLBdR8hAdV2Mz8bAOPyQWFQ5KfkymYs0mS0ovGBfVS43CcUufWIQP/2Q=="
+  },
+  "rodina-10": {
+    "cat": "rodina",
+    "alt": "Batoľa naťahuje ruku k dlani mamy na lúke",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAUB/8QAHxAAAQQCAwEBAAAAAAAAAAAAAQACAxEEIRIxUQUi/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKDWlhp3aYBZopGOZMiJpIJd6mSNfHo9oOSzcH8WjQQoNqv12hBqzxx48NQillSTFxtxsqtF9aU6ftQfkl5JqkDy8eoVIzG0IP/Z"
+  },
+  "rodina-11": {
+    "cat": "rodina",
+    "alt": "Rodičia a dieťa s tvárami pri sebe, spoločný smiech",
+    "width": 2056,
+    "height": 3084,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQFBgECA//EACEQAAICAQQCAwAAAAAAAAAAAAECAAMRBAUSUQYhIzFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALbAEH6MgafIq9QCqqR0Zxo3R69SeQJzAskIhVu1DplmCnqECkaLULQQrCSvxW2KwbB6iq7ch4WE5/ZvTWFtezr0BAdNFDeznMJmteSgmED/2Q=="
+  },
+  "rodina-12": {
+    "cat": "rodina",
+    "alt": "Rozosmiate batoľa so zažmúrenými očami v jasnom svetle",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYB/8QAIxAAAQQBAwQDAAAAAAAAAAAAAQACAxEEBRITISIxMkFxgf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDZE0Oq417XepBVTUZ+KL7VbSpS95q6QNkIQgyTcnMyoAMgVaaaVeOzvHn5UAk3n1FKTlP4gciVhF7ghYbJzp2zvDZCBaEH/9k="
+  },
+  "rodina-13": {
+    "cat": "rodina",
+    "alt": "Otec a batoľa sa smejú a hrajú vo vysokej tráve",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EACEQAAICAgEEAwAAAAAAAAAAAAECABEDBBIFITFRFCNB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJSL3E0fGtbY1HaWqXQM4pR7jHrPk4KKVf2BnXQyMLA7QlNdrHiUJfiECXj6imbXUM3H2BFvutia8RtTIgJA8xgykCoFUo2f7FarhMSbhVQAIQP/2Q=="
+  },
+  "rodina-14": {
+    "cat": "rodina",
+    "alt": "Mama nesie batoľa na boku, tetovanie na predlaktí, zlaté svetlo, farebná fotografia",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQGBf/EACAQAAEEAgEFAAAAAAAAAAAAAAEAAgMRBBIhBRMUMWH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAEQEh/9oADAMBAAIRAxEAPwCz0nIDAI+AF0/Jj30DhssnBOWSVdEKVmSRKX3ZCFONO7IjaaLxaFicjKmfM52xCFujU8serwWpDES7cGvisUHuFpkx0dQULdN7TD7HKEwyFCgP/9k="
+  },
+  "rodina-15": {
+    "cat": "rodina",
+    "alt": "Mama nesie rozšantené batoľa v náručí, kvetované šaty",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQDBQECBv/EACEQAAICAgEEAwAAAAAAAAAAAAECAAMEETETISJBBRJR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOXGNYWAA5j6fHNWNlu8KLVVh9zHnsQVgg737gVD4zljCW4rVhuECvx8frbJ4E1yGZAFA8RHMbwp0PcguAbmBCmVYF7cQmOj+GED/9k="
+  },
+  "rodina-16": {
+    "cat": "rodina",
+    "alt": "Mama a batoľa ležia v tráve a smejú sa",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgQG/8QAJBAAAgICAAQHAAAAAAAAAAAAAQIAAwQRBRITIRQiMUFCUVL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A58DXqIGkOhbeiIwxKFdg1g7GTl0AueloCAm5G+jCNUxbAo7CEDVTYi4Ss/tM1tiWDyMRKcOv56zW68yiNq6Md02K9QE/UcfMwjfwtH4hA//Z"
+  },
+  "rodina-17": {
+    "cat": "rodina",
+    "alt": "Batoľa sa drží mamy za ruku, západ slnka za nimi, farebná fotografia",
+    "width": 3793,
+    "height": 5690,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAYF/8QAHxAAAgIBBAMAAAAAAAAAAAAAAQIAAxEEBRITITFB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAFxEBAQEBAAAAAAAAAAAAAAAAABEBQf/aAAwDAQACEQMRAD8AhoUNV62D19mkU8lBH2Z2nUJp6yXGQZaTeVWnwvqGwpXXawKcQmWu36w2HC+IQ3VMDKLaSJUJ614ExtFhCmVLmJuzN6i2oYknMI7shDdbH//Z"
+  },
+  "rodina-18": {
+    "cat": "rodina",
+    "alt": "Mama bozkáva batoľa na líce v zlatom svetle, farebná fotografia",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAgP/xAAjEAACAgEDAwUAAAAAAAAAAAABAgADEQQFIRITMRQiMkFR/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDAP/EABgRAQADAQAAAAAAAAAAAAAAAAABERJh/9oADAMBAAIRAxEAPwDntltmn5c4nXc9bexUJ8P2LK3GbBM2asFDUo8SVqZMVb320CtyRCQLG95hGoFR7HVukDIiNljLYcjmNW2lAFHk/c36MOAznOYp+JDHLcwlNtGmYQ6bEv/Z"
+  },
+  "rodina-19": {
+    "cat": "rodina",
+    "alt": "Batoľa kráča po lúke, podvečerné protisvetlo",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFBgH/xAAgEAACAgICAgMAAAAAAAAAAAABAgADBBEFEgYxE0FC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANWc2gLv5BqTOU5dKaSazszM1i/9seohlOLa+qgnUBhfIMkD3CQ2WwMQFMIFoWBk1OYxUdlIidbmMK/1qAwVr36EIsbSDqED/9k="
+  },
+  "rodina-20": {
+    "cat": "rodina",
+    "alt": "Ruka vkladá poľný kvet do vlasov dieťaťa, detail kučier",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAIDBAUGAf/EAB8QAAEFAQADAQEAAAAAAAAAAAEAAgMEERITITEFUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBUXPBGDkqgt1yJnhg9ap1ad8LjHvQH9TzGdEnN1BTNpSEbiFoBTsOGtb6Qgrf1Y/DaPBwFdp2SCAT8S3A24PK4+wo0BDXZiDW1Z+oGnEJimNrt+oQf/9k="
+  },
+  "rodina-21": {
+    "cat": "rodina",
+    "alt": "Batoľa kráča a drží mamu za ruku, prechádzka po lúke",
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAhEAACAQQCAgMAAAAAAAAAAAABAgADBBESBRMhMRQiUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDmnmahtOhRqDLONuKptmDn6xBYo410GIwttVCAlQIGyuMexCRuMMQCYQE+XU7Bg4JlPcceTOYi9jb/AJNTUOIG7OM+4SUt5hA//9k="
   }
 }

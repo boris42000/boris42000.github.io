@@ -104,10 +104,22 @@ const CATS = [
 
 // Curated running order of every non-hero frame. The lightbox indexes into this, so
 // it is also the left-to-right order within each roller (banner first in its group).
+//
+// Sequencing rules, per the brief: never two near-identical frames side by side
+// (forehead-to-forehead couples, hand-hold walk-aways, high-key laughing faces,
+// newborn hand details are all spread out), and the colour frames are spaced as
+// evenly as the count allows so each one lands as a pop against the black-and-white
+// either side — tehotenske-05/-01 sit four apart, and rodina-17/-14/-18 fall on
+// roughly the 1/4, 1/2, 3/4 marks of that roller.
 const ORDER = [
-  'tehotenske-08', 'tehotenske-10', 'tehotenske-03', 'tehotenske-06', 'tehotenske-04',
-  'tehotenske-07', 'tehotenske-09', 'tehotenske-01', 'tehotenske-05',
-  'rodina-01', 'rodina-02', 'rodina-04', 'rodina-03', 'rodina-07', 'rodina-06', 'rodina-05',
+  'tehotenske-08', 'tehotenske-12', 'tehotenske-05', 'tehotenske-06', 'tehotenske-03',
+  'tehotenske-09', 'tehotenske-01', 'tehotenske-04', 'tehotenske-11', 'tehotenske-10',
+  'tehotenske-07',
+  'rodina-01',
+  'rodina-08', 'rodina-04', 'rodina-13', 'rodina-03', 'rodina-17', 'rodina-11',
+  'rodina-06', 'rodina-15', 'rodina-21', 'rodina-02', 'rodina-20', 'rodina-14',
+  'rodina-10', 'rodina-07', 'rodina-16', 'rodina-19', 'rodina-05', 'rodina-18',
+  'rodina-09', 'rodina-12',
   'portret-03', 'portret-02', 'portret-04',
 ]
 

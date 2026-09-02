@@ -33,12 +33,13 @@ const JPEG_MAX_WIDTH = 1120
  * Source file → slug + category. Explicit rather than globbed: the order here IS the
  * curation, and the slugs are what the markup reads.
  *
- * 21 of the 22 masters ship — the mosaic homepage wants volume, so the frames that
- * an earlier, sparser layout held back as near-duplicates are published too (the
- * flare frame reads as deliberate at mosaic scale). Only the dog portrait stays out:
- * off-message for a couples/family/maternity photographer. Add a line here and re-run
- * to publish one. `mono: false` keeps a frame in colour instead of the default
- * desaturation.
+ * The mosaic homepage wants volume, so frames an earlier, sparser layout held back as
+ * near-duplicates are published too (the flare frame reads as deliberate at mosaic
+ * scale). Two masters stay out: the dog portrait (off-message for a couples/family/
+ * maternity photographer) and IMG_1989 (a straight mono copy of the IMG_1990 cheek
+ * kiss, which ships in colour). Add a line here and re-run to publish one.
+ * `mono: false` keeps a frame in colour instead of the default desaturation — used
+ * sparingly, as a deliberate accent the black-and-white rhythm makes pop.
  */
 const PHOTOS = [
   // Portrait / artistic — the most abstract work in the set.
@@ -72,6 +73,10 @@ const PHOTOS = [
     alt: 'Ruky partnera na tehotenskom brušku, detail v tlmenom svetle' },
   { file: 'IMG_0554.jpg', slug: 'tehotenske-10', cat: 'tehotenske',
     alt: 'Pár v protisvetle medzi stromami, slnečná žiara cez listy' },
+  { file: '17-IMG_2369.jpg', slug: 'tehotenske-11', cat: 'tehotenske',
+    alt: 'Pár tvárou v tvár, profily proti svetlej oblohe' },
+  { file: '18-IMG_2362.jpg', slug: 'tehotenske-12', cat: 'tehotenske',
+    alt: 'Pár čelo na čele so zavretými očami, detail tvárí' },
 
   // Newborn / family.
   { file: 'IMG_0173.jpeg', slug: 'rodina-01', cat: 'rodina',
@@ -88,6 +93,37 @@ const PHOTOS = [
     alt: 'Spiace novorodeniatko s pästičkou pri tvári' },
   { file: 'IMG_0114.jpeg', slug: 'rodina-07', cat: 'rodina',
     alt: 'Detské prstíky vykúkajúce spod károvanej deky' },
+
+  // Older babies + toddlers, shot outdoors. The three `mono: false` frames are the
+  // only colour in this category — golden-hour accents kept apart in the running order.
+  { file: '2-IMG_2653.jpg', slug: 'rodina-08', cat: 'rodina',
+    alt: 'Detský portrét zblízka, prst pri ústach, veľké oči' },
+  { file: '7-IMG_2542.jpg', slug: 'rodina-09', cat: 'rodina',
+    alt: 'Dieťa sa drží dospelého za ruku, pohľad zozadu' },
+  { file: '8-IMG_2541.jpg', slug: 'rodina-10', cat: 'rodina',
+    alt: 'Batoľa naťahuje ruku k dlani mamy na lúke' },
+  { file: '10-IMG_2508.jpg', slug: 'rodina-11', cat: 'rodina',
+    alt: 'Rodičia a dieťa s tvárami pri sebe, spoločný smiech' },
+  { file: '20-IMG_2333.jpg', slug: 'rodina-12', cat: 'rodina',
+    alt: 'Rozosmiate batoľa so zažmúrenými očami v jasnom svetle' },
+  { file: '24-IMG_2265.jpg', slug: 'rodina-13', cat: 'rodina',
+    alt: 'Otec a batoľa sa smejú a hrajú vo vysokej tráve' },
+  { file: '29-IMG_2182.jpg', slug: 'rodina-14', cat: 'rodina', mono: false,
+    alt: 'Mama nesie batoľa na boku, tetovanie na predlaktí, zlaté svetlo, farebná fotografia' },
+  { file: '32-IMG_2168.jpg', slug: 'rodina-15', cat: 'rodina',
+    alt: 'Mama nesie rozšantené batoľa v náručí, kvetované šaty' },
+  { file: '35-IMG_2146.jpg', slug: 'rodina-16', cat: 'rodina',
+    alt: 'Mama a batoľa ležia v tráve a smejú sa' },
+  { file: '44-IMG_2009.jpg', slug: 'rodina-17', cat: 'rodina', mono: false,
+    alt: 'Batoľa sa drží mamy za ruku, západ slnka za nimi, farebná fotografia' },
+  { file: '47-IMG_1990.jpg', slug: 'rodina-18', cat: 'rodina', mono: false,
+    alt: 'Mama bozkáva batoľa na líce v zlatom svetle, farebná fotografia' },
+  { file: '54-IMG_1943.jpg', slug: 'rodina-19', cat: 'rodina',
+    alt: 'Batoľa kráča po lúke, podvečerné protisvetlo' },
+  { file: '59-IMG_1904.jpg', slug: 'rodina-20', cat: 'rodina',
+    alt: 'Ruka vkladá poľný kvet do vlasov dieťaťa, detail kučier' },
+  { file: '6-IMG_2547.jpg', slug: 'rodina-21', cat: 'rodina',
+    alt: 'Batoľa kráča a drží mamu za ruku, prechádzka po lúke' },
 ]
 
 const encoders = (pipe, { jpeg = true } = {}) =>
