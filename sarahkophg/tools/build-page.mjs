@@ -72,18 +72,41 @@ function picture(slug, { sizes, alt, loading = 'lazy', priority = false, square 
 }
 
 // ── Copy ────────────────────────────────────────────────────────────────────────
-// There is almost none, on purpose. What survives is either set on a photograph in
-// the mosaic or lives in the two closing sections at the foot of the page.
+// Still sparse, but the page carries a hero slogan, an "O mne" section and a
+// four-step booking list. These lived hand-edited straight in index.html for a
+// while; they are back in the template here so a rebuild can't drop them again.
 const NAV = [
-  ['#portfolio', 'Portfólio'], ['#rezervacia', 'Rezervácia'],
+  ['#portfolio', 'Portfólio'], ['#rezervacia', 'Rezervácia'], ['#o-mne', 'O mne'],
 ]
 
-// The whole of the written page: three lines in the booking section at the foot.
+// Sits above the "Rezervovať fotenie" button in the hero.
+const SLOGAN = 'Skutočné momenty namiesto dokonalých póz.'
+
+// The booking section's "Ako to prebieha" list.
 const STEPS = [
-  { n: '01', title: 'Naladenie', text: 'spoznáme sa, vyberieme miesto' },
-  { n: '02', title: 'Fotenie', text: 'voľná prechádzka, bez pózovania' },
-  { n: '03', title: 'Odovzdanie', text: 'starostlivo vybrané zábery' },
+  { n: '01', title: 'Dohodnutie detailov',
+    text: 'Spoločne vyberieme termín, prejdeme vašu predstavu a zvolíme ideálnu lokáciu.' },
+  { n: '02', title: 'Zmluva a rezervácia',
+    text: 'Zašlem vám jednoduchú zmluvu na potvrdenie všetkých detailov fotenia.' },
+  { n: '03', title: 'Samotné fotenie',
+    text: 'Stretneme sa na mieste v uvoľnenej atmosfére, kde necháme plynúť prirodzené momenty.' },
+  { n: '04', title: 'Odovzdanie fotografií',
+    text: 'Do maximálne 2 týždňov vám pošlem hotové zábery cez online galériu.' },
 ]
+
+// "O mne" — portrait left, four paragraphs right. The portrait is img/author.JPG
+// (outside the curated photos/ set); its renditions come from make-assets.mjs.
+const ABOUT = {
+  title: 'Ahoj, volám sa Sarah.',
+  paras: [
+    'Zameriavam sa primárne na umelecké portréty, tehotenskú fotografiu a vzácne rodinné momenty, ako sú prvé dni nového života v rodine.',
+    'Vo fotografii nehľadám strojené pózy ani umelú dokonalosť. Fascinuje ma surová autentickosť, prirodzenosť a čisté emócie. Verím, že najkrajšie snímky vznikajú vo chvíľach, keď zabudnete na fotoaparát a ste jednoducho sami sebou.',
+    'Veľkou srdcovkou je pre mňa čiernobiela fotografia — milujem, ako dokáže stiahnuť všetku pozornosť na čistú emóciu, svetlo a intimitu chvíle.',
+    'Fotenie je mojou srdcovou záležitosťou už od detstva. Hoci som na istý čas fotoaparát odložila, vrátila som sa k nemu s jasnejšou víziou a jediným cieľom: nazbierať čo najviac skúseností a popritom zachytávať život v jeho najúprimnejšej podobe.',
+  ],
+  sign: 'Teším sa na spoločné tvorenie!',
+  alt: 'Portrét fotografky Sarah Ko.',
+}
 
 // The only two frames that are not in the mosaic — they carry the hero. Everything
 // else is published exactly once, so the scroll never shows the same photograph twice.
@@ -272,6 +295,7 @@ ${JSON.stringify({
       ${picture(HERO_B, { sizes: '(min-width: 900px) 50vw, 100vw', loading: 'eager', className: 'hero__img', pos: '50% 40%' })}
     </div>
     <div class="hero__cta">
+      <p class="hero__slogan">${SLOGAN}</p>
       <a class="btn" href="#rezervacia">Rezervovať fotenie</a>
     </div>
   </section>
@@ -288,6 +312,7 @@ ${JSON.stringify({
       <p class="eyebrow">Rezervácia</p>
       <h2 class="contact__title">Poďme fotiť.</h2>
       <p>Momentálne rozširujem portfólio — napíšte mi a dohodneme si termín za zvýhodnených podmienok.</p>
+      <p class="eyebrow msteps__eyebrow">Ako to prebieha</p>
       <ol class="msteps">
         ${STEPS.map((s) => `<li>
           <span class="msteps__n">${s.n}</span>
@@ -299,6 +324,27 @@ ${JSON.stringify({
         <a class="link link--lg" href="mailto:${EMAIL}?subject=${encodeURIComponent('Rezervácia fotenia')}">Napíšte mi</a>
         <a class="link link--lg" href="${IG}" target="_blank" rel="noopener">Instagram ↗</a>
       </div>
+    </div>
+  </section>
+
+  <section class="about" id="o-mne" aria-label="O mne">
+    <figure class="about__photo">
+      <picture>
+        <source type="image/avif" srcset="img/author-480.avif 480w, img/author-600.avif 600w" sizes="(min-width: 900px) 40vw, 100vw">
+        <source type="image/webp" srcset="img/author-480.webp 480w, img/author-600.webp 600w" sizes="(min-width: 900px) 40vw, 100vw">
+        <img src="img/author-600.jpg"
+             srcset="img/author-480.jpg 480w, img/author-600.jpg 600w" sizes="(min-width: 900px) 40vw, 100vw"
+             width="600" height="774" alt="${esc(ABOUT.alt)}"
+             loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <div class="about__body">
+      <p class="eyebrow">O mne</p>
+      <h2 class="about__title">${ABOUT.title}</h2>
+      <div class="about__text">
+        ${ABOUT.paras.map((p) => `<p>${p}</p>`).join('\n        ')}
+      </div>
+      <p class="about__sign">${ABOUT.sign}</p>
     </div>
   </section>
 

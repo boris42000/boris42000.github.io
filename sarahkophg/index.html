@@ -81,6 +81,7 @@
   <nav class="hdr__nav" aria-label="Hlavná navigácia">
     <a href="#portfolio">Portfólio</a>
     <a href="#rezervacia">Rezervácia</a>
+    <a href="#o-mne">O mne</a>
   </nav>
   <button class="hdr__toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel">
     <span class="hdr__toggle-label">Menu</span>
@@ -91,6 +92,7 @@
   <nav aria-label="Navigácia v mobile">
     <a href="#portfolio"><span class="navpanel__n">01</span>Portfólio</a>
     <a href="#rezervacia"><span class="navpanel__n">02</span>Rezervácia</a>
+    <a href="#o-mne"><span class="navpanel__n">03</span>O mne</a>
   </nav>
   <div class="navpanel__foot">
     <a href="https://www.instagram.com/sarahko.phg/" target="_blank" rel="noopener">@sarahko.phg ↗</a>
@@ -127,6 +129,7 @@
           </picture>
     </div>
     <div class="hero__cta">
+      <p class="hero__slogan">Skutočné momenty namiesto dokonalých póz.</p>
       <a class="btn" href="#rezervacia">Rezervovať fotenie</a>
     </div>
   </section>
@@ -618,27 +621,57 @@
       <p class="eyebrow">Rezervácia</p>
       <h2 class="contact__title">Poďme fotiť.</h2>
       <p>Momentálne rozširujem portfólio — napíšte mi a dohodneme si termín za zvýhodnených podmienok.</p>
+      <p class="eyebrow msteps__eyebrow">Ako to prebieha</p>
       <ol class="msteps">
         <li>
           <span class="msteps__n">01</span>
-          <span class="msteps__title">Naladenie</span>
-          <span class="msteps__text">spoznáme sa, vyberieme miesto</span>
+          <span class="msteps__title">Dohodnutie detailov</span>
+          <span class="msteps__text">Spoločne vyberieme termín, prejdeme vašu predstavu a zvolíme ideálnu lokáciu.</span>
         </li>
         <li>
           <span class="msteps__n">02</span>
-          <span class="msteps__title">Fotenie</span>
-          <span class="msteps__text">voľná prechádzka, bez pózovania</span>
+          <span class="msteps__title">Zmluva a rezervácia</span>
+          <span class="msteps__text">Zašlem vám jednoduchú zmluvu na potvrdenie všetkých detailov fotenia.</span>
         </li>
         <li>
           <span class="msteps__n">03</span>
-          <span class="msteps__title">Odovzdanie</span>
-          <span class="msteps__text">starostlivo vybrané zábery</span>
+          <span class="msteps__title">Samotné fotenie</span>
+          <span class="msteps__text">Stretneme sa na mieste v uvoľnenej atmosfére, kde necháme plynúť prirodzené momenty.</span>
+        </li>
+        <li>
+          <span class="msteps__n">04</span>
+          <span class="msteps__title">Odovzdanie fotografií</span>
+          <span class="msteps__text">Do maximálne 2 týždňov vám pošlem hotové zábery cez online galériu.</span>
         </li>
       </ol>
       <div class="contact__links">
         <a class="link link--lg" href="mailto:ahoj@sarahkophg.sk?subject=Rezerv%C3%A1cia%20fotenia">Napíšte mi</a>
         <a class="link link--lg" href="https://www.instagram.com/sarahko.phg/" target="_blank" rel="noopener">Instagram ↗</a>
       </div>
+    </div>
+  </section>
+
+  <section class="about" id="o-mne" aria-label="O mne">
+    <figure class="about__photo">
+      <picture>
+        <source type="image/avif" srcset="img/author-480.avif 480w, img/author-600.avif 600w" sizes="(min-width: 900px) 40vw, 100vw">
+        <source type="image/webp" srcset="img/author-480.webp 480w, img/author-600.webp 600w" sizes="(min-width: 900px) 40vw, 100vw">
+        <img src="img/author-600.jpg"
+             srcset="img/author-480.jpg 480w, img/author-600.jpg 600w" sizes="(min-width: 900px) 40vw, 100vw"
+             width="600" height="774" alt="Portrét fotografky Sarah Ko."
+             loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <div class="about__body">
+      <p class="eyebrow">O mne</p>
+      <h2 class="about__title">Ahoj, volám sa Sarah.</h2>
+      <div class="about__text">
+        <p>Zameriavam sa primárne na umelecké portréty, tehotenskú fotografiu a vzácne rodinné momenty, ako sú prvé dni nového života v rodine.</p>
+        <p>Vo fotografii nehľadám strojené pózy ani umelú dokonalosť. Fascinuje ma surová autentickosť, prirodzenosť a čisté emócie. Verím, že najkrajšie snímky vznikajú vo chvíľach, keď zabudnete na fotoaparát a ste jednoducho sami sebou.</p>
+        <p>Veľkou srdcovkou je pre mňa čiernobiela fotografia — milujem, ako dokáže stiahnuť všetku pozornosť na čistú emóciu, svetlo a intimitu chvíle.</p>
+        <p>Fotenie je mojou srdcovou záležitosťou už od detstva. Hoci som na istý čas fotoaparát odložila, vrátila som sa k nemu s jasnejšou víziou a jediným cieľom: nazbierať čo najviac skúseností a popritom zachytávať život v jeho najúprimnejšej podobe.</p>
+      </div>
+      <p class="about__sign">Teším sa na spoločné tvorenie!</p>
     </div>
   </section>
 
