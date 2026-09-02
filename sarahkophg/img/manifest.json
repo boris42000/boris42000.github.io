@@ -88,6 +88,72 @@
     ],
     "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAYB/8QAHhAAAgMAAgMBAAAAAAAAAAAAAAECAxESMQQTISL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AykYt9E/VJvOLLXhKHJOWYaCdvgqjOK5Z2BlnS18YFi6yLtlnQALrSjv6GWXpwSRRU2dc3gEnP6ApyAD/2Q=="
   },
+  "portret-05": {
+    "cat": "portret",
+    "alt": "Žena v podrepe na starom kresle, pohľad zhora, dramatické svetlo",
+    "width": 2856,
+    "height": 4290,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAwYE/8QAIhAAAQQCAgEFAAAAAAAAAAAAAQACAwQRIRJRBQYTFCJh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMzDAJNA7Uz1jEQO1pPAV6z2hkrAHN3lVeoa8bbTXRY4/iBTHUPAaQmULR7YQgirZ+PzPYVNt5fCyTlkZ2uEznBCrFhwjcw7BQMmWGhg+wQkvM9oQf/Z"
+  },
+  "portret-06": {
+    "cat": "portret",
+    "alt": "Žena skrčená na zemi, ruky pri tvári, pohľad do kamery",
+    "width": 2856,
+    "height": 4290,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAMBBQIEBv/EAB4QAAICAgMBAQAAAAAAAAAAAAABAgMEEQUhMUEi/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOOjEya6LTj+Msyk3FflfRWdgyxm9taArtAS/QAuMHkLsWpwr++iuQvnk6clpI067WmFtrYCJegQ32AH/9k="
+  },
+  "portret-07": {
+    "cat": "portret",
+    "alt": "Detail tváre ženy z profilu, mäkko rozostrené pozadie",
+    "width": 2856,
+    "height": 4290,
+    "widths": [
+      480,
+      768,
+      1120,
+      1600
+    ],
+    "jpegWidths": [
+      480,
+      768,
+      1120
+    ],
+    "squares": [
+      400,
+      800
+    ],
+    "lqip": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAb/xAAjEAACAgIBAwUBAAAAAAAAAAABAgADBBESEyEiBQYxQVFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AI2TYQ2liluvrPIAjUX1y1niNmWxhMcRWsXuwgOw/cgTHVXHkITAnpVTgnn9wgScNh1k5fs6rPzFqw0XtrjOOqOrB/ZrzrrGVQWOgPiA9czW+LdtwksMQIQP/9k="
+  },
   "tehotenske-01": {
     "cat": "tehotenske",
     "alt": "Nastávajúci rodičia čelo na čele, tehotenské bruško v protisvetle, farebná fotografia",

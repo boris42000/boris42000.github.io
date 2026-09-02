@@ -51,6 +51,12 @@ const PHOTOS = [
     alt: 'Detail profilu tváre za rozostrenými steblami trávy' },
   { file: 'IMG_7227_Original.jpg', slug: 'portret-04', cat: 'portret',
     alt: 'Žena zaklonená v tráve so zavretými očami, mäkké svetlo' },
+  { file: 'IMG_9566_Original.JPG', slug: 'portret-05', cat: 'portret',
+    alt: 'Žena v podrepe na starom kresle, pohľad zhora, dramatické svetlo' },
+  { file: 'IMG_9260_Original.jpg', slug: 'portret-06', cat: 'portret',
+    alt: 'Žena skrčená na zemi, ruky pri tvári, pohľad do kamery' },
+  { file: 'IMG_9513_Original.jpg', slug: 'portret-07', cat: 'portret',
+    alt: 'Detail tváre ženy z profilu, mäkko rozostrené pozadie' },
 
   // Maternity + couples.
   { file: 'IMG_0758.jpg', slug: 'tehotenske-01', cat: 'tehotenske', mono: false,

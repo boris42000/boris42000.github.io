@@ -143,7 +143,7 @@ const ORDER = [
   'rodina-06', 'rodina-15', 'rodina-21', 'rodina-02', 'rodina-20', 'rodina-14',
   'rodina-10', 'rodina-07', 'rodina-16', 'rodina-19', 'rodina-05', 'rodina-18',
   'rodina-09', 'rodina-12',
-  'portret-03', 'portret-02', 'portret-04',
+  'portret-03', 'portret-02', 'portret-06', 'portret-04', 'portret-05', 'portret-07',
 ]
 
 // Kept name: still the flat, in-order slug list the lightbox and JSON-LD read.
