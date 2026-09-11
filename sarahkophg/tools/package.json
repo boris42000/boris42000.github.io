@@ -11,6 +11,6 @@
     "build": "node optimize-images.mjs && node make-assets.mjs && node build-page.mjs && node bump-version.mjs"
   },
   "devDependencies": {
-    "sharp": "^0.35.3"
+    "sharp": "^0.35.4"
   }
 }
