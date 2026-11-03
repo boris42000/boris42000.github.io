@@ -1,0 +1,742 @@
+{
+ "source": "https://pizzeriacoloseum.sk/",
+ "captured_utc": "2026-11-03T12:22:42Z",
+ "files": [
+  {
+   "url": "https://pizzeriacoloseum.sk/contacts.html",
+   "file": "contacts.html",
+   "sha256": "ed0f7167c1f584069e8b9a4207c32f88b30b359815a1e0efcb367e47d2ed3231",
+   "bytes": 12587,
+   "last_modified": "Fri, 20 Feb 2026 17:22:34 GMT",
+   "content_type": "text/html"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/css/bootstrap.css",
+   "file": "css/bootstrap.css",
+   "sha256": "61839133ceffb7b19b71b33d48004a3bdd0c8ba052852d3a78eba861977a9cea",
+   "bytes": 159704,
+   "last_modified": "Mon, 03 Mar 2025 10:46:03 GMT",
+   "content_type": "text/css"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/css/custom.css",
+   "file": "css/custom.css",
+   "sha256": "ce4ad1e0fd762a4da301eb9c8c9594105bd9af6cf8f912565dc93609dc444a04",
+   "bytes": 485,
+   "last_modified": "Mon, 31 Mar 2025 17:05:02 GMT",
+   "content_type": "text/css"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/css/fonts.css",
+   "file": "css/fonts.css",
+   "sha256": "3299c9750edf1fef25e0032db4eb9b76333975cad738681c3a362bbc2513867f",
+   "bytes": 121923,
+   "last_modified": "Mon, 03 Mar 2025 10:46:04 GMT",
+   "content_type": "text/css"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/css/soundcloud.css",
+   "file": "css/soundcloud.css",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "bytes": 0,
+   "last_modified": "Mon, 03 Mar 2025 10:46:04 GMT",
+   "content_type": "text/css"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/css/style.css",
+   "file": "css/style.css",
+   "sha256": "a82e04ba453214c74c336ada6ff87da923d9d4eaea1143470b52924d7a8e0c37",
+   "bytes": 721010,
+   "last_modified": "Mon, 03 Mar 2025 10:46:06 GMT",
+   "content_type": "text/css"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/favicon/apple-touch-icon.png",
+   "file": "favicon/apple-touch-icon.png",
+   "sha256": "af12d4813444a13ce9bba54cbaf2dc969a3f965e19d265e33e8f5c66bf5ef8e0",
+   "bytes": 12887,
+   "last_modified": "Mon, 03 Mar 2025 10:46:05 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/favicon/favicon-48x48.png",
+   "file": "favicon/favicon-48x48.png",
+   "sha256": "b2682aeea7e863b5058a74e8e4f5b249ed24e31d1534cf349c61ff079c148c0c",
+   "bytes": 2080,
+   "last_modified": "Mon, 03 Mar 2025 10:46:05 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/favicon/favicon.ico",
+   "file": "favicon/favicon.ico",
+   "sha256": "072a5a4283ff8d0d0fbdd81a7a95ca5f1ad4903db006cad294de50fb7b8dd82c",
+   "bytes": 15086,
+   "last_modified": "Mon, 03 Mar 2025 10:46:04 GMT",
+   "content_type": "image/x-icon"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/favicon/favicon.svg",
+   "file": "favicon/favicon.svg",
+   "sha256": "a1a0fb9b022463ec4b04e76609b3ec412638030c5893a215e5859ca23b120e9b",
+   "bytes": 35671,
+   "last_modified": "Mon, 03 Mar 2025 10:46:06 GMT",
+   "content_type": "image/svg+xml"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/favicon/site.webmanifest",
+   "file": "favicon/site.webmanifest",
+   "sha256": "91a78d4fe16316df93ec91b33a15c7ed84aab2b0de8a9959da40f108dfc2154e",
+   "bytes": 436,
+   "last_modified": "Mon, 03 Mar 2025 10:46:05 GMT",
+   "content_type": "application/manifest+json"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/favicon/web-app-manifest-192x192.png",
+   "file": "favicon/web-app-manifest-192x192.png",
+   "sha256": "bc27c42d92c967938182cf627adfd2601bb0ee34b6e4a3244d636e4fe62a1615",
+   "bytes": 14540,
+   "last_modified": "Mon, 03 Mar 2025 10:46:05 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/favicon/web-app-manifest-512x512.png",
+   "file": "favicon/web-app-manifest-512x512.png",
+   "sha256": "70f3d45bed0ec8ff0af1d2bc7f4dd90969a0813b6bf0ab9b8f34838eac7c47d7",
+   "bytes": 39130,
+   "last_modified": "Mon, 03 Mar 2025 10:46:05 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/Flaticon.eot",
+   "file": "fonts/Flaticon.eot",
+   "sha256": "c1c327fafc9e6a3554ba6258072e15224d6f904dd2df0ec6c59663ee57163957",
+   "bytes": 42248,
+   "last_modified": "Mon, 03 Mar 2025 10:46:07 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/Flaticon.svg",
+   "file": "fonts/Flaticon.svg",
+   "sha256": "3fd750f82d41bcf56b260b4ac07d98db2151c245ce600f15f01a338dbb979c3f",
+   "bytes": 189358,
+   "last_modified": "Mon, 03 Mar 2025 10:46:15 GMT",
+   "content_type": "image/svg+xml"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/Flaticon.ttf",
+   "file": "fonts/Flaticon.ttf",
+   "sha256": "864abf5625303e2e2dd7d3d37962d26d2e2aa8e8e974d2cae9a85f860541dd2a",
+   "bytes": 42072,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/Flaticon.woff",
+   "file": "fonts/Flaticon.woff",
+   "sha256": "54f96e9b626062dc2df64eb896fabb7e4b5f6f1f6232b092d9c47d2b7c85bb96",
+   "bytes": 20168,
+   "last_modified": "Mon, 03 Mar 2025 10:46:06 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.eot",
+   "file": "fonts/fontawesome-webfont.eot",
+   "sha256": "e219ece8f4d3e4ac455ef31cd3a7c7b5057ea68a109937fc26b03c6e99ee9322",
+   "bytes": 70807,
+   "last_modified": "Mon, 03 Mar 2025 10:46:14 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.eot?v=4.5.0",
+   "file": "fonts/fontawesome-webfont.eot",
+   "sha256": "e219ece8f4d3e4ac455ef31cd3a7c7b5057ea68a109937fc26b03c6e99ee9322",
+   "bytes": 70807,
+   "last_modified": "Mon, 03 Mar 2025 10:46:14 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.svg",
+   "file": "fonts/fontawesome-webfont.svg",
+   "sha256": "d67041fe5d50eef9ef671643968f7ce6b130eaaaaa2ce4d496b18d0a33aeb87b",
+   "bytes": 365616,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "image/svg+xml"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.ttf",
+   "file": "fonts/fontawesome-webfont.ttf",
+   "sha256": "7b5a4320fba0d4c8f79327645b4b9cc875a2ec617a557e849b813918eb733499",
+   "bytes": 142072,
+   "last_modified": "Mon, 03 Mar 2025 10:46:10 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.ttf?v=4.5.0",
+   "file": "fonts/fontawesome-webfont.ttf",
+   "sha256": "7b5a4320fba0d4c8f79327645b4b9cc875a2ec617a557e849b813918eb733499",
+   "bytes": 142072,
+   "last_modified": "Mon, 03 Mar 2025 10:46:10 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.woff",
+   "file": "fonts/fontawesome-webfont.woff",
+   "sha256": "c812ddc9e475d3e65d68a6b3b589ce598a2a5babb7afc55477d59215c4a38a40",
+   "bytes": 83588,
+   "last_modified": "Mon, 03 Mar 2025 10:46:11 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.woff?v=4.5.0",
+   "file": "fonts/fontawesome-webfont.woff",
+   "sha256": "c812ddc9e475d3e65d68a6b3b589ce598a2a5babb7afc55477d59215c4a38a40",
+   "bytes": 83588,
+   "last_modified": "Mon, 03 Mar 2025 10:46:11 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.woff2",
+   "file": "fonts/fontawesome-webfont.woff2",
+   "sha256": "ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995",
+   "bytes": 66624,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "font/woff2"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/fontawesome-webfont.woff2?v=4.5.0",
+   "file": "fonts/fontawesome-webfont.woff2",
+   "sha256": "ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995",
+   "bytes": 66624,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "font/woff2"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/glyphicons-halflings-regular.eot",
+   "file": "fonts/glyphicons-halflings-regular.eot",
+   "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407",
+   "bytes": 20127,
+   "last_modified": "Mon, 03 Mar 2025 10:46:07 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/glyphicons-halflings-regular.svg",
+   "file": "fonts/glyphicons-halflings-regular.svg",
+   "sha256": "42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5",
+   "bytes": 108738,
+   "last_modified": "Mon, 03 Mar 2025 10:46:12 GMT",
+   "content_type": "image/svg+xml"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/glyphicons-halflings-regular.ttf",
+   "file": "fonts/glyphicons-halflings-regular.ttf",
+   "sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456",
+   "bytes": 45404,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/glyphicons-halflings-regular.woff",
+   "file": "fonts/glyphicons-halflings-regular.woff",
+   "sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742",
+   "bytes": 23424,
+   "last_modified": "Mon, 03 Mar 2025 10:46:07 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/glyphicons-halflings-regular.woff2",
+   "file": "fonts/glyphicons-halflings-regular.woff2",
+   "sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c",
+   "bytes": 18028,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "font/woff2"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/lg.eot",
+   "file": "fonts/lg.eot",
+   "sha256": "0970881145aecce7668909140fc2f552c680007c147905bae6bf87d0fca9df6c",
+   "bytes": 4024,
+   "last_modified": "Mon, 03 Mar 2025 10:46:10 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/lg.eot?n1z373",
+   "file": "fonts/lg.eot",
+   "sha256": "0970881145aecce7668909140fc2f552c680007c147905bae6bf87d0fca9df6c",
+   "bytes": 4024,
+   "last_modified": "Mon, 03 Mar 2025 10:46:10 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/lg.svg",
+   "file": "fonts/lg.svg",
+   "sha256": "e89650de3b0ea9eb1f03f80da079963a97f94b050a7ad68b61876cb34b8b3e8c",
+   "bytes": 8855,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "image/svg+xml"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/lg.ttf",
+   "file": "fonts/lg.ttf",
+   "sha256": "5c3cb8b4780e7037479381cda6f640bb12c56b5c8dc0104b03dec0294aeec0e6",
+   "bytes": 3880,
+   "last_modified": "Mon, 03 Mar 2025 10:46:15 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/lg.ttf?n1z373",
+   "file": "fonts/lg.ttf",
+   "sha256": "5c3cb8b4780e7037479381cda6f640bb12c56b5c8dc0104b03dec0294aeec0e6",
+   "bytes": 3880,
+   "last_modified": "Mon, 03 Mar 2025 10:46:15 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/lg.woff",
+   "file": "fonts/lg.woff",
+   "sha256": "78e558964f6a4d4970dad55bc53bf6a7cdc0437d228ee2c60bc6d1dc9e0beefd",
+   "bytes": 3956,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/lg.woff?n1z373",
+   "file": "fonts/lg.woff",
+   "sha256": "78e558964f6a4d4970dad55bc53bf6a7cdc0437d228ee2c60bc6d1dc9e0beefd",
+   "bytes": 3956,
+   "last_modified": "Mon, 03 Mar 2025 10:46:08 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.eot",
+   "file": "fonts/materialdesignicons-webfont.eot",
+   "sha256": "6423c407713698935b9028e6ed8c1faeb4a437a4e2beb3c1cb1f529495406200",
+   "bytes": 208688,
+   "last_modified": "Mon, 03 Mar 2025 10:46:09 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.eot?v=1.4.57",
+   "file": "fonts/materialdesignicons-webfont.eot",
+   "sha256": "6423c407713698935b9028e6ed8c1faeb4a437a4e2beb3c1cb1f529495406200",
+   "bytes": 208688,
+   "last_modified": "Mon, 03 Mar 2025 10:46:09 GMT",
+   "content_type": "application/vnd.ms-fontobject"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.svg",
+   "file": "fonts/materialdesignicons-webfont.svg",
+   "sha256": "bf80f95a656380efe4c16174d8ee665c93fb79168c42d16ae0f334a0ddbbf467",
+   "bytes": 1581343,
+   "last_modified": "Mon, 03 Mar 2025 10:46:16 GMT",
+   "content_type": "image/svg+xml"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.ttf",
+   "file": "fonts/materialdesignicons-webfont.ttf",
+   "sha256": "637a440284c24b36e4b1f28c80da04cfd9a9c8c2b092a60803f627ce0f8f463b",
+   "bytes": 208468,
+   "last_modified": "Mon, 03 Mar 2025 10:46:13 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.ttf?v=1.4.57",
+   "file": "fonts/materialdesignicons-webfont.ttf",
+   "sha256": "637a440284c24b36e4b1f28c80da04cfd9a9c8c2b092a60803f627ce0f8f463b",
+   "bytes": 208468,
+   "last_modified": "Mon, 03 Mar 2025 10:46:13 GMT",
+   "content_type": "application/octet-stream"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.woff",
+   "file": "fonts/materialdesignicons-webfont.woff",
+   "sha256": "ff2a89a0ccd6ab54032e9aa25b5a584a2457cbd84b3433df1b0402bed80fa640",
+   "bytes": 102552,
+   "last_modified": "Mon, 03 Mar 2025 10:46:10 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.woff?v=1.4.57",
+   "file": "fonts/materialdesignicons-webfont.woff",
+   "sha256": "ff2a89a0ccd6ab54032e9aa25b5a584a2457cbd84b3433df1b0402bed80fa640",
+   "bytes": 102552,
+   "last_modified": "Mon, 03 Mar 2025 10:46:10 GMT",
+   "content_type": "font/woff"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.woff2",
+   "file": "fonts/materialdesignicons-webfont.woff2",
+   "sha256": "56ca131e02e335cbc5604cf53451ad97f160b33a46bba0b0b8f41578de9715c1",
+   "bytes": 79756,
+   "last_modified": "Mon, 03 Mar 2025 10:46:07 GMT",
+   "content_type": "font/woff2"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/fonts/materialdesignicons-webfont.woff2?v=1.4.57",
+   "file": "fonts/materialdesignicons-webfont.woff2",
+   "sha256": "56ca131e02e335cbc5604cf53451ad97f160b33a46bba0b0b8f41578de9715c1",
+   "bytes": 79756,
+   "last_modified": "Mon, 03 Mar 2025 10:46:07 GMT",
+   "content_type": "font/woff2"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/_blank.png",
+   "file": "images/_blank.png",
+   "sha256": "8a8a6d6325c5391079a56dc9a9185ef79618a784232a529db8b9809d3260e4cb",
+   "bytes": 68,
+   "last_modified": "Mon, 03 Mar 2025 10:46:21 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/favicon.ico",
+   "file": "images/favicon.ico",
+   "sha256": "1d2e484133cc3a3851b4c328a527764dba5d944b79f4ec98e70813af25b72b17",
+   "bytes": 184,
+   "last_modified": "Mon, 03 Mar 2025 10:46:16 GMT",
+   "content_type": "image/x-icon"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-01-285x285.jpg",
+   "file": "images/gallery-01-285x285.jpg",
+   "sha256": "27c5f3024686237ae630f1ead738e303329602f0ee00053100b7c50263629876",
+   "bytes": 1724,
+   "last_modified": "Mon, 03 Mar 2025 10:46:16 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-02-285x285.jpg",
+   "file": "images/gallery-02-285x285.jpg",
+   "sha256": "27c5f3024686237ae630f1ead738e303329602f0ee00053100b7c50263629876",
+   "bytes": 1724,
+   "last_modified": "Mon, 03 Mar 2025 10:46:17 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-03-601x442.jpg",
+   "file": "images/gallery-03-601x442.jpg",
+   "sha256": "de260d095c176dcd822d0f55756b3ec3a91820a12dcd9960a0166288986b2624",
+   "bytes": 4124,
+   "last_modified": "Mon, 03 Mar 2025 10:46:16 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-04-600x600.jpg",
+   "file": "images/gallery-04-600x600.jpg",
+   "sha256": "a64547afa2d13ec15225320e7a3d5ecbdd21491fa3867c7d97b418429b68fe7e",
+   "bytes": 5204,
+   "last_modified": "Mon, 03 Mar 2025 10:46:18 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-05-600x600.jpg",
+   "file": "images/gallery-05-600x600.jpg",
+   "sha256": "a64547afa2d13ec15225320e7a3d5ecbdd21491fa3867c7d97b418429b68fe7e",
+   "bytes": 5204,
+   "last_modified": "Mon, 03 Mar 2025 10:46:21 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-06-285x443.jpg",
+   "file": "images/gallery-06-285x443.jpg",
+   "sha256": "1ea3ce7722be56df910c846ba6c83f98fa959ee1335dd97c693c40aec768de1c",
+   "bytes": 1995,
+   "last_modified": "Mon, 03 Mar 2025 10:46:22 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-07-285x443.jpg",
+   "file": "images/gallery-07-285x443.jpg",
+   "sha256": "1ea3ce7722be56df910c846ba6c83f98fa959ee1335dd97c693c40aec768de1c",
+   "bytes": 1995,
+   "last_modified": "Mon, 03 Mar 2025 10:46:18 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-08-285x285.jpg",
+   "file": "images/gallery-08-285x285.jpg",
+   "sha256": "fb76577bd6812c2e4e958cd32c5b26a05d8d2920093251057ad987b6d7f7145d",
+   "bytes": 1754,
+   "last_modified": "Mon, 03 Mar 2025 10:46:16 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-08-370x370.jpg",
+   "file": "images/gallery-08-370x370.jpg",
+   "sha256": "b098cadc702121ff3338f1319350fb9a5d829fb1d7a1ffac6c770cc41d77fad5",
+   "bytes": 2468,
+   "last_modified": "Mon, 03 Mar 2025 10:46:26 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gallery-09-285x285.jpg",
+   "file": "images/gallery-09-285x285.jpg",
+   "sha256": "fb76577bd6812c2e4e958cd32c5b26a05d8d2920093251057ad987b6d7f7145d",
+   "bytes": 1754,
+   "last_modified": "Mon, 03 Mar 2025 10:46:19 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gmap_marker.png",
+   "file": "images/gmap_marker.png",
+   "sha256": "ed09a8ad25d9aea073254dab22cbea9bf06d81bb96634874485fef85ea9450c5",
+   "bytes": 397,
+   "last_modified": "Mon, 03 Mar 2025 10:46:19 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/gmap_marker_active.png",
+   "file": "images/gmap_marker_active.png",
+   "sha256": "5dcc40d0d8df1d27e7856780a906f62dde6d4f22401b6b778cd5d371268ff875",
+   "bytes": 397,
+   "last_modified": "Mon, 03 Mar 2025 10:46:26 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/ie8-panel/warning_bar_0000_us.jpg",
+   "file": "images/ie8-panel/warning_bar_0000_us.jpg",
+   "sha256": "754e0f10a47cfe4f04fe5a804a735a660ba2c20fc33bdb75151f7f1eb223b737",
+   "bytes": 13012,
+   "last_modified": "Mon, 03 Mar 2025 10:46:27 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-01-1920x963.jpg",
+   "file": "images/image-01-1920x963.jpg",
+   "sha256": "59e8489937fcbe6259cdb0bbfec62e0c30df63c4a2e59a7f434ec3bd1f0cb315",
+   "bytes": 1301312,
+   "last_modified": "Mon, 03 Mar 2025 10:46:21 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-02-1920x935.jpg",
+   "file": "images/image-02-1920x935.jpg",
+   "sha256": "c519dd336548dc6fda880e0d635594f5a6a6b16e66c59f0d12694b23baa98d0e",
+   "bytes": 19081,
+   "last_modified": "Mon, 03 Mar 2025 10:46:17 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-04-570x321.jpg",
+   "file": "images/image-04-570x321.jpg",
+   "sha256": "05527cc2c4f07cfc09a593c646dfd0db09ffd7ebce65ef95e0598eb0c052537f",
+   "bytes": 3637,
+   "last_modified": "Mon, 03 Mar 2025 10:46:26 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-05-1920x575.jpg",
+   "file": "images/image-05-1920x575.jpg",
+   "sha256": "8b3d386aebc66c84fb07040eecd1fff3f39ddf54099cc14ade27babd33d57bc7",
+   "bytes": 19196,
+   "last_modified": "Mon, 03 Mar 2025 10:46:16 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-06-170x326.png",
+   "file": "images/image-06-170x326.png",
+   "sha256": "5443f107b646451c283eef7df50359e493315716b7d472c2fb5d6617b7fd3a6a",
+   "bytes": 2934,
+   "last_modified": "Mon, 03 Mar 2025 10:46:20 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-07-170x326.png",
+   "file": "images/image-07-170x326.png",
+   "sha256": "5443f107b646451c283eef7df50359e493315716b7d472c2fb5d6617b7fd3a6a",
+   "bytes": 2934,
+   "last_modified": "Mon, 03 Mar 2025 10:46:16 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-08-170x326.png",
+   "file": "images/image-08-170x326.png",
+   "sha256": "5443f107b646451c283eef7df50359e493315716b7d472c2fb5d6617b7fd3a6a",
+   "bytes": 2934,
+   "last_modified": "Mon, 03 Mar 2025 10:46:17 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-09-669x610.png",
+   "file": "images/image-09-669x610.png",
+   "sha256": "bc9dfe25b2fe96566d27d8ca24e2a5a5098fd80e66c2e57d923110aaaff00e9f",
+   "bytes": 8831,
+   "last_modified": "Mon, 03 Mar 2025 10:46:17 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-10-229x82.png",
+   "file": "images/image-10-229x82.png",
+   "sha256": "6d8771dcee6eebfc5e13c32dd8ee9ec4f06e0ca38a7ea37962f2476d2c83e424",
+   "bytes": 2361,
+   "last_modified": "Mon, 03 Mar 2025 10:46:18 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/image-11-1920x675.png",
+   "file": "images/image-11-1920x675.png",
+   "sha256": "2ac78487bf869cd7d1f8e8ff07f1c4a7b1ff0468811b5753855f22b25c9119c6",
+   "bytes": 27856,
+   "last_modified": "Mon, 03 Mar 2025 10:46:17 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/intense.jpg",
+   "file": "images/intense.jpg",
+   "sha256": "7ea74246826ecc653ea6e5adc1e678bb4819f7c86011b3f465c237cb739294fa",
+   "bytes": 79780,
+   "last_modified": "Mon, 03 Mar 2025 10:46:19 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/interior2.jpeg",
+   "file": "images/interior2.jpeg",
+   "sha256": "ea7aede888d24628f480b582eae1c4ff75c087f16dae9db7e4d5fdcbdf3cd5d0",
+   "bytes": 80020,
+   "last_modified": "Mon, 03 Mar 2025 10:46:22 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/interior3.jpeg",
+   "file": "images/interior3.jpeg",
+   "sha256": "040c2aa8265ead9c06188eac1f5be8eda33d1e5c5601a9f4c902d257a009c318",
+   "bytes": 163444,
+   "last_modified": "Mon, 03 Mar 2025 10:46:27 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/intro-01-1920x955.jpg",
+   "file": "images/intro-01-1920x955.jpg",
+   "sha256": "e0efe916dd677267bb148fe8d8d8815f65ba1af33387e28cac613704f6faa3f4",
+   "bytes": 919273,
+   "last_modified": "Mon, 03 Mar 2025 10:46:27 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/intro-logo-175x173.png",
+   "file": "images/intro-logo-175x173.png",
+   "sha256": "85e377c35b2a630e9230d8eb8c2607717c580f298e39869ad0fe37d101fa3b5b",
+   "bytes": 299074,
+   "last_modified": "Mon, 03 Mar 2025 10:46:21 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/loading.gif",
+   "file": "images/loading.gif",
+   "sha256": "0953ac5d8603bf87c8e462494309e1c85c8cda8c3f6ef5af2fce3f9eb97943f2",
+   "bytes": 2535,
+   "last_modified": "Mon, 03 Mar 2025 10:46:18 GMT",
+   "content_type": "image/gif"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/logo-inverse.png",
+   "file": "images/logo-inverse.png",
+   "sha256": "5c1a70142cf58108d7442ffebe179c89eeec6048e1f623fbf2bd0fbed96952bf",
+   "bytes": 10253,
+   "last_modified": "Mon, 03 Mar 2025 10:46:23 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/logo.png",
+   "file": "images/logo.png",
+   "sha256": "55668fdd03d5edd0774b0e5e2f147246e23783a65d1578e3735f64337e44346c",
+   "bytes": 49927,
+   "last_modified": "Mon, 03 Mar 2025 10:46:20 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/pizzaformenu.png",
+   "file": "images/pizzaformenu.png",
+   "sha256": "669aa017ed639baf1d0307de3958f352c4bbf0e0fb59ad81aeabf32f12bd45b1",
+   "bytes": 769694,
+   "last_modified": "Mon, 03 Mar 2025 10:46:26 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/portfolio-15-370x280.jpg",
+   "file": "images/portfolio-15-370x280.jpg",
+   "sha256": "988ccdf35ba4ff4f187cb73608e779a81ee4f7eb529d54c177e4aca7d4a0d8df",
+   "bytes": 2300,
+   "last_modified": "Mon, 03 Mar 2025 10:46:20 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/portfolio-16-370x280.jpg",
+   "file": "images/portfolio-16-370x280.jpg",
+   "sha256": "988ccdf35ba4ff4f187cb73608e779a81ee4f7eb529d54c177e4aca7d4a0d8df",
+   "bytes": 2300,
+   "last_modified": "Mon, 03 Mar 2025 10:46:26 GMT",
+   "content_type": "image/jpeg"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/video-play.png",
+   "file": "images/video-play.png",
+   "sha256": "8d4add73a89cd2aff0874bc4b829680e5124223d808236fc2370a1ef3ba138ea",
+   "bytes": 560,
+   "last_modified": "Mon, 03 Mar 2025 10:46:21 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/vimeo-play.png",
+   "file": "images/vimeo-play.png",
+   "sha256": "6b5dac1de2354b3e52dd3b9c880ad4bde7a3333b2c4d262b891e5ff212e5f504",
+   "bytes": 849,
+   "last_modified": "Mon, 03 Mar 2025 10:46:17 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/images/youtube-play.png",
+   "file": "images/youtube-play.png",
+   "sha256": "61b2d13d37e5b6dc5ea3918cd7b0b2adb58c64c74f56e6a480896bae96210d59",
+   "bytes": 1083,
+   "last_modified": "Mon, 03 Mar 2025 10:46:17 GMT",
+   "content_type": "image/png"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/index.html",
+   "file": "index.html",
+   "sha256": "87fa0a8c73aa656cc56144fa244b8a7b2478b5dfc33a34f7e9cc4aeab4847ec1",
+   "bytes": 33435,
+   "last_modified": "Fri, 20 Feb 2026 17:22:34 GMT",
+   "content_type": "text/html"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/js/core.min.js",
+   "file": "js/core.min.js",
+   "sha256": "d725db5b756555e3b7923e9d5e193f5f44390e13800afdacfaca6c49aab705d4",
+   "bytes": 396317,
+   "last_modified": "Mon, 03 Mar 2025 10:46:28 GMT",
+   "content_type": "application/javascript"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/js/script.js",
+   "file": "js/script.js",
+   "sha256": "a58d76558461f4e76e17cda8500983dbcfaa632ab8fe25b4ee87f0593faea4b6",
+   "bytes": 28961,
+   "last_modified": "Mon, 03 Mar 2025 10:46:27 GMT",
+   "content_type": "application/javascript"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/menu-data.js?v=2",
+   "file": "menu-data.js",
+   "sha256": "34489eac73adb77f2b952d9306bc29dad678012f0147b4aedf4dbdb0c63675aa",
+   "bytes": 35221,
+   "last_modified": "Fri, 20 Feb 2026 17:22:35 GMT",
+   "content_type": "application/javascript"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/menu-data.js",
+   "file": "menu-data.js",
+   "sha256": "34489eac73adb77f2b952d9306bc29dad678012f0147b4aedf4dbdb0c63675aa",
+   "bytes": 35221,
+   "last_modified": "Fri, 20 Feb 2026 17:22:35 GMT",
+   "content_type": "application/javascript"
+  },
+  {
+   "url": "https://pizzeriacoloseum.sk/menu.html",
+   "file": "menu.html",
+   "sha256": "40160f1300e1d30a26b532fb574567d03441367a041b83263f51e7c5cfa28c73",
+   "bytes": 24887,
+   "last_modified": "Fri, 20 Feb 2026 17:22:35 GMT",
+   "content_type": "text/html"
+  }
+ ]
+}
