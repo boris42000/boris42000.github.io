@@ -95,6 +95,8 @@
                     </li>
                     <li><a href="contacts.html"><span>Kontakt</span></a>
                     </li>
+                    <li><a href="https://wolt.com/sk/svk/topolcany/restaurant/coloseum-pizzeria" target="_blank" rel="noopener"><span>Objednať cez Wolt</span></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -154,6 +156,7 @@
                   <p class=" big d-none d-md-block">Predstavujeme návštevníkom taliansku kultúru cez naše
                     jedlá a každému ponúkame niečo podľa jeho chuti.</p>
                   <div class="group"><a class="btn btn-lg btn-primary" href="#menuHead">Naše menu</a>
+                    <a class="btn btn-lg btn-primary" href="https://wolt.com/sk/svk/topolcany/restaurant/coloseum-pizzeria" target="_blank" rel="noopener">Objednať cez Wolt</a>
                   </div>
                 </div>
               </div>
@@ -567,85 +570,7 @@
   <!-- Java script-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="menu-data.js?v=2"></script>
-  <script>
-    (function () {
-      if (!window.menuItems) return;
-
-      Object.keys(window.menuItems).forEach(function (sectionId) {
-        var ul = document.querySelector('ul[data-menu-section="' + sectionId + '"]');
-        if (!ul) return;
-
-        var items = window.menuItems[sectionId];
-        if (!Array.isArray(items)) return;
-
-        items.forEach(function (entry) {
-          // Section or sub-section header
-          if (entry.type === "header") {
-            var li = document.createElement("li");
-            li.className = "box-pricing-item" + (entry.headerClass ? " " + entry.headerClass : "");
-
-            var headerTitle = document.createElement("div");
-            headerTitle.className = "box-pricing-title big text-uppercase text-spacing-120";
-
-            var headerName = document.createElement("div");
-            headerName.className = "box-pricing-name font-weight-bold";
-            headerName.style.textDecoration = "underline";
-            headerName.textContent = entry.text;
-
-            headerTitle.appendChild(headerName);
-            li.appendChild(headerTitle);
-            ul.appendChild(li);
-            return;
-          }
-
-          // Simple line (sides, drinks)
-          if (entry.type === "line") {
-            var li = document.createElement("li");
-            if (entry.html) {
-              li.innerHTML = entry.html;
-            } else {
-              li.textContent = entry.text || "";
-            }
-            ul.appendChild(li);
-            return;
-          }
-
-          // Regular menu item
-          var li = document.createElement("li");
-          li.className = "box-pricing-item";
-
-          var title = document.createElement("div");
-          title.className = "box-pricing-title big text-uppercase text-spacing-120";
-
-          var name = document.createElement("div");
-          name.className = "box-pricing-name  font-weight-bold";
-          name.textContent = entry.name;
-
-          var dots = document.createElement("div");
-          dots.className = "box-pricing-dots";
-          dots.textContent = entry.amount || "";
-
-          var price = document.createElement("div");
-          price.className = entry.priceClass || "box-pricing-price h5 font-weight-bold";
-          price.textContent = entry.price || "";
-
-          title.appendChild(name);
-          title.appendChild(dots);
-          title.appendChild(price);
-
-          var desc = document.createElement("div");
-          desc.className = "box-pricing-desc text-dark offset-top-10";
-          desc.textContent = entry.description || "";
-
-          li.appendChild(title);
-          li.appendChild(desc);
-
-          ul.appendChild(li);
-        });
-      });
-    })();
-  </script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>
