@@ -21,3 +21,13 @@
         color: #777;
     }
 }
+/* Banner grows with its content: a fixed height let the next section cover the buttons on small screens. */
+.section-cover {
+    height: auto;
+    min-height: max(100vh, 660px);
+}
+
+/* The template's .group has a left-only negative margin, which pushes centered content 7.5px to the left. */
+html .parallax-content .group {
+    margin-left: 0;
+}
