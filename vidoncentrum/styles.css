@@ -849,11 +849,15 @@ p {
   font-weight: 500;
   font-size: 0.78rem;
   color: var(--mint);
+  white-space: nowrap;
 }
 .prices tbody th,
 .prices td {
-  padding: 14px 20px;
+  padding: 11px 20px;
   border-top: 1px solid var(--line);
+  font-size: 1rem;
+  line-height: 1.45;
+  vertical-align: middle;
 }
 .prices tbody th {
   text-align: left;
@@ -866,6 +870,7 @@ p {
   color: var(--ink);
   white-space: nowrap;
   width: 1%;
+  min-width: 9.5rem;
 }
 .prices tbody tr:not(.price-group):hover {
   background: #f8fbfa;
@@ -892,12 +897,14 @@ p {
 }
 .covered {
   display: inline-block;
-  padding: 2px 10px;
+  padding: 2px 9px;
   border-radius: 999px;
   background: var(--teal-soft);
   color: var(--teal-strong);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 .price-empty {
   margin: 0;
@@ -924,43 +931,51 @@ p {
   .prices tbody tr:not(.price-group) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px 12px;
-    padding: 16px 18px;
+    gap: 4px 12px;
+    padding: 12px 16px;
     border-top: 1px solid var(--line);
   }
   .prices tbody tr:not(.price-group) th {
     grid-column: 1 / -1;
     padding: 0;
     border: 0;
+    font-size: 0.97rem;
     font-weight: 600;
     color: var(--ink);
-    line-height: 1.4;
+    line-height: 1.35;
   }
   .prices td {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 1px;
     width: auto;
+    min-width: 0;
     padding: 0;
     border: 0;
     text-align: left;
-    white-space: normal;
+    font-size: 0.95rem;
   }
   .prices td::before {
     content: attr(data-label);
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--muted);
+  }
+  .prices .covered {
+    font-size: 0.75rem;
+    padding: 1px 8px;
   }
   .prices .price-group,
   .prices .price-group th {
     display: block;
   }
   .prices .price-group th {
-    padding: 18px 18px 10px;
+    padding: 14px 16px 8px;
     border-top: 1px solid var(--line);
+    font-size: 0.78rem;
   }
   .prices tbody:first-of-type .price-group th {
     border-top: 0;
@@ -1092,12 +1107,14 @@ p {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    min-height: 56px;
+    min-height: 54px;
+    padding: 0 20px;
     border-radius: 999px;
     background: var(--teal);
     color: #fff;
     font-weight: 700;
     font-size: 1.05rem;
+    white-space: nowrap;
     text-decoration: none;
     box-shadow: 0 10px 30px rgb(13 37 48 / 0.3);
     transition: transform 0.3s, opacity 0.3s;

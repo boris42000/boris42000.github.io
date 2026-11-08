@@ -57,7 +57,9 @@
     /* ── Mobile call bar: hide while the hero (with its own call button) is visible ── */
     const callBar = $('.call-bar')
     const hero = $('.hero')
-    new IntersectionObserver(([en]) => callBar.classList.toggle('is-hidden', en.isIntersecting), {
+    // Compare the ratio, not isIntersecting: crossing the 0.25 threshold downwards still
+    // reports isIntersecting=true (24% is "intersecting"), and no further event follows.
+    new IntersectionObserver(([en]) => callBar.classList.toggle('is-hidden', en.intersectionRatio >= 0.25), {
       threshold: 0.25,
     }).observe(hero)
 
