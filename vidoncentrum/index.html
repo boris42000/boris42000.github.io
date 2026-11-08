@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d2530" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Must run before first paint: gates the scroll-reveal styles, so with JS off everything is simply visible. -->
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
+
+    <title>VIDON očné centrum — operácie sivého zákalu a očná ambulancia | Bánovce nad Bebravou</title>
+    <meta
+      name="description"
+      content="VIDON očné centrum v Bánovciach nad Bebravou. Od roku 2013 jednodňová očná chirurgia a oftalmologická ambulancia — operácie sivého zákalu, glaukómu a mihalníc. Zmluvy so VšZP, Dôverou a Union."
+    />
+    <link rel="canonical" href="https://www.vidoncentrum.sk/" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <link rel="preload" href="./fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/plus-jakarta-sans-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css?v=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sk_SK" />
+    <meta property="og:site_name" content="VIDON očné centrum" />
+    <meta property="og:title" content="VIDON očné centrum — Bánovce nad Bebravou" />
+    <meta
+      property="og:description"
+      content="Operácie sivého zákalu, jednodňová očná chirurgia a oftalmologická ambulancia. Objednávanie na 0907 033 873."
+    />
+    <meta property="og:url" content="https://www.vidoncentrum.sk/" />
+    <meta property="og:image" content="https://www.vidoncentrum.sk/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "VIDON centrum s.r.o.",
+        "alternateName": "VIDON očné centrum",
+        "url": "https://www.vidoncentrum.sk/",
+        "image": "https://www.vidoncentrum.sk/og-image.jpg",
+        "telephone": "+421907033873",
+        "email": "vidoncentrum@gmail.com",
+        "foundingDate": "2013",
+        "medicalSpecialty": "Optometric",
+        "taxID": "2023454532",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hviezdoslavova 23/3",
+          "addressLocality": "Bánovce nad Bebravou",
+          "postalCode": "957 01",
+          "addressCountry": "SK"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 48.7201258, "longitude": 18.2584473 },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "09:00", "closes": "12:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "12:00" }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="VIDON očné centrum — na začiatok stránky">
+          <svg class="brand-eye" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M2 32C10 17 20 10 32 10s22 7 30 22c-8 15-18 22-30 22S10 47 2 32Z" fill="#e7eeec" />
+            <circle cx="32" cy="32" r="17" fill="#14907a" />
+            <circle cx="32" cy="32" r="10.5" fill="#123544" />
+            <circle cx="37.5" cy="26.5" r="4" fill="#fff" />
+          </svg>
+          <span class="brand-text">
+            <span class="brand-name">VIDON</span>
+            <span class="brand-sub">očné centrum</span>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Hlavná navigácia" data-nav>
+          <ul>
+            <li><a href="#o-nas">O nás</a></li>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#objednanie">Objednanie</a></li>
+            <li><a href="#cennik">Cenník</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn-primary header-call" href="tel:+421907033873">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.23Z" /></svg>
+          <span>0907&nbsp;033&nbsp;873</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" data-nav-toggle>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ───────────── Hero ───────────── -->
+      <section class="hero" id="top">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Očné centrum · Bánovce nad Bebravou</p>
+            <h1>Starostlivosť o&nbsp;váš zrak s&nbsp;osobným prístupom</h1>
+            <p class="lead">
+              Jednodňová očná chirurgia a oftalmologická ambulancia. Operácie sivého zákalu, glaukómu a mihalníc
+              na modernom prístrojovom vybavení — od roku 2013.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="tel:+421907033873">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.23Z" /></svg>
+                Objednať sa telefonicky
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#cennik">Pozrieť cenník</a>
+            </div>
+            <ul class="insurers" aria-label="Zmluvné zdravotné poisťovne">
+              <li>VšZP</li>
+              <li>Dôvera</li>
+              <li>Union</li>
+            </ul>
+          </div>
+
+          <aside class="hero-card" aria-labelledby="hero-hours-title">
+            <h2 id="hero-hours-title" class="card-title">Objednávanie pacientov</h2>
+            <p class="card-note">Telefonicky, na konkrétny deň</p>
+            <ul class="hours" data-hours>
+              <li data-days="2 3 4"><span>Utorok – štvrtok</span><strong>9:00 – 12:00</strong></li>
+              <li data-days="5"><span>Piatok</span><strong>8:00 – 12:00</strong></li>
+            </ul>
+            <div class="phones">
+              <a href="tel:+421907033873"><small>Mobil</small>0907 033 873</a>
+              <a href="tel:+421387624401"><small>Pevná linka</small>038 / 762 44 01</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ───────────── O nás ───────────── -->
+      <section class="section" id="o-nas" aria-labelledby="o-nas-title">
+        <div class="container about">
+          <div class="about-text reveal">
+            <p class="eyebrow">O nás</p>
+            <h2 id="o-nas-title">Spokojný pacient je náš hlavný cieľ</h2>
+            <p>
+              VIDON centrum bolo založené v&nbsp;roku 2013 a špecializuje sa na jednodňovú oftalmologickú zdravotnú
+              starostlivosť a oftalmologickú ambulantnú starostlivosť. Za celú dobu fungovania sme vykonali veľké
+              množstvo odborných zákrokov, operácií a vyšetrení.
+            </p>
+            <p>
+              Centrum je vybavené najmodernejšou prístrojovou technikou a pracujeme výhradne s materiálmi svetových
+              renomovaných firiem. Na základe osobnej konzultácie vám navrhneme optimálne riešenie vášho problému —
+              kladieme veľký dôraz na osobný prístup a vašim očiam poskytneme najlepšiu možnú starostlivosť.
+            </p>
+            <p class="about-cta">Navštívte VIDON centrum. Pomôžeme vám skvalitniť váš život.</p>
+          </div>
+
+          <ul class="facts reveal">
+            <li>
+              <strong>2013</strong>
+              <span>rok založenia centra</span>
+            </li>
+            <li>
+              <strong>1 deň</strong>
+              <span>jednodňová chirurgia — domov ešte v deň zákroku</span>
+            </li>
+            <li>
+              <strong>VšZP · Dôvera · Union</strong>
+              <span>zmluvy so všetkými zdravotnými poisťovňami</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────────── Služby ───────────── -->
+      <section class="section section-tint" id="sluzby" aria-labelledby="sluzby-title">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="eyebrow">Služby</p>
+            <h2 id="sluzby-title">Čomu sa venujeme</h2>
+          </header>
+
+          <div class="services">
+            <article class="service reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3.5" /><path d="M4 12h1.5M18.5 12H20" /></svg>
+              </div>
+              <h3>Sivý zákal a vnútroočné šošovky</h3>
+              <ul>
+                <li>Operácie sivého zákalu (katarakty)</li>
+                <li>Operácia sekundárnej katarakty</li>
+                <li>Repozícia implantovanej vnútroočnej šošovky</li>
+                <li>Sekundárna implantácia šošovky do prednej komory</li>
+                <li>Explantácia a reimplantácia vnútroočnej šošovky</li>
+              </ul>
+            </article>
+
+            <article class="service reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M2 12c3-5 6.5-7 10-7s7 2 10 7c-3 5-6.5 7-10 7s-7-2-10-7Z" /><circle cx="12" cy="12" r="3" /><path d="M12 2v2M5 4.5l1.2 1.6M19 4.5l-1.2 1.6" /></svg>
+              </div>
+              <h3>Glaukóm</h3>
+              <ul>
+                <li>Filtračná operácia glaukómu</li>
+                <li>Operácia glaukómu laserom</li>
+              </ul>
+            </article>
+
+            <article class="service reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M2 13c3 4 6.5 6 10 6s7-2 10-6" /><path d="M5 16.5 3.5 19M9 18.5 8.5 21M15 18.5l.5 2.5M19 16.5l1.5 2.5" /><path d="M3 10c2.6-3 5.6-4.5 9-4.5S18.4 7 21 10" /></svg>
+              </div>
+              <h3>Mihalnice, spojovka a rohovka</h3>
+              <ul>
+                <li>Plastické operácie na mihalniciach</li>
+                <li>Extirpácie nádorov mihalníc a spojoviek</li>
+                <li>Operácia pterygia</li>
+                <li>Operácia zrastov spojovky</li>
+                <li>Operácie slzných bodov</li>
+                <li>Tarzorafia</li>
+                <li>Krytie rohovky amniovou membránou</li>
+              </ul>
+            </article>
+
+            <article class="service reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M9 3v2h6V3M8 10h8M8 14h8M8 18h5" /></svg>
+              </div>
+              <h3>Oftalmologická ambulancia</h3>
+              <ul>
+                <li>Kompletné očné vyšetrenie</li>
+                <li>Počítačový perimeter</li>
+                <li>OCT sietnice a OCT glaukóm</li>
+                <li>Vyšetrenia pre vodičský a zbrojný preukaz</li>
+                <li>Estetické zákroky v okolí oka</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Objednanie ───────────── -->
+      <section class="section section-dark" id="objednanie" aria-labelledby="objednanie-title">
+        <div class="container booking">
+          <div class="booking-text reveal">
+            <p class="eyebrow">Objednanie</p>
+            <h2 id="objednanie-title">Objednajte sa telefonicky na konkrétny deň</h2>
+            <p>
+              Pacientov objednávame výhradne telefonicky. Zavolajte nám v čase objednávania a dohodneme si termín,
+              ktorý vám vyhovuje.
+            </p>
+            <div class="booking-phones">
+              <a class="btn btn-light btn-lg" href="tel:+421907033873">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.23Z" /></svg>
+                0907 033 873
+              </a>
+              <a class="btn btn-outline-light btn-lg" href="tel:+421387624401">038 / 762 44 01</a>
+            </div>
+          </div>
+          <div class="booking-hours reveal">
+            <h3>Čas objednávania</h3>
+            <ul class="hours hours-dark" data-hours>
+              <li data-days="1"><span>Pondelok</span><strong>—</strong></li>
+              <li data-days="2"><span>Utorok</span><strong>9:00 – 12:00</strong></li>
+              <li data-days="3"><span>Streda</span><strong>9:00 – 12:00</strong></li>
+              <li data-days="4"><span>Štvrtok</span><strong>9:00 – 12:00</strong></li>
+              <li data-days="5"><span>Piatok</span><strong>8:00 – 12:00</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Cenník ───────────── -->
+      <section class="section" id="cennik" aria-labelledby="cennik-title">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="eyebrow">Cenník</p>
+            <h2 id="cennik-title">Cenník výkonov</h2>
+            <p>
+              Ceny pre samoplatcov a sumy, ktoré doplácajú poistenci VšZP, Dôvery a Union.
+              Pri vnútroočných šošovkách ide o&nbsp;cenu, resp. doplatok za šošovku.
+            </p>
+          </header>
+
+          <div class="price-tools">
+            <label class="search">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+              <span class="visually-hidden">Hľadať v cenníku</span>
+              <input type="search" placeholder="Hľadať, napr. katarakta" autocomplete="off" data-price-search />
+            </label>
+            <div class="chips" role="group" aria-label="Kategória" data-price-chips>
+              <button type="button" class="chip" aria-pressed="true" data-group="">Všetko</button>
+              <button type="button" class="chip" aria-pressed="false" data-group="vysetrenia">Vyšetrenia</button>
+              <button type="button" class="chip" aria-pressed="false" data-group="ambulantne">Ambulantné</button>
+              <button type="button" class="chip" aria-pressed="false" data-group="operacie">Operácie</button>
+              <button type="button" class="chip" aria-pressed="false" data-group="esteticke">Estetické</button>
+              <button type="button" class="chip" aria-pressed="false" data-group="sosovky">Šošovky</button>
+            </div>
+          </div>
+
+          <div class="price-wrap">
+          <table class="prices" data-prices>
+            <caption class="visually-hidden">Cenník výkonov VIDON centra v eurách</caption>
+            <thead>
+              <tr>
+                <th scope="col">Výkon</th>
+                <th scope="col">Samoplatca</th>
+                <th scope="col">Poistenec <small>VšZP · Dôvera · Union</small></th>
+              </tr>
+            </thead>
+            <tbody data-group="vysetrenia">
+              <tr class="price-group"><th colspan="3" scope="colgroup">Vyšetrenia a potvrdenia</th></tr>
+              <tr><th scope="row">Kompletné očné vyšetrenie</th><td data-label="Samoplatca">40 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Počítačový perimeter</th><td data-label="Samoplatca">12 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">OCT sietnice</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec">20 €</td></tr>
+              <tr><th scope="row">OCT glaukóm</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec">20 €</td></tr>
+              <tr><th scope="row">Vyšetrenie vodiča</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec">20 €</td></tr>
+              <tr><th scope="row">Vyšetrenie pre vodičský a zbrojný preukaz</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec">20 €</td></tr>
+              <tr><th scope="row">Vyšetrenie na sociálne účely (polícia, práca vo výškach)</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec">20 €</td></tr>
+              <tr><th scope="row">Výpis zo zdravotnej dokumentácie na žiadosť pacienta</th><td data-label="Samoplatca">10 €</td><td data-label="Poistenec">10 €</td></tr>
+              <tr><th scope="row">Kópia očného nálezu</th><td data-label="Samoplatca">5 € / strana</td><td data-label="Poistenec">5 € / strana</td></tr>
+            </tbody>
+            <tbody data-group="ambulantne">
+              <tr class="price-group"><th colspan="3" scope="colgroup">Ambulantné zákroky</th></tr>
+              <tr><th scope="row">Vybratie cudzieho telesa zo spojovky alebo rohovky</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Spriechodnenie slzných ciest sondážou</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Uzáver slzného bodu jednostranne</th><td data-label="Samoplatca">50 €</td><td data-label="Poistenec">50 €</td></tr>
+              <tr><th scope="row">Uzáver slzného bodu obojstranne</th><td data-label="Samoplatca">100 €</td><td data-label="Poistenec">100 €</td></tr>
+            </tbody>
+            <tbody data-group="operacie">
+              <tr class="price-group"><th colspan="3" scope="colgroup">Operácie</th></tr>
+              <tr><th scope="row">Operácia katarakty (sivého zákalu)</th><td data-label="Samoplatca">400 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Operácia sekundárnej katarakty</th><td data-label="Samoplatca">400 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Operácia sekundárnej katarakty YAG laserom</th><td data-label="Samoplatca">250 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Repozícia implantovanej vnútroočnej šošovky</th><td data-label="Samoplatca">390 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Sekundárna implantácia vnútroočnej šošovky do prednej komory</th><td data-label="Samoplatca">400 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Explantácia a reimplantácia umelej vnútroočnej šošovky</th><td data-label="Samoplatca">430 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Operácia glaukómu laserom (LIT)</th><td data-label="Samoplatca">250 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Operácia pterýgia</th><td data-label="Samoplatca">280 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Operácia nádorov mihalníc</th><td data-label="Samoplatca">300 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Operácia slzných bodov</th><td data-label="Samoplatca">190 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Tarzorafia</th><td data-label="Samoplatca">200 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Operácia zrastov spojovky</th><td data-label="Samoplatca">200 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Plastika mihalníc obojstranne zo zdravotnej indikácie</th><td data-label="Samoplatca">400 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Plastické operácie na mihalniciach (ektropium, entropium, ptóza) – jedno oko</th><td data-label="Samoplatca">350 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+            </tbody>
+            <tbody data-group="esteticke">
+              <tr class="price-group"><th colspan="3" scope="colgroup">Estetické zákroky</th></tr>
+              <tr><th scope="row">Blefaroplastika jednostranne z kozmetickej indikácie</th><td data-label="Samoplatca">200 €</td><td data-label="Poistenec">200 €</td></tr>
+              <tr><th scope="row">Blefaroplastika obojstranne z kozmetickej indikácie</th><td data-label="Samoplatca">400 €</td><td data-label="Poistenec">400 €</td></tr>
+              <tr><th scope="row">Kontrola po blefaroplastike z kozmetickej indikácie</th><td data-label="Samoplatca">20 €</td><td data-label="Poistenec">20 €</td></tr>
+              <tr><th scope="row">Odstránenie stehov po kozmetickom vybratí útvarov z okolia oka</th><td data-label="Samoplatca">10 €</td><td data-label="Poistenec">10 €</td></tr>
+              <tr><th scope="row">Vybratie degeneratívnych zmien v okolí oka (xantelazma, ateróm, cysta, bradavica) – jedno oko</th><td data-label="Samoplatca">40 €</td><td data-label="Poistenec">40 €</td></tr>
+              <tr><th scope="row">Vybratie degeneratívnych zmien v okolí oka (xantelazma, ateróm, cysta, bradavica) – obe oči</th><td data-label="Samoplatca">70 €</td><td data-label="Poistenec">70 €</td></tr>
+            </tbody>
+            <tbody data-group="sosovky">
+              <tr class="price-group"><th colspan="3" scope="colgroup">Vnútroočné šošovky</th></tr>
+              <tr><th scope="row">MA60AC <span class="code">X02050</span></th><td data-label="Samoplatca">110 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">MA60MA <span class="code">X02051</span></th><td data-label="Samoplatca">110 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">J&amp;J ZCB00V <span class="code">X03992</span></th><td data-label="Samoplatca">126 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">J&amp;J Eyhance ICB00 <span class="code">X04968</span></th><td data-label="Samoplatca">145 €</td><td data-label="Poistenec">25 €</td></tr>
+              <tr><th scope="row">CNA0T0 <span class="code">X04442</span></th><td data-label="Samoplatca">182,60 €</td><td data-label="Poistenec">20 €</td></tr>
+              <tr><th scope="row">AcriSof IQ Vivity DFT015 <span class="code">X05106</span></th><td data-label="Samoplatca">701,80 €</td><td data-label="Poistenec">557 €</td></tr>
+              <tr><th scope="row">J&amp;J Symfony ZXR00 <span class="code">X03301</span></th><td data-label="Samoplatca">605 €</td><td data-label="Poistenec">506 €</td></tr>
+              <tr><th scope="row">PanOptix IQ TFNT00 <span class="code">X03604</span></th><td data-label="Samoplatca">701,80 €</td><td data-label="Poistenec">557 €</td></tr>
+              <tr><th scope="row">PanOptix Clareon CNWTT0 <span class="code">X05690</span></th><td data-label="Samoplatca">757,61 €</td><td data-label="Poistenec">612,60 €</td></tr>
+              <tr><th scope="row">J&amp;J Tecnis toric II ZCUxxx <span class="code">X05402</span></th><td data-label="Samoplatca">215 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">J&amp;J Symfony toric ZXTxxx <span class="code">X03302</span></th><td data-label="Samoplatca">883,30 €</td><td data-label="Poistenec">641 €</td></tr>
+              <tr><th scope="row">AcriSof IQ toric SN6ATx <span class="code">X02045</span></th><td data-label="Samoplatca">344,85 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">Clareon Toric <span class="code">X05490</span></th><td data-label="Samoplatca">384,85 €</td><td data-label="Poistenec">40 €</td></tr>
+              <tr><th scope="row">AcriSof IQ Vivity Toric DFTx15 <span class="code">X04133</span></th><td data-label="Samoplatca">955,90 €</td><td data-label="Poistenec">611 €</td></tr>
+              <tr><th scope="row">Clareon PanOptix Toric Trifocal CNWTT2-6 <span class="code">X05693</span></th><td data-label="Samoplatca">982,08 €</td><td data-label="Poistenec">637,20 €</td></tr>
+              <tr><th scope="row">Artisan prednokomorová <span class="code">X02095</span></th><td data-label="Samoplatca">214,80 €</td><td data-label="Poistenec"><span class="covered">Hradí poisťovňa</span></td></tr>
+              <tr><th scope="row">PureSee DEN00V <span class="code">X05799</span></th><td data-label="Samoplatca">640 €</td><td data-label="Poistenec">511 €</td></tr>
+              <tr><th scope="row">PureSee torická DET <span class="code">X05800</span></th><td data-label="Samoplatca">826 €</td><td data-label="Poistenec">499 €</td></tr>
+            </tbody>
+          </table>
+          <p class="price-empty" hidden data-price-empty>Nenašli sme žiadnu položku. Skúste iný výraz alebo nám zavolajte.</p>
+          </div>
+          <p class="price-note">Uvedené ceny sú v eurách. Pri otázkach k cenám a doplatkom nám zavolajte.</p>
+        </div>
+      </section>
+
+      <!-- ───────────── Kontakt ───────────── -->
+      <section class="section section-tint" id="kontakt" aria-labelledby="kontakt-title">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="eyebrow">Kontakt</p>
+            <h2 id="kontakt-title">Kde nás nájdete</h2>
+          </header>
+
+          <div class="contact-grid">
+            <div class="contact-card reveal">
+              <h3>VIDON centrum s.r.o.</h3>
+              <ul class="contact-list">
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+                  <span>Hviezdoslavova 23/3<br />957 01 Bánovce nad Bebravou</span>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.23Z" /></svg>
+                  <span><a href="tel:+421907033873">0907 033 873</a><br /><a href="tel:+421387624401">038 / 762 44 01</a></span>
+                </li>
+                <li>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3.5 6.5 8.5 6.5 8.5-6.5" /></svg>
+                  <span><a href="mailto:vidoncentrum@gmail.com">vidoncentrum@gmail.com</a><br /><a href="mailto:info@vidoncentrum.sk">info@vidoncentrum.sk</a></span>
+                </li>
+              </ul>
+              <a
+                class="btn btn-primary"
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Hviezdoslavova+23%2F3%2C+957+01+B%C3%A1novce+nad+Bebravou"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-8-8 18-2-8-8-2Z" /></svg>
+                Navigovať
+              </a>
+            </div>
+
+            <div class="contact-card reveal">
+              <h3>Fakturačné údaje</h3>
+              <dl class="company">
+                <div><dt>IČO</dt><dd>46 579 010</dd></div>
+                <div><dt>DIČ</dt><dd>2023454532</dd></div>
+                <div><dt>IBAN</dt><dd>SK59 1111 0000 0012 0645 1004</dd></div>
+                <div><dt>SWIFT / BIC</dt><dd>UNCRSKBX</dd></div>
+                <div><dt>Banka</dt><dd>UniCredit Bank Czech Republic and Slovakia, a.s., pobočka zahraničnej banky</dd></div>
+                <div><dt>Registrácia</dt><dd>Obchodný register Okresného súdu Nitra, oddiel Sro, vložka č. 34169/N</dd></div>
+              </dl>
+            </div>
+
+            <div class="contact-card reveal" id="gdpr">
+              <h3>Ochrana osobných údajov</h3>
+              <p>Dokumenty GDPR na stiahnutie:</p>
+              <ul class="docs">
+                <li>
+                  <a href="./docs/prava-dotknutych-osob.pdf" target="_blank" rel="noopener">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z" /><path d="M14 3v5h5M12 11v6M9 14.5l3 3 3-3" /></svg>
+                    <span>Práva a povinnosti dotknutých osôb <small>PDF</small></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./docs/politika-bezpecnosti.pdf" target="_blank" rel="noopener">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z" /><path d="M14 3v5h5M12 11v6M9 14.5l3 3 3-3" /></svg>
+                    <span>Politika bezpečnosti <small>PDF</small></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> VIDON centrum s.r.o. · Hviezdoslavova 23/3, Bánovce nad Bebravou</p>
+        <p><a href="#gdpr">GDPR</a> · <a href="#top">Na začiatok ↑</a></p>
+      </div>
+    </footer>
+
+    <!-- Mobile: the one action that matters is always a thumb away -->
+    <a class="call-bar" href="tel:+421907033873">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.23Z" /></svg>
+      Zavolať a objednať sa · 0907 033 873
+    </a>
+
+    <script src="./main.js?v=1" defer></script>
+  </body>
+</html>
