@@ -1,12 +1,286 @@
 <!doctype html>
 <html lang="sk">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=./abmaudit/" />
-    <link rel="canonical" href="https://boris42000.github.io/abmaudit/" />
-    <title>ABMaudit</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f2e8" />
+    <meta name="color-scheme" content="light" />
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
+
+    <title>Boris Bobocký — portfólio</title>
+    <meta
+      name="description"
+      content="Boris Bobocký, full-stack vývojár v Brne. Výber webov a aplikácií, ktoré som navrhol a postavil."
+    />
+    <link rel="canonical" href="https://boris42000.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="./portfolio/favicon.svg" />
+
+    <link rel="preload" href="./portfolio/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./portfolio/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./portfolio/styles.css?v=11" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sk_SK" />
+    <meta property="og:title" content="Boris Bobocký — portfólio" />
+    <meta property="og:description" content="Full-stack vývojár v Brne. Weby a aplikácie, ktoré som navrhol a postavil." />
+    <meta property="og:url" content="https://boris42000.github.io/" />
+    <meta property="og:image" content="https://boris42000.github.io/portfolio/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
-    <p>Presmerúva sa na <a href="./abmaudit/">ABMaudit</a>&hellip;</p>
+    <a class="skip-link" href="#prace">Preskočiť na projekty</a>
+
+    <header class="top">
+      <a class="logo" href="#" aria-label="Boris Bobocký — na začiatok">bb<span>.</span></a>
+      <nav aria-label="Hlavná navigácia">
+        <a href="#aplikacie">Aplikácie</a>
+        <a href="#prace">Weby</a>
+        <a href="#o-mne">O mne</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ───────── Hero ───────── -->
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="hello">Ahoj, som Boris.</p>
+          <h1>
+            Staviam <mark class="hl hl-yellow">weby</mark><br />
+            a <mark class="hl hl-orange">aplikácie</mark>.
+          </h1>
+          <p class="lead">
+            Full‑stack vývojár v Brne, cez deň v AT&amp;T. Popri tom robím vlastné projekty — weby pre malé
+            firmy a aplikácie s objednávkami, fakturáciou a skladom. Tu je ich výber.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="#prace">Pozrieť práce ↓</a>
+            <a class="btn" href="https://www.linkedin.com/in/boris-bobocky/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <!-- Decorative stickers; draggable with a pointer, ignored by screen readers -->
+        <div class="stickers" aria-hidden="true" data-stickers>
+          <span class="sticker s-mint" style="--x: 8%; --y: 10%; --r: -8deg">Brno&nbsp;·&nbsp;CZ</span>
+          <span class="sticker s-blue" style="--x: 52%; --y: 4%; --r: 6deg">TypeScript</span>
+          <span class="sticker s-pink round" style="--x: 62%; --y: 38%; --r: 12deg">React</span>
+          <span class="sticker s-lilac" style="--x: 4%; --y: 46%; --r: 4deg">Node.js</span>
+          <span class="sticker s-yellow" style="--x: 30%; --y: 70%; --r: -5deg">PostgreSQL</span>
+          <span class="sticker-hint" style="--x: 60%; --y: 80%">potiahni ma ↖</span>
+        </div>
+      </section>
+
+      <!-- ───────── Aplikácie ───────── -->
+      <section class="section" id="aplikacie" aria-labelledby="aplikacie-title">
+        <header class="section-head reveal">
+          <h2 id="aplikacie-title">Aplikácie <span class="count">02</span></h2>
+        </header>
+
+        <article class="app reveal">
+          <div class="app-info">
+            <p class="meta"><span class="chip">Webová aplikácia</span> 2026 · pilot</p>
+            <h3>ABM Faktúra</h3>
+            <p>
+              Portál pre viac ako 100 klientov jednej účtovnej kancelárie. Firmy v ňom vystavujú a prijímajú
+              e‑faktúry, účtovníci ich exportujú do svojho účtovného programu. Vzniká kvôli povinnej e‑fakturácii na
+              Slovensku od 1.&nbsp;januára 2027.
+            </p>
+            <h4>Pár rozhodnutí</h4>
+            <ul class="notes">
+              <li>Prijaté XML sa ukladá bajt po bajte spolu so SHA‑256 a nikdy sa negeneruje znova.</li>
+              <li>Doručovanie cez certifikovaného poskytovateľa je za portom, doménový kód o ňom nevie.</li>
+              <li>Validácia podľa EN&nbsp;16931 beží v KoSIT validátore v samostatnom JVM kontajneri.</li>
+              <li>Fronta úloh a opakovania cez PostgreSQL (pg‑boss), bez ďalšej infraštruktúry.</li>
+            </ul>
+            <p class="stack">TypeScript · React · Fastify · PostgreSQL</p>
+          </div>
+          <div class="app-phones" aria-hidden="true">
+            <span class="phone"><img src="./portfolio/img/faktura-nova.webp" width="319" height="685" alt="" loading="lazy" decoding="async" /></span>
+            <span class="phone"><img src="./portfolio/img/faktura-vystavene.webp" width="319" height="685" alt="" loading="lazy" decoding="async" /></span>
+            <span class="phone"><img src="./portfolio/img/faktura-platba.webp" width="319" height="685" alt="" loading="lazy" decoding="async" /></span>
+          </div>
+        </article>
+
+        <article class="app app-alt reveal" style="--c: var(--green)" data-work>
+          <div class="app-info">
+            <p class="meta"><span class="chip">Webová aplikácia</span> 2026 · v prevádzke</p>
+            <h3>Zachovaná</h3>
+            <p>
+              Obrazy zo sušených svadobných kytíc. Verejná stránka s objednávkovým formulárom a k tomu celá
+              administrácia: objednávky a ich stavy, faktúry s PDF a e‑mailom, darčekové poukazy a sklad rámov,
+              plexiskiel a skiel.
+            </p>
+            <h4>Pár rozhodnutí</h4>
+            <ul class="notes">
+              <li>Rezervácie na sklade sa neukladajú, dopočítavajú sa z otvorených objednávok — uložené by sa časom rozišli so skutočnosťou.</li>
+              <li>Odpis materiálu pri odoslaní objednávky drží časová značka, takže opakovaná zmena stavu nič neodpíše dvakrát.</li>
+              <li>Zaplatená faktúra sa archivuje ako hotové PDF, neskoršia zmena cenníka ju nezmení. Stornované čísla sa už nepoužijú.</li>
+              <li>Zod schémy v zdieľanom balíku validujú formulár v prehliadači aj požiadavky na serveri.</li>
+            </ul>
+            <p class="stack">TypeScript · React · Express · Azure Cosmos DB</p>
+          </div>
+          <div class="work-media">
+            <a class="browser" href="https://www.zachovana.sk/" target="_blank" rel="noopener" aria-label="Otvoriť web Zachovaná">
+              <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>zachovana.sk</b></span>
+              <span class="browser-view"><img src="./portfolio/img/zachovana-desktop.webp" width="1100" height="4125" alt="Náhľad webu Zachovaná" loading="lazy" decoding="async" /></span>
+            </a>
+            <span class="phone work-phone" aria-hidden="true"><img src="./portfolio/img/zachovana-order.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+          </div>
+        </article>
+      </section>
+
+      <!-- ───────── Weby ───────── -->
+      <section class="section" id="prace" aria-labelledby="prace-title">
+        <header class="section-head reveal">
+          <h2 id="prace-title">Weby <span class="count">04</span></h2>
+        </header>
+
+        <div class="works">
+          <article class="work reveal" style="--c: var(--mint)" data-work>
+            <div class="work-media">
+              <a class="browser" href="./vidoncentrum/" aria-label="Otvoriť návrh webu VIDON očné centrum">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>boris42000.github.io/vidoncentrum</b></span>
+                <span class="browser-view"><img src="./portfolio/img/vidoncentrum-desktop.webp" width="1100" height="4125" alt="Náhľad webu VIDON očné centrum" loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="./portfolio/img/vidoncentrum-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Návrh</span> Očná klinika · Bánovce nad Bebravou · 2026</p>
+              <h3>VIDON očné centrum</h3>
+              <p>
+                Návrh nového webu namiesto pôvodného WordPressu z roku 2018. Jedna statická stránka bez frameworku;
+                cenník s 51 položkami sa na mobile skladá do kariet a dá sa filtrovať.
+              </p>
+              <a class="btn" href="./vidoncentrum/">Pozrieť web ↗</a>
+            </div>
+          </article>
+
+          <article class="work reveal" style="--c: var(--blue)" data-work>
+            <div class="work-media">
+              <a class="browser" href="./abmaudit/" aria-label="Otvoriť web ABMaudit">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>abmaudit.sk</b></span>
+                <span class="browser-view"><img src="./portfolio/img/abmaudit-desktop.webp" width="1100" height="4125" alt="Náhľad webu ABMaudit" loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="./portfolio/img/abmaudit-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Web</span> Audit a účtovníctvo · Topoľčany · 2026</p>
+              <h3>ABMaudit</h3>
+              <p>
+                Web audítorskej a účtovnej kancelárie. Postavený vo Vite, výstupom je predrenderované statické HTML;
+                fotky pripravuje samostatný skript v AVIF, WebP a JPEG v štyroch šírkach.
+              </p>
+              <a class="btn" href="./abmaudit/">Pozrieť web ↗</a>
+            </div>
+          </article>
+
+          <article class="work reveal" style="--c: var(--pink)" data-work>
+            <div class="work-media">
+              <a class="browser" href="./sarahkophg/" aria-label="Otvoriť web Sarah Ko.">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>boris42000.github.io/sarahkophg</b></span>
+                <span class="browser-view"><img src="./portfolio/img/sarahkophg-desktop.webp" width="1100" height="4125" alt="Náhľad webu fotografky Sarah Ko." loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="./portfolio/img/sarahkophg-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Web</span> Čiernobiela fotografia · 2026</p>
+              <h3>Sarah Ko.</h3>
+              <p>
+                Portfólio čiernobielej fotografky. Galérie na Embla Carousel, vlastný lightbox a skript nad knižnicou
+                sharp, ktorý z originálov vyrobí všetky veľkosti fotiek.
+              </p>
+              <a class="btn" href="./sarahkophg/">Pozrieť web ↗</a>
+            </div>
+          </article>
+
+          <article class="work reveal" style="--c: var(--yellow)" data-work>
+            <div class="work-media">
+              <a class="browser" href="./Coloseum/" aria-label="Otvoriť web Pizzeria Coloseum">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>pizzeriacoloseum.sk</b></span>
+                <span class="browser-view"><img src="./portfolio/img/coloseum-desktop.webp" width="1100" height="4125" alt="Náhľad webu Pizzeria Coloseum" loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="./portfolio/img/coloseum-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Údržba</span> Reštaurácia · Topoľčany</p>
+              <h3>Pizzeria Coloseum</h3>
+              <p>
+                Údržba existujúceho webu reštaurácie, ktorý som nenavrhoval. Jedálny lístok som presunul z HTML do
+                jedného JSON súboru a pridal objednávanie cez Wolt.
+              </p>
+              <a class="btn" href="./Coloseum/">Pozrieť web ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ───────── O mne ───────── -->
+      <section class="section" id="o-mne" aria-labelledby="o-mne-title">
+        <header class="section-head reveal">
+          <h2 id="o-mne-title">O mne</h2>
+        </header>
+
+        <div class="cv">
+          <div class="cv-col reveal">
+            <h3 class="cv-title"><span class="chip">Práca</span></h3>
+            <ol class="timeline">
+              <li style="--c: var(--blue)">
+                <span class="when">2025 — dnes</span>
+                <strong>Software Developer · AT&amp;T</strong>
+                <span class="what">Brno, hybridne. TypeScript, React.</span>
+              </li>
+              <li style="--c: var(--lilac)">
+                <span class="when">2023 — 2025</span>
+                <strong>Junior Software Developer · Insight Global</strong>
+                <span class="what">Externe pre AT&amp;T. TypeScript, React.</span>
+              </li>
+              <li style="--c: var(--mint)">
+                <span class="when">2022 — 2023</span>
+                <strong>Software Developer (stáž) · Tietoevry</strong>
+                <span class="what">Automatizácia testov.</span>
+              </li>
+            </ol>
+          </div>
+          <div class="cv-col reveal">
+            <h3 class="cv-title"><span class="chip">Škola</span></h3>
+            <ol class="timeline">
+              <li style="--c: var(--orange)">
+                <span class="when">2023 — 2026</span>
+                <strong>Masarykova univerzita</strong>
+                <span class="what">Inžinierske štúdium, informačné technológie.</span>
+              </li>
+              <li style="--c: var(--yellow)">
+                <span class="when">2019 — 2023</span>
+                <strong>Vysoké učení technické v Brně</strong>
+                <span class="what">Bakalárske štúdium, informačné technológie.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Kontakt ───────── -->
+      <section class="section" id="kontakt" aria-labelledby="kontakt-title">
+        <div class="contact reveal">
+          <h2 id="kontakt-title">Ozvi sa.</h2>
+          <p>Najrýchlejšie ma zastihneš na LinkedIne. Kód je na GitHube.</p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="https://www.linkedin.com/in/boris-bobocky/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn" href="https://github.com/boris42000" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>© <span data-year>2026</span> Boris Bobocký</p>
+      <p><a href="https://github.com/boris42000/boris42000.github.io" target="_blank" rel="noopener">Zdrojový kód tejto stránky</a></p>
+    </footer>
+
+    <script src="./portfolio/main.js?v=2" defer></script>
   </body>
 </html>
