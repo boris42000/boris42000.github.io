@@ -19,7 +19,7 @@
 
     <link rel="preload" href="./portfolio/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./portfolio/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="./portfolio/styles.css?v=40" />
+    <link rel="stylesheet" href="./portfolio/styles.css?v=51" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sk_SK" />
@@ -65,11 +65,11 @@
 
         <!-- Decorative stickers; draggable with a pointer, ignored by screen readers -->
         <div class="stickers" aria-hidden="true" data-stickers>
-          <span class="sticker s-blue" style="--x: 8%; --y: 10%; --r: -8deg">Brno&nbsp;·&nbsp;CZ</span>
+          <span class="sticker s-leaf" style="--x: 8%; --y: 10%; --r: -8deg">Brno&nbsp;·&nbsp;CZ</span>
           <span class="sticker s-sun" style="--x: 52%; --y: 4%; --r: 6deg">TypeScript</span>
-          <span class="sticker s-blue round" style="--x: 62%; --y: 38%; --r: 12deg">React</span>
+          <span class="sticker s-leaf round" style="--x: 62%; --y: 38%; --r: 12deg">React</span>
           <span class="sticker s-sun" style="--x: 4%; --y: 46%; --r: 4deg">Node.js</span>
-          <span class="sticker s-blue" style="--x: 30%; --y: 70%; --r: -5deg">PostgreSQL</span>
+          <span class="sticker s-leaf" style="--x: 30%; --y: 70%; --r: -5deg">PostgreSQL</span>
           <span class="sticker-hint" style="--x: 60%; --y: 80%">potiahni ma ↖</span>
         </div>
       </section>
@@ -140,7 +140,7 @@
         </header>
 
         <div class="works">
-          <article class="work reveal" style="--c: var(--blue)" data-work>
+          <article class="work reveal" style="--c: var(--leaf)" data-work>
             <div class="work-media">
               <a class="browser" href="./vidoncentrum/" aria-label="Otvoriť návrh webu VIDON očné centrum">
                 <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>boris42000.github.io/vidoncentrum</b></span>
@@ -178,7 +178,7 @@
             </div>
           </article>
 
-          <article class="work reveal" style="--c: var(--blue)" data-work>
+          <article class="work reveal" style="--c: var(--leaf)" data-work>
             <div class="work-media">
               <a class="browser" href="./sarahkophg/" aria-label="Otvoriť web Sarah Ko.">
                 <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>boris42000.github.io/sarahkophg</b></span>
@@ -224,41 +224,37 @@
           <h2 id="o-mne-title">O mne</h2>
         </header>
 
-        <div class="cv">
-          <div class="cv-col reveal">
-            <h3 class="cv-title"><span class="chip">Práca</span></h3>
-            <ol class="timeline">
-              <li style="--c: var(--blue)">
-                <span class="when">2025 — dnes</span>
-                <strong>Software Developer · AT&amp;T</strong>
-                <span class="what">Brno, hybridne. TypeScript, React.</span>
+        <div class="cv reveal">
+          <p class="cv-lead">
+            Informačné technológie som študoval v Brne a od roku 2022 popri škole pracujem ako vývojár. Tmavšie miesto
+            v grafe je čas, keď sa obe veci diali naraz.
+          </p>
+
+          <!-- x = years since Jan 2019 (axis 2019–2027); months estimated where LinkedIn gives only years -->
+          <div class="chart">
+            <div class="axis" aria-hidden="true">
+              <span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+            </div>
+            <ol class="track track-work" data-label="Práca" aria-label="Práca">
+              <li class="band" style="--from: 3.25; --to: 4.42">
+                <strong>Tietoevry</strong><span>stáž · automatizácia testov · 2022–2023</span>
               </li>
-              <li style="--c: var(--lilac)">
-                <span class="when">2023 — 2025</span>
-                <strong>Junior Software Developer · Insight Global</strong>
-                <span class="what">Externe pre AT&amp;T. TypeScript, React.</span>
+              <li class="band" style="--from: 4.5; --to: 6.33">
+                <strong>Insight Global</strong><span>Junior Software Developer, externe pre AT&amp;T · 2023–2025</span>
               </li>
-              <li style="--c: var(--mint)">
-                <span class="when">2022 — 2023</span>
-                <strong>Software Developer (stáž) · Tietoevry</strong>
-                <span class="what">Automatizácia testov.</span>
-              </li>
-            </ol>
-          </div>
-          <div class="cv-col reveal">
-            <h3 class="cv-title"><span class="chip">Škola</span></h3>
-            <ol class="timeline">
-              <li style="--c: var(--orange)">
-                <span class="when">2023 — 2026</span>
-                <strong>Masarykova univerzita</strong>
-                <span class="what">Inžinierske štúdium, informačné technológie.</span>
-              </li>
-              <li style="--c: var(--yellow)">
-                <span class="when">2019 — 2023</span>
-                <strong>Vysoké učení technické v Brně</strong>
-                <span class="what">Bakalárske štúdium, informačné technológie.</span>
+              <li class="band" style="--from: 6.33; --to: 7.85">
+                <strong>AT&amp;T</strong><span>Software Developer · TypeScript, React · 2025–dnes</span>
               </li>
             </ol>
+            <ol class="track track-school" data-label="Škola" aria-label="Škola">
+              <li class="band" style="--from: 0.67; --to: 4.45">
+                <strong>Vysoké učení technické v Brně</strong><span>Bakalárske štúdium, informačné technológie · 2019–2023</span>
+              </li>
+              <li class="band" style="--from: 4.67; --to: 7.04">
+                <strong>Masarykova univerzita</strong><span>Inžinierske štúdium, informačné technológie · 2023–2026</span>
+              </li>
+            </ol>
+            <div class="now" style="--at: 7.85" aria-hidden="true"><span>dnes</span></div>
           </div>
         </div>
       </section>

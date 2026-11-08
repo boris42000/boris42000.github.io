@@ -34,18 +34,18 @@
 }
 
 /*
-  Risograph print: cream stock, two inks (sunflower yellow + blue) that overprint (multiply),
+  Risograph print: cream stock, two inks (sunflower yellow + green) that overprint (multiply),
   halftone fields, paper grain, and a slightly mis-registered second plate.
 */
 :root {
   --paper: #f6f2e8;
-  --ink: #232347; /* the "black" drum: a deep navy, as riso blacks often look */
-  --muted: #5b5872;
+  --ink: #1d2a22; /* the "black" drum: a deep green-black */
+  --muted: #56604f;
   --sun: #ffc800;
-  --blue: #0078bf;
-  --c: var(--blue);
+  --leaf: #0b8a52;
+  --c: var(--leaf);
   /* fallbacks for colours still referenced from the markup */
-  --mint: var(--blue);
+  --mint: var(--leaf);
   --lilac: var(--sun);
   --orange: var(--sun);
   --yellow: var(--sun);
@@ -121,7 +121,7 @@ p {
   color: var(--ink);
 }
 :focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--leaf);
   outline-offset: 3px;
 }
 .skip-link {
@@ -138,7 +138,7 @@ p {
 
 /* The second plate: a yellow copy of the type, printed a hair off. */
 .misreg {
-  color: var(--blue);
+  color: var(--leaf);
   text-shadow: 0.035em 0.03em 0 var(--sun);
 }
 
@@ -149,9 +149,9 @@ p {
   align-items: center;
   gap: 8px;
   padding: 11px 22px;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--leaf);
   border-radius: 999px;
-  color: var(--blue);
+  color: var(--leaf);
   font-family: var(--display);
   font-weight: 700;
   font-size: 1rem;
@@ -177,7 +177,7 @@ p {
   translate: 2px 2px;
 }
 .btn-ink {
-  background: var(--blue);
+  background: var(--leaf);
   color: var(--paper);
 }
 .btn-ink:hover {
@@ -228,7 +228,7 @@ p {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--leaf);
   color: var(--paper);
   font-family: var(--display);
   font-size: 1.3rem;
@@ -304,7 +304,7 @@ p {
   font-family: var(--display);
   font-weight: 600;
   font-size: 1.1rem;
-  color: var(--blue);
+  color: var(--leaf);
 }
 .hello::before {
   content: '';
@@ -319,7 +319,7 @@ p {
   font-size: clamp(3rem, 1.2rem + 7vw, 7rem);
   letter-spacing: -0.05em;
   line-height: 0.98;
-  color: var(--blue);
+  color: var(--leaf);
   text-shadow: 0.03em 0.025em 0 var(--sun);
 }
 /* highlights are ink bands, not boxes */
@@ -339,7 +339,7 @@ p {
   margin-top: 0.08em;
   padding: 0 0.14em 0.06em;
   background: var(--sun);
-  color: var(--blue);
+  color: var(--leaf);
   rotate: -1.5deg;
   mix-blend-mode: multiply;
 }
@@ -399,8 +399,8 @@ p {
   padding: 0;
   border-radius: 50%;
 }
-.s-blue {
-  background: var(--blue);
+.s-leaf {
+  background: var(--leaf);
   color: var(--paper);
 }
 .s-sun {
@@ -445,7 +445,7 @@ p {
 .section-head {
   margin-bottom: clamp(28px, 4vw, 48px);
   padding-bottom: 18px;
-  border-bottom: 3px solid var(--blue);
+  border-bottom: 3px solid var(--leaf);
 }
 .section-head h2 {
   display: flex;
@@ -453,7 +453,7 @@ p {
   gap: 14px;
   font-size: clamp(2.8rem, 1.4rem + 5.5vw, 6rem);
   letter-spacing: -0.05em;
-  color: var(--blue);
+  color: var(--leaf);
   text-shadow: 0.03em 0.025em 0 var(--sun);
 }
 .count {
@@ -466,7 +466,7 @@ p {
 
 /* ───────── App cards ───────── */
 .app {
-  --c: var(--blue);
+  --c: var(--leaf);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(24px, 4vw, 56px);
@@ -486,7 +486,7 @@ p {
 .app h3 {
   margin-bottom: 18px;
   font-size: clamp(2.3rem, 1.5rem + 2.8vw, 4rem);
-  color: var(--blue);
+  color: var(--leaf);
   text-shadow: 0.03em 0.025em 0 var(--sun);
 }
 .app-info > p:not([class]) {
@@ -528,7 +528,7 @@ p {
   font-family: var(--display);
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--blue);
+  color: var(--leaf);
 }
 
 /* Halftone field the visuals sit on */
@@ -551,13 +551,12 @@ p {
   align-items: center;
   padding: clamp(28px, 4vw, 48px) 12px;
 }
-/* the frame is an outline only, so the duotone prints onto the ink field, not onto black */
 .phone {
   display: block;
   overflow: hidden;
   border: 4px solid var(--ink);
   border-radius: 24px;
-  background: color-mix(in srgb, var(--c) 30%, var(--paper));
+  background: var(--ink);
 }
 .app-phones .phone {
   flex: none;
@@ -596,24 +595,6 @@ p {
   .app-alt .work-media {
     order: -1;
   }
-}
-
-/* "Printed" screenshots: duotone on the ink field; full colour when you look closer. */
-.browser-view img,
-.phone img {
-  filter: grayscale(1) contrast(1.15) brightness(1.05);
-  mix-blend-mode: multiply;
-  transition: filter 0.5s, mix-blend-mode 0s 0.25s;
-}
-.browser-view {
-  background: color-mix(in srgb, var(--c) 30%, var(--paper));
-}
-.app:hover img,
-.work:hover img,
-.work.is-active img,
-.app.is-active img {
-  filter: none;
-  mix-blend-mode: normal;
 }
 
 /* ───────── Works ───────── */
@@ -691,14 +672,14 @@ p {
 /* Whole page scrolls past on hover: shift by (own height − frame height). */
 .browser-view img {
   width: 100%;
-  transition: transform 1.2s var(--ease), filter 0.5s;
+  transition: transform 1.2s var(--ease);
 }
 .work.is-active .browser-view img,
 .app.is-active .browser-view img,
 .browser:hover .browser-view img,
 .browser:focus-visible .browser-view img {
   transform: translateY(calc(-100% + 100cqh));
-  transition: transform 9s cubic-bezier(0.45, 0, 0.4, 1), filter 0.5s;
+  transition: transform 9s cubic-bezier(0.45, 0, 0.4, 1);
 }
 .work-phone {
   position: absolute;
@@ -721,7 +702,7 @@ p {
 }
 .work-info h3 {
   font-size: clamp(1.7rem, 1.3rem + 1.3vw, 2.4rem);
-  color: var(--blue);
+  color: var(--leaf);
 }
 .work-info p:not([class]) {
   color: var(--muted);
@@ -730,60 +711,199 @@ p {
   margin-top: 6px;
 }
 
-/* ───────── O mne ───────── */
-.cv {
+/* ───────── O mne: a printed timeline chart ─────────
+   Bands are placed by years since Jan 2019 on an 8-year axis. The work row
+   overlaps the school row and both print with multiply, so the years spent
+   doing both come out darker. */
+.cv-lead {
+  max-width: 58ch;
+  margin-bottom: clamp(28px, 4vw, 44px);
+  font-size: clamp(1.08rem, 1rem + 0.3vw, 1.25rem);
+}
+.chart {
+  --years: 8;
+  position: relative;
+  padding-bottom: 8px;
+}
+.axis {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(32px, 5vw, 64px);
+  grid-template-columns: repeat(var(--years), 1fr);
+  margin-bottom: 14px;
+  border-bottom: 3px solid var(--leaf);
+  font-family: var(--display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
 }
-@media (max-width: 760px) {
-  .cv {
-    grid-template-columns: 1fr;
-  }
+.axis span {
+  padding: 0 0 6px 6px;
+  border-left: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
 }
-.cv-title {
-  margin-bottom: 10px;
-}
-.cv-title .chip {
-  --c: var(--sun);
-  font-size: 0.8rem;
-}
-.timeline {
+.track {
+  position: relative;
+  height: 104px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.timeline li {
-  display: grid;
-  grid-template-columns: 7.5em 1fr;
-  gap: 2px 18px;
-  padding: 16px 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
+.track + .track {
+  margin-top: -36px;
 }
-.when {
-  grid-row: span 2;
-  padding-top: 0.2em;
+.track::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
   font-family: var(--display);
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.track-work::before {
+  top: 4px;
+}
+.track-school::before {
+  bottom: 6px;
+}
+.band {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--from) / var(--years) * 100%);
+  width: calc((var(--to) - var(--from)) / var(--years) * 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+  padding: 10px 12px;
+  border-radius: 6px;
+  mix-blend-mode: multiply;
+  transition: translate 0.3s var(--bounce);
+}
+.band:hover {
+  translate: 0 -3px;
+}
+.band strong {
+  font-family: var(--display);
+  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.band span {
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+/* work prints in green with text at the top… */
+.track-work .band {
+  justify-content: flex-start;
+  background-color: var(--leaf);
+  color: var(--paper);
+}
+.track-work .band + .band {
+  border-left: 2px solid var(--paper);
+}
+/* …school in yellow halftone with text at the bottom, clear of the overlap */
+.track-school .band {
+  justify-content: flex-end;
+  background-color: color-mix(in srgb, var(--sun) 55%, var(--paper));
+  background-image: radial-gradient(circle, var(--sun) 0 38%, transparent 42%);
+  background-size: 6px 6px;
   color: var(--ink);
 }
-/* year as a highlighter stroke */
-.when {
-  justify-self: start;
-  align-self: start;
-  padding: 0 4px;
-  background: linear-gradient(transparent 55%, var(--sun) 55% 92%, transparent 92%);
+.now {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--at) / var(--years) * 100%);
+  border-left: 2px dashed var(--ink);
+  pointer-events: none;
 }
-.timeline strong {
+.now span {
+  position: absolute;
+  top: -2px;
+  left: 6px;
+  padding: 0 5px;
+  background: var(--paper);
   font-family: var(--display);
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
-  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
-.what {
-  font-size: 0.95rem;
-  color: var(--muted);
+
+/* Phones: the chart turns on its side — years run down, the two rows become columns. */
+@media (max-width: 760px) {
+  .chart {
+    display: grid;
+    grid-template-columns: 46px 1fr 1fr;
+    height: calc(var(--years) * 78px);
+    padding-bottom: 0;
+  }
+  .axis {
+    grid-template-columns: none;
+    grid-template-rows: repeat(var(--years), 1fr);
+    margin: 0;
+    border-bottom: 0;
+    border-right: 3px solid var(--leaf);
+  }
+  .axis span {
+    padding: 4px 0 0;
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+  }
+  .track {
+    height: auto;
+    margin-left: 8px;
+  }
+  .track + .track {
+    margin-top: 0;
+    margin-left: -22px;
+  }
+  .track::before {
+    top: 4px;
+    bottom: auto;
+    left: 6px;
+  }
+  .track-school::before {
+    left: 30px;
+  }
+  .band {
+    left: 0;
+    right: 0;
+    width: auto;
+    top: calc(var(--from) / var(--years) * 100%);
+    bottom: auto;
+    height: calc((var(--to) - var(--from)) / var(--years) * 100%);
+    padding: 8px 10px;
+  }
+  .track-work .band {
+    padding-right: 30px;
+  }
+  .track-work .band + .band {
+    border-left: 0;
+    border-top: 2px solid var(--paper);
+  }
+  .track-school .band {
+    justify-content: flex-start;
+    padding-left: 32px;
+  }
+  .band strong {
+    font-size: 0.9rem;
+  }
+  .band span {
+    font-size: 0.72rem;
+  }
+  .now {
+    top: calc(var(--at) / var(--years) * 100%);
+    bottom: auto;
+    left: 0;
+    right: 0;
+    border-left: 0;
+    border-top: 2px dashed var(--ink);
+  }
+  .now span {
+    top: -0.8em;
+    left: 0;
+  }
 }
 
 /* ───────── Kontakt: a full yellow halftone print ───────── */
@@ -798,7 +918,7 @@ p {
 .contact h2 {
   font-size: clamp(3.2rem, 1.6rem + 7vw, 8rem);
   letter-spacing: -0.055em;
-  color: var(--blue);
+  color: var(--leaf);
   text-shadow: 0.03em 0.025em 0 var(--sun);
 }
 .contact p {
@@ -820,7 +940,7 @@ p {
   color: var(--muted);
 }
 .foot a {
-  color: var(--blue);
+  color: var(--leaf);
   text-underline-offset: 3px;
 }
 
