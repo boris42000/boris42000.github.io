@@ -572,9 +572,130 @@ p {
     grid-template-columns: 1fr;
   }
   .app-phones,
-  .app-alt .work-media {
+  .app-alt .work-media,
+  .nda-field {
     order: -1;
   }
+}
+
+/* ───────── Under NDA: a redacted proof ─────────
+   A mock page of placeholder shapes; black bars are printed slightly off
+   register, so the yellow plate peeks out from under them. */
+.chip-nda {
+  background: var(--ink);
+  color: var(--paper);
+}
+.nda-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 48px) clamp(16px, 3vw, 40px);
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--leaf) 14%, var(--paper));
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--leaf) 55%, transparent) 0 30%, transparent 34%);
+  background-size: var(--halftone-size);
+  isolation: isolate;
+}
+.nda-sheet {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  background: var(--paper);
+  rotate: -1.5deg;
+  transition: rotate 0.5s var(--bounce);
+}
+.app-nda:hover .nda-sheet {
+  rotate: 0deg;
+}
+.nda-sheet .browser-bar b {
+  display: flex;
+  justify-content: center;
+}
+.nda-sheet s {
+  display: block;
+  width: var(--w);
+  height: 9px;
+  border-radius: 1px;
+  text-decoration: none;
+}
+.nda-sheet .x {
+  background: var(--ink);
+  box-shadow: 2px 1.5px 0 var(--sun);
+}
+.nda-sheet .ln {
+  background: color-mix(in srgb, var(--ink) 16%, transparent);
+}
+.nda-body {
+  display: grid;
+  grid-template-columns: 26% 1fr;
+  min-height: 250px;
+}
+.nda-side {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 18px 14px;
+  border-right: 1.5px solid color-mix(in srgb, var(--ink) 20%, transparent);
+}
+.nda-main {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 18px 18px 22px;
+}
+.nda-sheet .x-title {
+  height: 18px;
+  margin-bottom: 4px;
+}
+.nda-line {
+  display: flex;
+  gap: 6px;
+}
+.nda-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 84px;
+  margin: 6px 0;
+  padding: 0 4px;
+  border-bottom: 2px solid var(--ink);
+}
+.nda-chart i {
+  flex: 1;
+  height: var(--h);
+  border-radius: 2px 2px 0 0;
+  background: var(--leaf);
+  box-shadow: 2px 0 0 var(--sun);
+  mix-blend-mode: multiply;
+}
+/* a rubber stamp in the green ink */
+.nda-stamp {
+  position: absolute;
+  right: 7%;
+  bottom: 18%;
+  padding: 4px 14px;
+  border: 3px solid var(--leaf);
+  border-radius: 4px;
+  outline: 1.5px solid var(--leaf);
+  outline-offset: 3px;
+  color: var(--leaf);
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 0.9rem + 1vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  rotate: -14deg;
+  mix-blend-mode: multiply;
+  transition: rotate 0.5s var(--bounce), scale 0.5s var(--bounce);
+}
+.app-nda:hover .nda-stamp {
+  rotate: -8deg;
+  scale: 1.06;
 }
 
 /* ───────── Works ───────── */

@@ -19,7 +19,7 @@
 
     <link rel="preload" href="./portfolio/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./portfolio/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="./portfolio/styles.css?v=56" />
+    <link rel="stylesheet" href="./portfolio/styles.css?v=57" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sk_SK" />
@@ -78,7 +78,7 @@
       <!-- ───────── Aplikácie ───────── -->
       <section class="section" id="aplikacie" aria-labelledby="aplikacie-title">
         <header class="section-head reveal">
-          <h2 id="aplikacie-title">Aplikácie <span class="count">02</span></h2>
+          <h2 id="aplikacie-title">Aplikácie <span class="count">03</span></h2>
         </header>
 
         <article class="app reveal">
@@ -116,6 +116,40 @@
               <span class="browser-view"><img src="./portfolio/img/zachovana-desktop.webp" width="1100" height="4125" alt="Náhľad webu Zachovaná" loading="lazy" decoding="async" /></span>
             </a>
             <span class="phone work-phone" aria-hidden="true"><img src="./portfolio/img/zachovana-order.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+          </div>
+        </article>
+        <article class="app app-nda reveal">
+          <div class="app-info">
+            <p class="meta"><span class="chip">Webová aplikácia</span> <span class="chip chip-nda">pod NDA</span> Masarykova univerzita · od 2025</p>
+            <h3>Portál pre eLTER</h3>
+            <p>
+              Portál na správu a vizualizáciu datasetov pre európsku výskumnú infraštruktúru eLTER. Začal ako moja
+              diplomová práca, teraz na ňom pracujem na dohodu ako jediný vývojár. Je súčasťou väčšieho systému,
+              preto tu nie sú ukážky ani podrobnosti.
+            </p>
+            <p class="stack">React · TypeScript · Vite · Tailwind CSS · Leaflet · Node.js · Express · PostgreSQL · Drizzle · Zod · OpenID Connect · Vitest · Docker · Helm · Kubernetes · Argo CD</p>
+          </div>
+          <!-- Placeholder shapes only: nothing real sits under the black bars. -->
+          <div class="nda-field" aria-hidden="true">
+            <div class="nda-sheet">
+              <span class="browser-bar"><i></i><i></i><i></i><b><s class="x" style="--w: 11ch"></s></b></span>
+              <div class="nda-body">
+                <div class="nda-side">
+                  <s class="x" style="--w: 80%"></s><s class="ln" style="--w: 60%"></s><s class="x" style="--w: 70%"></s><s class="ln" style="--w: 85%"></s><s class="x" style="--w: 55%"></s><s class="ln" style="--w: 65%"></s>
+                </div>
+                <div class="nda-main">
+                  <s class="x x-title" style="--w: 64%"></s>
+                  <p class="nda-line"><s class="ln" style="--w: 22%"></s><s class="x" style="--w: 46%"></s><s class="ln" style="--w: 18%"></s></p>
+                  <p class="nda-line"><s class="x" style="--w: 30%"></s><s class="ln" style="--w: 40%"></s></p>
+                  <div class="nda-chart">
+                    <i style="--h: 38%"></i><i style="--h: 62%"></i><i style="--h: 48%"></i><i style="--h: 84%"></i><i style="--h: 70%"></i><i style="--h: 92%"></i><i style="--h: 56%"></i><i style="--h: 76%"></i>
+                  </div>
+                  <p class="nda-line"><s class="ln" style="--w: 16%"></s><s class="x" style="--w: 58%"></s></p>
+                  <p class="nda-line"><s class="x" style="--w: 40%"></s><s class="ln" style="--w: 26%"></s><s class="x" style="--w: 18%"></s></p>
+                </div>
+              </div>
+              <span class="nda-stamp">pod NDA</span>
+            </div>
           </div>
         </article>
       </section>
@@ -218,18 +252,18 @@
           <table class="stackmap">
             <caption class="visually-hidden">Ktoré vrstvy aplikácie som robil v jednotlivých projektoch</caption>
             <thead>
-              <tr><th scope="col"><span class="visually-hidden">Vrstva</span></th><th scope="col" style="--c: var(--leaf)"><span>Faktúra</span></th><th scope="col" style="--c: var(--sun)"><span>Zachovaná</span></th><th scope="col" style="--c: var(--leaf)"><span>ABMaudit</span></th><th scope="col" style="--c: var(--sun)"><span>VIDON</span></th><th scope="col" style="--c: var(--leaf)"><span>Sarah Ko.</span></th></tr>
+              <tr><th scope="col"><span class="visually-hidden">Vrstva</span></th><th scope="col" style="--c: var(--leaf)"><span>Faktúra</span></th><th scope="col" style="--c: var(--sun)"><span>Zachovaná</span></th><th scope="col" style="--c: var(--leaf)"><span>eLTER</span></th><th scope="col" style="--c: var(--sun)"><span>ABMaudit</span></th><th scope="col" style="--c: var(--leaf)"><span>VIDON</span></th><th scope="col" style="--c: var(--sun)"><span>Sarah Ko.</span></th></tr>
             </thead>
             <tbody>
-              <tr><th scope="row"><strong>Dizajn a UX</strong><span>návrh rozhrania, mobil</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td></tr>
-              <tr><th scope="row"><strong>Frontend</strong><span>React · TypeScript · vanilla JS</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td></tr>
-              <tr><th scope="row"><strong>Backend a API</strong><span>Node.js · Fastify · Express</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
-              <tr><th scope="row"><strong>Databáza</strong><span>PostgreSQL · Azure Cosmos DB</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
-              <tr><th scope="row"><strong>Dokumenty a integrácie</strong><span>PDF faktúry · e‑mail · e‑fakturácia</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
-              <tr><th scope="row"><strong>Cloud a infraštruktúra</strong><span>Azure · Bicep · Docker</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
-              <tr><th scope="row"><strong>CI/CD</strong><span>GitHub Actions</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
-              <tr><th scope="row"><strong>Testy</strong><span>Vitest · Playwright</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
-              <tr><th scope="row"><strong>Výkon a obrázky</strong><span>predrenderovanie · AVIF/WebP · sharp</span></th><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td></tr>
+              <tr><th scope="row"><strong>Dizajn a UX</strong><span>návrh rozhrania, mobil</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td></tr>
+              <tr><th scope="row"><strong>Frontend</strong><span>React · TypeScript · vanilla JS</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td></tr>
+              <tr><th scope="row"><strong>Backend a API</strong><span>Node.js · Fastify · Express</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
+              <tr><th scope="row"><strong>Databáza</strong><span>PostgreSQL · Azure Cosmos DB</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
+              <tr><th scope="row"><strong>Dokumenty a integrácie</strong><span>PDF faktúry · e‑mail · e‑fakturácia · API</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
+              <tr><th scope="row"><strong>Cloud a infraštruktúra</strong><span>Azure · Bicep · Docker · Kubernetes · Helm</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
+              <tr><th scope="row"><strong>CI/CD</strong><span>GitHub Actions · GitLab CI · Argo CD</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
+              <tr><th scope="row"><strong>Testy</strong><span>Vitest · Playwright</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td></tr>
+              <tr><th scope="row"><strong>Výkon a obrázky</strong><span>predrenderovanie · AVIF/WebP · sharp</span></th><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">nie</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">áno</span></span></td></tr>
             </tbody>
           </table>
         </div>
@@ -269,7 +303,7 @@
                 <strong>Vysoké učení technické v Brně</strong><span>Bakalárske štúdium, informačné technológie · 2019–2023</span>
               </li>
               <li class="band" style="--from: 4.67; --to: 7.04">
-                <strong>Masarykova univerzita</strong><span>Inžinierske štúdium, informačné technológie · 2023–2026</span>
+                <strong>Masarykova univerzita</strong><span>Inžinierske štúdium, informačné technológie · 2023–2026</span><span>diplomová práca pre eLTER</span>
               </li>
             </ol>
             <div class="now" style="--at: 7.85" aria-hidden="true"><span>dnes</span></div>
