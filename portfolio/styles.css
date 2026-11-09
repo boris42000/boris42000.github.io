@@ -587,12 +587,41 @@ p {
   max-width: 52ch;
   color: var(--muted);
 }
+/* tech used in a project, one row per layer */
 .stack {
-  margin-top: 22px;
+  display: grid;
+  gap: 8px;
+  max-width: 60ch;
+  margin: 22px 0 0;
   font-family: var(--display);
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--leaf);
+}
+.stack div {
+  display: grid;
+  grid-template-columns: 8.5em minmax(0, 1fr);
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
+}
+.stack dt {
+  padding-top: 0.2em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.stack dd {
+  margin: 0;
+  line-height: 1.45;
+}
+@media (max-width: 480px) {
+  .stack div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
 }
 
 /* Halftone field the visuals sit on */
