@@ -399,6 +399,16 @@ p {
   padding: 0;
   border-radius: 50%;
 }
+/* a sunburst for the one that is a whole platform rather than a tool */
+.sticker.burst {
+  display: grid;
+  place-items: center;
+  width: 6.6em;
+  height: 6.6em;
+  padding: 0;
+  border-radius: 0;
+  clip-path: polygon(50.0% 0.0%, 59.1% 10.0%, 71.7% 5.0%, 75.6% 17.9%, 89.1% 18.8%, 86.9% 32.2%, 98.7% 38.9%, 91.0% 50.0%, 98.7% 61.1%, 86.9% 67.8%, 89.1% 81.2%, 75.6% 82.1%, 71.7% 95.0%, 59.1% 90.0%, 50.0% 100.0%, 40.9% 90.0%, 28.3% 95.0%, 24.4% 82.1%, 10.9% 81.2%, 13.1% 67.8%, 1.3% 61.1%, 9.0% 50.0%, 1.3% 38.9%, 13.1% 32.2%, 10.9% 18.8%, 24.4% 17.9%, 28.3% 5.0%, 40.9% 10.0%);
+}
 .s-leaf {
   background: var(--leaf);
   color: var(--paper);
@@ -492,36 +502,6 @@ p {
 .app-info > p:not([class]) {
   max-width: 52ch;
   color: var(--muted);
-}
-.app h4 {
-  margin: 30px 0 10px;
-  font-size: 1rem;
-  letter-spacing: -0.01em;
-}
-.notes {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
-}
-.notes li {
-  position: relative;
-  padding: 10px 0 10px 22px;
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
-  font-size: 0.96rem;
-  line-height: 1.5;
-}
-.notes li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 1.05em;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--c);
-  box-shadow: 2px 1px 0 var(--sun);
 }
 .stack {
   margin-top: 22px;
