@@ -811,6 +811,44 @@ p {
   background-size: 6px 6px;
   color: var(--ink);
 }
+/* Insight Global and AT&T are one client: a bracket spans both, and the
+   contract years are hatched (the usual mark for work done through an agency). */
+.track-work {
+  height: 134px;
+}
+.track-work .band {
+  top: 30px;
+}
+.band-contract {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 9px,
+    color-mix(in srgb, var(--paper) 22%, transparent) 9px 13px
+  );
+}
+.client {
+  position: absolute;
+  top: 8px;
+  height: 14px;
+  left: calc(var(--from) / var(--years) * 100%);
+  width: calc((var(--to) - var(--from)) / var(--years) * 100%);
+  border: 2px solid var(--leaf);
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+.client span {
+  position: absolute;
+  top: -0.75em;
+  left: 10px;
+  padding: 0 6px;
+  background: var(--paper);
+  color: var(--leaf);
+  font-family: var(--display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .now {
   position: absolute;
   top: 0;
@@ -875,8 +913,33 @@ p {
     height: calc((var(--to) - var(--from)) / var(--years) * 100%);
     padding: 8px 10px;
   }
+  .track-work {
+    height: auto;
+  }
   .track-work .band {
+    top: calc(var(--from) / var(--years) * 100%);
+    left: 18px;
     padding-right: 30px;
+  }
+  .client {
+    top: calc(var(--from) / var(--years) * 100%);
+    height: calc((var(--to) - var(--from)) / var(--years) * 100%);
+    left: 2px;
+    width: 10px;
+    border: 2px solid var(--leaf);
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+  /* label sits on the bracket's vertical stroke, like it sits on the horizontal one on desktop */
+  .client span {
+    top: 50%;
+    left: -7px;
+    padding: 6px 0;
+    line-height: 1.1;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+    translate: 0 -50%;
+    font-size: 0.7rem;
   }
   .track-work .band + .band {
     border-left: 0;
