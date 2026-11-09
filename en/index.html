@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f2e8" />
+    <meta name="color-scheme" content="light" />
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
+
+    <title>Boris Bobocký — portfolio</title>
+    <meta
+      name="description"
+      content="Boris Bobocký, full-stack developer in Brno. A selection of websites and apps I designed and built."
+    />
+    <link rel="canonical" href="https://boris42000.github.io/en/" />
+    <link rel="alternate" hreflang="sk" href="https://boris42000.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://boris42000.github.io/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://boris42000.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="../portfolio/favicon.svg" />
+
+    <link rel="preload" href="../portfolio/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../portfolio/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../portfolio/styles.css?v=58" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Boris Bobocký — portfolio" />
+    <meta property="og:description" content="Full-stack developer in Brno. Websites and apps I designed and built." />
+    <meta property="og:url" content="https://boris42000.github.io/en/" />
+    <meta property="og:image" content="https://boris42000.github.io/portfolio/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <a class="skip-link" href="#prace">Skip to projects</a>
+
+    <header class="top">
+      <a class="logo" href="#" aria-label="Boris Bobocký — back to top">bb<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#aplikacie">Apps</a>
+        <a href="#prace">Websites</a>
+        <a href="#o-mne">About</a>
+        <a href="#kontakt">Contact</a>
+      </nav>
+      <a class="lang" href="../" hreflang="sk" lang="sk" aria-label="Slovenská verzia" data-lang-switch>
+        <span class="lang-to" aria-hidden="true">SK</span><span class="lang-cur" aria-hidden="true">EN</span>
+      </a>
+    </header>
+
+    <main>
+      <!-- ───────── Hero ───────── -->
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="hello">Hi, I'm Boris.</p>
+          <h1>
+            I build <mark class="hl hl-yellow">websites</mark><br />
+            and <mark class="hl hl-orange">apps</mark>.
+          </h1>
+          <p class="lead">
+            Full‑stack developer in Brno, at AT&amp;T by day. On the side I build my own projects: websites for small businesses and apps that handle orders, invoicing and stock. Here is a selection.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="#prace">See the work ↓</a>
+            <a class="btn" href="https://www.linkedin.com/in/boris-bobocky/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <!-- Decorative stickers; draggable with a pointer, ignored by screen readers -->
+        <div class="stickers" aria-hidden="true" data-stickers>
+          <span class="sticker s-leaf" style="--x: 8%; --y: 10%; --r: -8deg">Brno&nbsp;·&nbsp;CZ</span>
+          <span class="sticker s-sun" style="--x: 52%; --y: 4%; --r: 6deg">TypeScript</span>
+          <span class="sticker s-leaf round" style="--x: 62%; --y: 38%; --r: 12deg">React</span>
+          <span class="sticker s-sun" style="--x: 4%; --y: 46%; --r: 4deg">Node.js</span>
+          <span class="sticker s-leaf" style="--x: 30%; --y: 70%; --r: -5deg">PostgreSQL</span>
+          <span class="sticker s-sun burst" style="--x: 30%; --y: 24%; --r: 10deg">Azure</span>
+          <span class="sticker-hint" style="--x: 60%; --y: 80%">drag me ↖</span>
+        </div>
+      </section>
+
+      <!-- ───────── Aplikácie ───────── -->
+      <section class="section" id="aplikacie" aria-labelledby="aplikacie-title">
+        <header class="section-head reveal">
+          <h2 id="aplikacie-title">Apps <span class="count">03</span></h2>
+        </header>
+
+        <article class="app reveal">
+          <div class="app-info">
+            <p class="meta"><span class="chip">Web app</span> 2026 · pilot</p>
+            <h3>ABM Faktúra</h3>
+            <p>
+              A portal for the more than 100 clients of one accounting firm. Businesses issue and receive e‑invoices in it, and the accountants export them to their accounting software. It is being built because e‑invoicing becomes mandatory in Slovakia on 1&nbsp;January 2027.
+            </p>
+            <p class="stack">TypeScript · React · Fastify · PostgreSQL</p>
+          </div>
+          <div class="app-phones" aria-hidden="true">
+            <span class="phone"><img src="../portfolio/img/faktura-nova.webp" width="319" height="685" alt="" loading="lazy" decoding="async" /></span>
+            <span class="phone"><img src="../portfolio/img/faktura-vystavene.webp" width="319" height="685" alt="" loading="lazy" decoding="async" /></span>
+            <span class="phone"><img src="../portfolio/img/faktura-platba.webp" width="319" height="685" alt="" loading="lazy" decoding="async" /></span>
+          </div>
+        </article>
+
+        <article class="app app-alt reveal" style="--c: var(--sun)" data-work>
+          <div class="app-info">
+            <p class="meta"><span class="chip">Web app</span> 2026 · live</p>
+            <h3>Zachovaná</h3>
+            <p>
+              Pictures made from dried wedding bouquets. A public site with an order form, plus the whole admin behind it: orders and their status, invoices with PDF and e‑mail, gift vouchers, and stock of frames, acrylic and glass.
+            </p>
+            <p class="stack">TypeScript · React · Express · Azure Cosmos DB</p>
+          </div>
+          <div class="work-media">
+            <a class="browser" href="https://www.zachovana.sk/" target="_blank" rel="noopener" aria-label="Open the Zachovaná website">
+              <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>zachovana.sk</b></span>
+              <span class="browser-view"><img src="../portfolio/img/zachovana-desktop.webp" width="1100" height="4125" alt="Preview of the Zachovaná website" loading="lazy" decoding="async" /></span>
+            </a>
+            <span class="phone work-phone" aria-hidden="true"><img src="../portfolio/img/zachovana-order.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+          </div>
+        </article>
+        <article class="app app-nda reveal">
+          <div class="app-info">
+            <p class="meta"><span class="chip">Web app</span> <span class="chip chip-nda">under NDA</span> Masaryk University · since 2025</p>
+            <h3>eLTER portal</h3>
+            <p>
+              A portal for managing and visualising datasets for eLTER, the European research infrastructure. It started as my master's thesis; now I work on it part-time on contract, as its only developer. It is part of a larger system, so there are no screenshots or details here.
+            </p>
+            <p class="stack">React · TypeScript · Vite · Tailwind CSS · Leaflet · Node.js · Express · PostgreSQL · Drizzle · Zod · OpenID Connect · Vitest · Docker · Helm · Kubernetes · Argo CD</p>
+          </div>
+          <!-- Placeholder shapes only: nothing real sits under the black bars. -->
+          <div class="nda-field" aria-hidden="true">
+            <div class="nda-sheet">
+              <span class="browser-bar"><i></i><i></i><i></i><b><s class="x" style="--w: 11ch"></s></b></span>
+              <div class="nda-body">
+                <div class="nda-side">
+                  <s class="x" style="--w: 80%"></s><s class="ln" style="--w: 60%"></s><s class="x" style="--w: 70%"></s><s class="ln" style="--w: 85%"></s><s class="x" style="--w: 55%"></s><s class="ln" style="--w: 65%"></s>
+                </div>
+                <div class="nda-main">
+                  <s class="x x-title" style="--w: 64%"></s>
+                  <p class="nda-line"><s class="ln" style="--w: 22%"></s><s class="x" style="--w: 46%"></s><s class="ln" style="--w: 18%"></s></p>
+                  <p class="nda-line"><s class="x" style="--w: 30%"></s><s class="ln" style="--w: 40%"></s></p>
+                  <div class="nda-chart">
+                    <i style="--h: 38%"></i><i style="--h: 62%"></i><i style="--h: 48%"></i><i style="--h: 84%"></i><i style="--h: 70%"></i><i style="--h: 92%"></i><i style="--h: 56%"></i><i style="--h: 76%"></i>
+                  </div>
+                  <p class="nda-line"><s class="ln" style="--w: 16%"></s><s class="x" style="--w: 58%"></s></p>
+                  <p class="nda-line"><s class="x" style="--w: 40%"></s><s class="ln" style="--w: 26%"></s><s class="x" style="--w: 18%"></s></p>
+                </div>
+              </div>
+              <span class="nda-stamp">under NDA</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ───────── Weby ───────── -->
+      <section class="section" id="prace" aria-labelledby="prace-title">
+        <header class="section-head reveal">
+          <h2 id="prace-title">Websites <span class="count">04</span></h2>
+        </header>
+
+        <div class="works">
+          <article class="work reveal" style="--c: var(--leaf)" data-work>
+            <div class="work-media">
+              <a class="browser" href="../vidoncentrum/" aria-label="Open the VIDON eye centre website proposal">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>boris42000.github.io/vidoncentrum</b></span>
+                <span class="browser-view"><img src="../portfolio/img/vidoncentrum-desktop.webp" width="1100" height="4125" alt="Preview of the VIDON eye centre website" loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="../portfolio/img/vidoncentrum-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Proposal</span> Eye clinic · Bánovce nad Bebravou · 2026</p>
+              <h3>VIDON očné centrum</h3>
+              <p>
+                A proposed new website to replace the original WordPress site from 2018. One static page with no framework; the 51-item price list folds into cards on mobile and can be filtered.
+              </p>
+              <a class="btn" href="../vidoncentrum/">View site ↗</a>
+            </div>
+          </article>
+
+          <article class="work reveal" style="--c: var(--sun)" data-work>
+            <div class="work-media">
+              <a class="browser" href="https://www.abmaudit.sk/" target="_blank" rel="noopener" aria-label="Open the ABMaudit website">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>abmaudit.sk</b></span>
+                <span class="browser-view"><img src="../portfolio/img/abmaudit-desktop.webp" width="1100" height="4125" alt="Preview of the ABMaudit website" loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="../portfolio/img/abmaudit-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Website</span> Audit and accounting · Topoľčany · 2026</p>
+              <h3>ABMaudit</h3>
+              <p>
+                Website of an audit and accounting firm. Built with Vite, the output is pre-rendered static HTML; a separate script prepares the photos in AVIF, WebP and JPEG at four widths.
+              </p>
+              <a class="btn" href="https://www.abmaudit.sk/" target="_blank" rel="noopener">View site ↗</a>
+            </div>
+          </article>
+
+          <article class="work reveal" style="--c: var(--leaf)" data-work>
+            <div class="work-media">
+              <a class="browser" href="../sarahkophg/" aria-label="Open the Sarah Ko. website">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>boris42000.github.io/sarahkophg</b></span>
+                <span class="browser-view"><img src="../portfolio/img/sarahkophg-desktop.webp" width="1100" height="4125" alt="Preview of photographer Sarah Ko.'s website" loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="../portfolio/img/sarahkophg-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Website</span> Black-and-white photography · 2026</p>
+              <h3>Sarah Ko.</h3>
+              <p>
+                Portfolio of a black-and-white photographer. Galleries on Embla Carousel, a custom lightbox, and a script built on the sharp library that makes every photo size from the originals.
+              </p>
+              <a class="btn" href="../sarahkophg/">View site ↗</a>
+            </div>
+          </article>
+
+          <article class="work reveal" style="--c: var(--sun)" data-work>
+            <div class="work-media">
+              <a class="browser" href="https://pizzeriacoloseum.sk/" target="_blank" rel="noopener" aria-label="Open the Pizzeria Coloseum website">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><b>pizzeriacoloseum.sk</b></span>
+                <span class="browser-view"><img src="../portfolio/img/coloseum-desktop.webp" width="1100" height="4125" alt="Preview of the Pizzeria Coloseum website" loading="lazy" decoding="async" /></span>
+              </a>
+              <span class="phone work-phone" aria-hidden="true"><img src="../portfolio/img/coloseum-mobile.webp" width="390" height="844" alt="" loading="lazy" decoding="async" /></span>
+            </div>
+            <div class="work-info">
+              <p class="meta"><span class="chip">Maintenance</span> Restaurant · Topoľčany</p>
+              <h3>Pizzeria Coloseum</h3>
+              <p>
+                Maintenance of an existing restaurant website that I didn't design. I moved the menu from HTML into a single JSON file and added ordering through Wolt.
+              </p>
+              <a class="btn" href="https://pizzeriacoloseum.sk/" target="_blank" rel="noopener">View site ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ───────── Od pixelu po server ───────── -->
+      <section class="section" id="stack" aria-labelledby="stack-title">
+        <header class="section-head reveal">
+          <h2 id="stack-title">From pixel to server</h2>
+        </header>
+        <p class="stack-lead reveal">
+          On larger projects I do everything from interface design to deployment. Each project is one line; a filled stop means I built that layer in it.
+        </p>
+        <div class="stackmap-wrap reveal">
+          <table class="stackmap">
+            <caption class="visually-hidden">Which layers of the application I built in each project</caption>
+            <thead>
+              <tr><th scope="col"><span class="visually-hidden">Layer</span></th><th scope="col" style="--c: var(--leaf)"><span>Faktúra</span></th><th scope="col" style="--c: var(--sun)"><span>Zachovaná</span></th><th scope="col" style="--c: var(--leaf)"><span>eLTER</span></th><th scope="col" style="--c: var(--sun)"><span>ABMaudit</span></th><th scope="col" style="--c: var(--leaf)"><span>VIDON</span></th><th scope="col" style="--c: var(--sun)"><span>Sarah Ko.</span></th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row"><strong>Design and UX</strong><span>interface design, mobile</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td></tr>
+              <tr><th scope="row"><strong>Frontend</strong><span>React · TypeScript · vanilla JS</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td></tr>
+              <tr><th scope="row"><strong>Backend and API</strong><span>Node.js · Fastify · Express</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td></tr>
+              <tr><th scope="row"><strong>Database</strong><span>PostgreSQL · Azure Cosmos DB</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td></tr>
+              <tr><th scope="row"><strong>Documents and integrations</strong><span>PDF invoices · e‑mail · e‑invoicing · API</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td></tr>
+              <tr><th scope="row"><strong>Cloud and infrastructure</strong><span>Azure · Bicep · Docker · Kubernetes · Helm</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td></tr>
+              <tr><th scope="row"><strong>CI/CD</strong><span>GitHub Actions · GitLab CI · Argo CD</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td></tr>
+              <tr><th scope="row"><strong>Tests</strong><span>Vitest · Playwright</span></th><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td></tr>
+              <tr><th scope="row"><strong>Performance and images</strong><span>pre-rendering · AVIF/WebP · sharp</span></th><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td><td style="--c: var(--leaf)"><span class="stop"><span class="visually-hidden">no</span></span></td><td style="--c: var(--sun)"><span class="stop on"><span class="visually-hidden">yes</span></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ───────── O mne ───────── -->
+      <section class="section" id="o-mne" aria-labelledby="o-mne-title">
+        <header class="section-head reveal">
+          <h2 id="o-mne-title">About</h2>
+        </header>
+
+        <div class="cv reveal">
+          <p class="cv-lead">
+            I studied information technology in Brno, and since 2022 I have worked as a developer alongside my studies. The darker areas of the chart are the time when both happened at once.
+          </p>
+
+          <!-- x = years since Jan 2019 (axis 2019–2027); months estimated where LinkedIn gives only years -->
+          <div class="chart">
+            <div class="axis" aria-hidden="true">
+              <span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+            </div>
+            <ol class="track track-work" data-label="Work" aria-label="Work">
+              <li class="client" style="--from: 4.5; --to: 7.85" aria-hidden="true"><span>AT&amp;T project · since 2023</span></li>
+              <li class="band" style="--from: 3.25; --to: 4.42">
+                <strong>Tietoevry</strong><span>internship · test automation · 2022–2023</span>
+              </li>
+              <li class="band band-contract" style="--from: 4.5; --to: 6.33">
+                <strong>Insight Global</strong><span>Junior Software Developer, contracted to AT&amp;T · 2023–2025</span>
+              </li>
+              <li class="band" style="--from: 6.33; --to: 7.85">
+                <strong>AT&amp;T</strong><span>Software Developer · TypeScript, React · 2025–present</span>
+              </li>
+            </ol>
+            <ol class="track track-school" data-label="School" aria-label="School">
+              <li class="band" style="--from: 0.67; --to: 4.45">
+                <strong>Brno University of Technology</strong><span>Bachelor's, information technology · 2019–2023</span>
+              </li>
+              <li class="band" style="--from: 4.67; --to: 7.04">
+                <strong>Masaryk University</strong><span>Master's, information technology · 2023–2026</span><span>master's thesis for eLTER</span>
+              </li>
+            </ol>
+            <div class="now" style="--at: 7.85" aria-hidden="true"><span>today</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Kontakt ───────── -->
+      <section class="section" id="kontakt" aria-labelledby="kontakt-title">
+        <div class="contact reveal">
+          <h2 id="kontakt-title">Get in touch.</h2>
+          <p>LinkedIn is the fastest way to reach me. My code is on GitHub.</p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="https://www.linkedin.com/in/boris-bobocky/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn" href="https://github.com/boris42000" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>© <span data-year>2026</span> Boris Bobocký</p>
+      <p><a href="https://github.com/boris42000/boris42000.github.io" target="_blank" rel="noopener">Source code of this site</a></p>
+    </footer>
+
+    <script src="../portfolio/main.js?v=3" defer></script>
+  </body>
+</html>

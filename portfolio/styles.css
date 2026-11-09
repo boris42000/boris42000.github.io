@@ -221,6 +221,7 @@ p {
   -webkit-backdrop-filter: blur(8px);
 }
 .logo {
+  flex: none;
   margin-right: auto;
   display: inline-flex;
   align-items: center;
@@ -272,9 +273,83 @@ p {
 .top nav a:hover::after {
   transform: scaleX(1);
 }
+/* Language switch: a bold two-ink pill. The current language is printed in
+   ink, the other one sits on the yellow plate so it is the first thing seen. */
+.lang {
+  flex: none;
+  display: inline-flex;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 var(--leaf);
+  transition: translate 0.3s var(--bounce), box-shadow 0.3s var(--bounce);
+}
+.lang span {
+  padding: 9px 13px;
+}
+.lang-cur {
+  background: var(--ink);
+  color: var(--paper);
+}
+.lang-to {
+  background: var(--sun);
+  color: var(--ink);
+  transition: background-color 0.2s, color 0.2s;
+}
+.lang:hover {
+  translate: -2px -2px;
+  box-shadow: 5px 5px 0 var(--leaf);
+}
+.lang:hover .lang-to {
+  background: var(--leaf);
+  color: var(--paper);
+}
+/* visitors whose browser isn't Slovak or Czech get one wiggle */
+.lang.is-nudged {
+  animation: lang-nudge 0.9s var(--bounce) 0.8s 2;
+}
+@keyframes lang-nudge {
+  0%,
+  100% {
+    rotate: 0deg;
+  }
+  30% {
+    rotate: -8deg;
+  }
+  60% {
+    rotate: 6deg;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lang.is-nudged {
+    animation: none;
+  }
+}
 @media (max-width: 640px) {
+  .top {
+    gap: 12px;
+  }
   .top nav {
-    gap: 14px;
+    gap: 12px;
+  }
+  .top nav a {
+    white-space: nowrap;
+  }
+  /* no room for both halves on a phone: keep the bold one, the language to switch to */
+  .lang {
+    font-size: 0.86rem;
+  }
+  .lang span {
+    padding: 9px 11px;
+  }
+  .lang .lang-cur {
+    display: none;
   }
   .top nav a {
     font-size: 0.88rem;
@@ -283,6 +358,15 @@ p {
     width: 42px;
     height: 42px;
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .top nav {
+    gap: 9px;
+  }
+  .top nav a {
+    font-size: 0.82rem;
   }
 }
 

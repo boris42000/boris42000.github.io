@@ -6,6 +6,20 @@
   /* ── Draggable stickers ─────────────────────────
      Each sticker keeps its CSS position (--x/--y) and is moved with a translate
      offset (--dx/--dy), clamped so it can't be dragged out of its box. */
+  /* ── Language switch ─────────────────────────────
+     Both pages share section ids, so the switch keeps you where you were.
+     On the Slovak page, a browser that isn't sk/cs gets a wiggle toward EN. */
+  const lang = document.querySelector('[data-lang-switch]')
+  if (lang) {
+    lang.addEventListener('click', () => {
+      // the section currently under the sticky header, not just the last clicked anchor
+      const here = [...document.querySelectorAll('main section[id]')].filter((s) => s.getBoundingClientRect().top < 120).pop()
+      lang.href = lang.href.split('#')[0] + (here ? `#${here.id}` : '')
+    })
+    const prefersLocal = (navigator.languages || [navigator.language]).some((l) => /^(sk|cs)\b/i.test(l))
+    if (document.documentElement.lang === 'sk' && !prefersLocal) lang.classList.add('is-nudged')
+  }
+
   const box = document.querySelector('[data-stickers]')
   if (box) {
     box.querySelectorAll('.sticker').forEach((el) => {
